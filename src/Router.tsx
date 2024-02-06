@@ -1,22 +1,23 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import { HomePage } from './pages/Home.page';
-import GateWithCorrugatedBoard from './pages/GateWithCorrugatedBoard/GateWithCorrugatedBoard';
+
 import EliteIronGates from './pages/EliteIronGates/EliteIronGates';
+import GateWithCorrugatedBoard from './pages/GateWithCorrugatedBoard/GateWithCorrugatedBoard';
+import { HomePage } from './pages/Home.page';
 import { RoutersPaths } from './types/enums';
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <HomePage />,
+    element: <HomePage />
   },
   {
     path: `/${RoutersPaths.GATEWITHCORRUGATEDBOARD}`,
-    element: <GateWithCorrugatedBoard />,
+    element: <GateWithCorrugatedBoard />
   },
   {
     path: `/${RoutersPaths.ELITEIRONGATES}`,
-    element: <EliteIronGates />,
-  },
+    element: <EliteIronGates />
+  }
 ]);
 
 export function Router() {

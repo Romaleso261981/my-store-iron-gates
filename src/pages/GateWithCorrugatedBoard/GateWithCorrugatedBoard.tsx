@@ -1,4 +1,5 @@
 import { FooterLinks, HeaderTabs } from '@/components';
+
 import { mockdata } from './mockdata';
 import { ArticalCard } from './UI/ArticalCard';
 
