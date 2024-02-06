@@ -1,6 +1,7 @@
-import { ArticalCard } from './UI/Card/Card';
-import { mockdata } from './mockdata';
 import { FooterLinks, HeaderTabs } from '@/components';
+
+import { mockdata } from './mockdata';
+import { ArticalCard } from './UI/Card/Card';
 
 export default function EliteIronGates() {
   return (

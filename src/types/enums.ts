@@ -3,5 +3,5 @@ export enum RoutersPaths {
   ADMIN = '/admin',
   GATEWITHCORRUGATEDBOARD = '/gateWithCorrugatedBoard',
   LOGIN = '/login',
-  NOFOUND = '*',
+  NOFOUND = '*'
 }

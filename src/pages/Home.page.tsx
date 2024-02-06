@@ -1,7 +1,8 @@
 import { Container } from '@mantine/core';
-import { Welcome } from '../components/Welcome/Welcome';
-import { HeaderTabs } from '../components/Header/Header';
+
 import { FooterLinks } from '../components/Footer/Footer';
+import { HeaderTabs } from '../components/Header/Header';
+import { Welcome } from '../components/Welcome/Welcome';
 
 export function HomePage() {
   return (

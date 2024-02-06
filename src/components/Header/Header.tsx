@@ -1,37 +1,38 @@
-import cx from 'clsx';
-import { useState } from 'react';
 import {
-  Container,
   Avatar,
-  UnstyledButton,
-  Group,
-  Text,
-  Menu,
-  Tabs,
   Burger,
+  Container,
+  Group,
+  Menu,
   rem,
-  useMantineTheme,
+  Tabs,
+  Text,
+  UnstyledButton,
+  useMantineTheme
 } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import {
-  IconLogout,
-  IconHeart,
-  IconStar,
-  IconMessage,
-  IconSettings,
-  IconPlayerPause,
-  IconTrash,
-  IconSwitchHorizontal,
   IconChevronDown,
+  IconHeart,
+  IconLogout,
+  IconMessage,
+  IconPlayerPause,
+  IconSettings,
+  IconStar,
+  IconSwitchHorizontal,
+  IconTrash
 } from '@tabler/icons-react';
-import { Link, useNavigate } from 'react-router-dom';
-import classes from './HeaderTabs.module.css';
+import cx from 'clsx';
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
+
 import { ColorSchemeToggle } from '../ColorSchemeToggle/ColorSchemeToggle';
+import classes from './HeaderTabs.module.css';
 
 const user = {
   name: 'Jane Spoonfighter',
   email: 'janspoon@fighter.dev',
-  image: 'https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-5.png',
+  image: 'https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-5.png'
 };
 
 const tabs = [
@@ -40,7 +41,7 @@ const tabs = [
     path: '/gateWithCorrugatedBoard',
     id: '1',
     lable: 'Ворота з профнастилом',
-    type: 'Ворота з профнастилом',
+    type: 'Ворота з профнастилом'
   },
   { avatar: '', path: '/eliteIronGates', id: '2', lable: 'Елітні ворота', type: 'Елітні ворота' },
   { avatar: '', path: '/', id: '3', lable: 'Козирки', type: 'Козирки' },
@@ -48,17 +49,16 @@ const tabs = [
   { avatar: '', path: '/', id: '5', lable: 'Грати', type: 'Грати' },
   { avatar: '', path: '/', id: '5', lable: 'Пракани', type: 'Пракани' },
   { avatar: '', path: '/', id: '7', lable: 'Ковані вироби', type: 'Ковані вироби' },
-  { avatar: '', path: '/', id: '8', lable: 'Відкатні ворота', type: 'Відкатні ворота' },
+  { avatar: '', path: '/', id: '8', lable: 'Відкатні ворота', type: 'Відкатні ворота' }
 ];
 
 export function HeaderTabs() {
   const theme = useMantineTheme();
-  const navigate = useNavigate();
   const [opened, { toggle }] = useDisclosure(false);
   const [userMenuOpened, setUserMenuOpened] = useState(false);
 
   const items = tabs.map((tab) => (
-    <Link to={tab.path}>
+    <Link key={tab.id} to={tab.path}>
       <Tabs.Tab value={tab.lable} key={tab.id}>
         {tab.type}
       </Tabs.Tab>
@@ -77,12 +77,10 @@ export function HeaderTabs() {
             transitionProps={{ transition: 'pop-top-right' }}
             onClose={() => setUserMenuOpened(false)}
             onOpen={() => setUserMenuOpened(true)}
-            withinPortal
-          >
+            withinPortal>
             <Menu.Target>
               <UnstyledButton
-                className={cx(classes.user, { [classes.userActive]: userMenuOpened })}
-              >
+                className={cx(classes.user, { [classes.userActive]: userMenuOpened })}>
                 <Group gap={7}>
                   <Avatar src={user.image} alt={user.name} radius="xl" size={20} />
                   <Text fw={500} size="sm" lh={1} mr={3}>
@@ -100,8 +98,7 @@ export function HeaderTabs() {
                     color={theme.colors.red[6]}
                     stroke={1.5}
                   />
-                }
-              >
+                }>
                 Liked posts
               </Menu.Item>
               <Menu.Item
@@ -111,8 +108,7 @@ export function HeaderTabs() {
                     color={theme.colors.yellow[6]}
                     stroke={1.5}
                   />
-                }
-              >
+                }>
                 Saved posts
               </Menu.Item>
               <Menu.Item
@@ -122,8 +118,7 @@ export function HeaderTabs() {
                     color={theme.colors.blue[6]}
                     stroke={1.5}
                   />
-                }
-              >
+                }>
                 Your comments
               </Menu.Item>
 
@@ -131,22 +126,19 @@ export function HeaderTabs() {
               <Menu.Item
                 leftSection={
                   <IconSettings style={{ width: rem(16), height: rem(16) }} stroke={1.5} />
-                }
-              >
+                }>
                 Account settings
               </Menu.Item>
               <Menu.Item
                 leftSection={
                   <IconSwitchHorizontal style={{ width: rem(16), height: rem(16) }} stroke={1.5} />
-                }
-              >
+                }>
                 Change account
               </Menu.Item>
               <Menu.Item
                 leftSection={
                   <IconLogout style={{ width: rem(16), height: rem(16) }} stroke={1.5} />
-                }
-              >
+                }>
                 Logout
               </Menu.Item>
 
@@ -156,14 +148,14 @@ export function HeaderTabs() {
               <Menu.Item
                 leftSection={
                   <IconPlayerPause style={{ width: rem(16), height: rem(16) }} stroke={1.5} />
-                }
-              >
+                }>
                 Pause subscription
               </Menu.Item>
               <Menu.Item
                 color="red"
-                leftSection={<IconTrash style={{ width: rem(16), height: rem(16) }} stroke={1.5} />}
-              >
+                leftSection={
+                  <IconTrash style={{ width: rem(16), height: rem(16) }} stroke={1.5} />
+                }>
                 Delete account
               </Menu.Item>
             </Menu.Dropdown>
@@ -179,9 +171,8 @@ export function HeaderTabs() {
           classNames={{
             root: classes.tabs,
             list: classes.tabsList,
-            tab: classes.tab,
-          }}
-        >
+            tab: classes.tab
+          }}>
           <Tabs.List>{items}</Tabs.List>
         </Tabs>
       </Container>

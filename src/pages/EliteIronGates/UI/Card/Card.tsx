@@ -1,5 +1,6 @@
-import { SimpleGrid, Card, Image, Text, Container, AspectRatio, Button, Flex } from '@mantine/core';
-import { FC } from 'react';
+import { AspectRatio, Button, Card, Container, Flex, Image, SimpleGrid, Text } from '@mantine/core';
+import type { FC } from 'react';
+
 import classes from './Card.module.css';
 
 type CardData = {
@@ -24,8 +25,7 @@ export const ArticalCard: FC<Props> = ({ data }) => {
       radius="md"
       component="a"
       href="#"
-      className={classes.card}
-    >
+      className={classes.card}>
       <AspectRatio ratio={1920 / 1080}>
         <Image src={article.image} />
       </AspectRatio>

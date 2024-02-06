@@ -5,7 +5,7 @@ export const mockdata = [
     image: 'https://images.prom.ua/4643083809_kovani-vorota-z.jpg',
     code: 'B-01221',
     cost: '24 200',
-    date: 'August 18, 2022',
+    date: 'August 18, 2022'
   },
   {
     id: '2',
@@ -13,7 +13,7 @@ export const mockdata = [
     image: 'https://images.prom.ua/5077803389_kovani-vorota-z.jpg',
     code: 'B-0112',
     cost: '24 400',
-    date: 'August 27, 2022',
+    date: 'August 27, 2022'
   },
   {
     id: '3',
@@ -21,7 +21,7 @@ export const mockdata = [
     image: 'https://images.prom.ua/5191755770_vorota-kovani-z.jpg',
     code: 'B-0101',
     cost: '23 700',
-    date: 'September 9, 2022',
+    date: 'September 9, 2022'
   },
   {
     id: '4',
@@ -29,7 +29,7 @@ export const mockdata = [
     image: 'https://images.prom.ua/4410285717_kovani-vorota-z.jpg',
     code: 'B-0103',
     cost: '24 400',
-    date: 'September 12, 2022',
+    date: 'September 12, 2022'
   },
   {
     id: '5',
@@ -37,7 +37,7 @@ export const mockdata = [
     image: 'https://images.prom.ua/4351805732_vorota-z-profnastilom.jpg',
     code: 'B-01003  ',
     cost: '18 270',
-    date: 'September 12, 2022',
+    date: 'September 12, 2022'
   },
   {
     id: '6',
@@ -45,7 +45,7 @@ export const mockdata = [
     image: 'https://images.prom.ua/3926049107_kovani-vorota-z.jpg',
     code: 'B-0130',
     cost: '21 000 ',
-    date: 'September 12, 2022',
+    date: 'September 12, 2022'
   },
   {
     id: '7',
@@ -53,7 +53,7 @@ export const mockdata = [
     image: 'https://images.prom.ua/4410288518_kovani-vorota-z.jpg',
     code: 'B-0104',
     cost: '18 480',
-    date: 'September 12, 2022',
+    date: 'September 12, 2022'
   },
   {
     id: '8',
@@ -61,6 +61,6 @@ export const mockdata = [
     image: 'https://images.prom.ua/5077844271_kovani-vorota-z.jpg',
     code: 'B-01137',
     cost: '27 710',
-    date: 'September 12, 2022',
-  },
+    date: 'September 12, 2022'
+  }
 ];

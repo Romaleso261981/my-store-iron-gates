@@ -1,5 +1,6 @@
-import { Text, Container, ActionIcon, Group, rem } from '@mantine/core';
-import { IconBrandTwitter, IconBrandYoutube, IconBrandInstagram } from '@tabler/icons-react';
+import { ActionIcon, Container, Group, rem, Text } from '@mantine/core';
+import { IconBrandInstagram, IconBrandTwitter, IconBrandYoutube } from '@tabler/icons-react';
+
 import classes from './FooterLinks.module.css';
 
 const data = [
@@ -9,8 +10,8 @@ const data = [
       { label: 'Features', link: '#' },
       { label: 'Pricing', link: '#' },
       { label: 'Support', link: '#' },
-      { label: 'Forums', link: '#' },
-    ],
+      { label: 'Forums', link: '#' }
+    ]
   },
   {
     title: 'Project',
@@ -18,8 +19,8 @@ const data = [
       { label: 'Contribute', link: '#' },
       { label: 'Media assets', link: '#' },
       { label: 'Changelog', link: '#' },
-      { label: 'Releases', link: '#' },
-    ],
+      { label: 'Releases', link: '#' }
+    ]
   },
   {
     title: 'Community',
@@ -27,9 +28,9 @@ const data = [
       { label: 'Join Discord', link: '#' },
       { label: 'Follow on Twitter', link: '#' },
       { label: 'Email newsletter', link: '#' },
-      { label: 'GitHub discussions', link: '#' },
-    ],
-  },
+      { label: 'GitHub discussions', link: '#' }
+    ]
+  }
 ];
 
 export function FooterLinks() {
@@ -40,8 +41,7 @@ export function FooterLinks() {
         className={classes.link}
         component="a"
         href={link.link}
-        onClick={(event) => event.preventDefault()}
-      >
+        onClick={(event) => event.preventDefault()}>
         {link.label}
       </Text>
     ));
