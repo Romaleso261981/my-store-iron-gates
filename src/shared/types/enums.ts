@@ -8,6 +8,7 @@ export enum MessagesType {
   MESSAGES = 'messages'
 }
 export enum RoutersPaths {
+  MAIN = '/',
   ELITEIRONGATES = '/eliteIronGates',
   ADMIN = '/admin',
   GATEWITHCORRUGATEDBOARD = '/gateWithCorrugatedBoard',
