@@ -1,6 +1,7 @@
 import './shared/config/i18n/i18n.ts';
 import './integations/firebase.ts';
 import '@mantine/core/styles.css';
+import '@mantine/carousel/styles.css';
 
 import { StrictMode } from 'react';
 import ReactDOM from 'react-dom/client';

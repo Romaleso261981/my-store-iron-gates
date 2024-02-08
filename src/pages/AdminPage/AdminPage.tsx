@@ -1,5 +1,12 @@
-import { TableSelection } from './ui';
+import { CardsCarousel } from '@/shared/components/CardsCarousel/CardsCarousel';
+
+// import { TableSelection } from './ui';
 
 export default function AdminPage() {
-  return <TableSelection />;
+  return (
+    <>
+      {/* <TableSelection /> */}
+      <CardsCarousel />
+    </>
+  );
 }

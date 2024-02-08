@@ -9,9 +9,12 @@ export enum MessagesType {
 }
 export enum RoutersPaths {
   MAIN = '/',
-  ELITEIRONGATES = '/eliteIronGates',
+  KOVANIKOZIRKI = '/kovani-kozirki',
+  VOROTAPROFNASTILOM = '/vorota-profnastilom-kovanimi',
+  KOVANIGRATI = '/kovani-grati',
+  KOVANIZABORI = '/kovani-zabori',
+  ELITNIKOVANIVOROTA = '/elitni-kovani-vorota',
   ADMIN = '/admin',
-  GATEWITHCORRUGATEDBOARD = '/gateWithCorrugatedBoard',
   LOGIN = '/login',
   NOFOUND = '*'
 }

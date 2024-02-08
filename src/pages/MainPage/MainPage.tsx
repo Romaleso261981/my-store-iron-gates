@@ -1,17 +1,21 @@
 import '@mantine/core/styles.css';
 
-import { Center, Container, Title } from '@mantine/core';
+import { Flex } from '@mantine/core';
 import type { FC } from 'react';
 
-import styles from './Main.module.css';
+import { CardsCarousel } from '@/shared/components/CardsCarousel/CardsCarousel';
+import { ContactUs } from '@/shared/components/ContactUs/ContactUs';
+import { NavbarNested } from '@/shared/components/NavbarNested/NavbarNested';
 
 const MainPage: FC = () => {
   return (
-    <Container>
-      <Center className={styles.wrapper}>
-        <Title>MainPage</Title>
-      </Center>
-    </Container>
+    <Flex direction="column" p={20}>
+      <Flex pl={20} pr={10}>
+        <NavbarNested />
+        <CardsCarousel />
+      </Flex>
+      <ContactUs />
+    </Flex>
   );
 };
 

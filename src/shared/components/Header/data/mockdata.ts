@@ -39,3 +39,32 @@ export const mockdata = [
     description: 'Combusken battles with the intensely hot flames it spews'
   }
 ];
+
+export const tabsButtons = [
+  {
+    avatar: '',
+    path: '/vorota-profnastilom-kovanimi',
+    id: '1',
+    lable: 'Ворота з профнастилом',
+    type: 'Ворота з профнастилом'
+  },
+  {
+    avatar: '',
+    path: '/elitni-kovani-vorota',
+    id: '2',
+    lable: 'Елітні ворота',
+    type: 'Елітні ворота'
+  },
+  { avatar: '', path: '/kovani-kozirki', id: '3', lable: 'Козирки', type: 'Козирки' },
+  { avatar: '', path: '/', id: '4', lable: 'Ферми', type: 'Ферми' },
+  { avatar: '', path: '/kovani-grati', id: '5', lable: 'Грати', type: 'Грати' },
+  { avatar: '', path: '/kovani-zabori', id: '6', lable: 'Пракани', type: 'Пракани' },
+  {
+    avatar: '',
+    path: '/mongali-grili',
+    id: '7',
+    lable: 'Монгали та гриль',
+    type: 'Монгали та гриль'
+  },
+  { avatar: '', path: '/', id: '8', lable: 'Відкатні ворота', type: 'Відкатні ворота' }
+];

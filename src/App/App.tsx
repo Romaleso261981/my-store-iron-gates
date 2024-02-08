@@ -1,11 +1,11 @@
 import { MantineProvider } from '@mantine/core';
-import type react from 'react';
+import type { FC } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 
 import RootRouter from './RootRouter';
 import { myTheme } from './theme';
 
-const App: react.FC = () => {
+const App: FC = () => {
   return (
     <BrowserRouter>
       <MantineProvider theme={myTheme} defaultColorScheme="light">

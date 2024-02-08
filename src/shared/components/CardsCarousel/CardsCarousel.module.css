@@ -1,0 +1,42 @@
+.cardBox {
+  padding: 1.25rem;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+}
+
+.title {
+  font-family:
+    Greycliff CF,
+    sans-serif;
+  font-weight: 900;
+  color: var(--mantine-color-red-8);
+  line-height: 1.2;
+  font-size: rem(32px);
+  margin-top: var(--mantine-spacing-xs);
+}
+.cost {
+  font-family:
+    Greycliff CF,
+    sans-serif;
+  font-weight: 900;
+  color: var(--mantine-color-red-8);
+  line-height: 1.2;
+  font-size: rem(32px);
+}
+
+.category {
+  color: var(--mantine-color-white);
+}
+.image {
+  width: 70%;
+}
+.button {
+  margin-top: var(--mantine-spacing-xs);
+}
+
+.description {
+  left: 3.125rem;
+  bottom: 1.25rem;
+  position: absolute;
+}
