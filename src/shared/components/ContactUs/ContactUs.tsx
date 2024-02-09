@@ -26,9 +26,9 @@ export function ContactUs() {
     <div className={classes.wrapper}>
       <SimpleGrid cols={{ base: 1, sm: 2 }} spacing={50}>
         <div>
-          <Title className={classes.title}>Contact us</Title>
+          <Title className={classes.title}>Контактна особа</Title>
           <Text className={classes.description} mt="sm" mb={30}>
-            Leave your email and we will get back to you within 24 hours
+            Залиште свій Email і ми вам відпишемось на протязі години.
           </Text>
 
           <ContactIconsList />
@@ -58,7 +58,7 @@ export function ContactUs() {
           />
 
           <Group justify="flex-end" mt="md">
-            <Button className={classes.control}>Send message</Button>
+            <Button className={classes.control}>Відправити SMS</Button>
           </Group>
         </div>
       </SimpleGrid>

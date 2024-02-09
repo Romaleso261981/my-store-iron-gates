@@ -1,4 +1,4 @@
-import { Box, rem, Stack, Text } from '@mantine/core';
+import { rem, Stack, Text, ThemeIcon } from '@mantine/core';
 import { IconAt, IconMapPin, IconPhone, IconSun } from '@tabler/icons-react';
 
 import classes from './ContactIcons.module.css';
@@ -12,9 +12,9 @@ interface ContactIconProps extends Omit<React.ComponentPropsWithoutRef<'div'>, '
 function ContactIcon({ icon: Icon, title, description, ...others }: ContactIconProps) {
   return (
     <div className={classes.wrapper} {...others}>
-      <Box mr="md">
+      <ThemeIcon size={40} radius="md" className={classes.icon}>
         <Icon style={{ width: rem(24), height: rem(24) }} />
-      </Box>
+      </ThemeIcon>
 
       <div>
         <Text size="xs" className={classes.title}>
@@ -27,10 +27,10 @@ function ContactIcon({ icon: Icon, title, description, ...others }: ContactIconP
 }
 
 const MOCKDATA = [
-  { title: 'Пошта', description: 'desheva.kovka1@gmail.com', icon: IconAt },
-  { title: 'Телефон', description: '+38 096 536 41 01', icon: IconPhone },
-  { title: 'Адресса', description: 'Вінниця, Україна', icon: IconMapPin },
-  { title: 'Часи роботи', description: '8 a.m. – 11 p.m.', icon: IconSun }
+  { title: 'Email', description: 'hello@mantine.dev', icon: IconAt },
+  { title: 'Phone', description: '+49 (800) 335 35 35', icon: IconPhone },
+  { title: 'Address', description: '844 Morris Park avenue', icon: IconMapPin },
+  { title: 'Working hours', description: '8 a.m. – 11 p.m.', icon: IconSun }
 ];
 
 export function ContactIconsList() {

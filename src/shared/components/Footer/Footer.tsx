@@ -1,13 +1,14 @@
-import { ActionIcon, Container, Group, rem, Text } from '@mantine/core';
+import { ActionIcon, Box, Container, Group, rem, Text } from '@mantine/core';
+import { MantineLogo } from '@mantinex/mantine-logo';
 import { IconBrandInstagram, IconBrandTwitter, IconBrandYoutube } from '@tabler/icons-react';
 
 import classes from './FooterLinks.module.css';
 
 const data = [
   {
-    title: 'About',
+    title: 'Про нас',
     links: [
-      { label: 'Features', link: '#' },
+      { label: 'Телефон ', link: '#' },
       { label: 'Pricing', link: '#' },
       { label: 'Support', link: '#' },
       { label: 'Forums', link: '#' }
@@ -47,22 +48,23 @@ export function FooterLinks() {
     ));
 
     return (
-      <div className={classes.wrapper} key={group.title}>
+      <Box className={classes.wrapper} key={group.title}>
         <Text className={classes.title}>{group.title}</Text>
         {links}
-      </div>
+      </Box>
     );
   });
 
   return (
     <footer className={classes.footer}>
       <Container className={classes.inner}>
-        <div className={classes.logo}>
+        <Box className={classes.logo}>
+          <MantineLogo size={30} />
           <Text size="xs" c="dimmed" className={classes.description}>
             Build fully functional accessible web applications faster than ever
           </Text>
-        </div>
-        <div className={classes.groups}>{groups}</div>
+        </Box>
+        <Box className={classes.groups}>{groups}</Box>
       </Container>
       <Container className={classes.afterFooter}>
         <Text c="dimmed" size="sm">

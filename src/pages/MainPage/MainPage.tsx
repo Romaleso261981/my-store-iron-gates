@@ -3,9 +3,9 @@ import '@mantine/core/styles.css';
 import { Flex } from '@mantine/core';
 import type { FC } from 'react';
 
-import { CardsCarousel } from '@/shared/components/CardsCarousel/CardsCarousel';
-import { ContactUs } from '@/shared/components/ContactUs/ContactUs';
-import { NavbarNested } from '@/shared/components/NavbarNested/NavbarNested';
+import { CardsCarousel, ContactUs, NavbarNested, StatsGrid } from '@/shared/components';
+import { CommentHtml } from '@/shared/components/CommentHtml/CommentHtml';
+import { FaqWithHeader } from '@/shared/components/FaqWithHeader/FaqWithHeader';
 
 const MainPage: FC = () => {
   return (
@@ -14,6 +14,9 @@ const MainPage: FC = () => {
         <NavbarNested />
         <CardsCarousel />
       </Flex>
+      <StatsGrid />
+      <FaqWithHeader />
+      <CommentHtml />
       <ContactUs />
     </Flex>
   );

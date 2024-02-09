@@ -8,6 +8,10 @@ import { Layout } from './layout';
 
 const AuthPage = lazy(() => import('../pages/AuthPage/AuthPage'));
 const MainPage = lazy(() => import('../pages/MainPage/MainPage'));
+const PricingPage = lazy(() => import('../pages/PricingPage/PricingPage'));
+const CommunityPage = lazy(() => import('../pages/CommunityPage/CommunityPage'));
+const AdressPage = lazy(() => import('../pages/AdressPage/AdressPage'));
+const AboutPage = lazy(() => import('../pages/AboutPage/AboutPage'));
 const AdminPage = lazy(() => import('../pages/AdminPage/AdminPage'));
 const NotFound = lazy(() => import('../pages/Error-404/Error-404'));
 const GateWithCorrugatedBoard = lazy(
@@ -23,6 +27,10 @@ export default function RootRouter() {
         <Route path={RoutersPaths.ADMIN} element={<AdminPage />} />
         <Route element={<Layout />}>
           <Route path={RoutersPaths.MAIN} element={<MainPage />} />
+          <Route path={RoutersPaths.ABOUT} element={<AboutPage />} />
+          <Route path={RoutersPaths.ADRESS} element={<AdressPage />} />
+          <Route path={RoutersPaths.COMMUNITY} element={<CommunityPage />} />
+          <Route path={RoutersPaths.PRICING} element={<PricingPage />} />
           <Route path={RoutersPaths.VOROTAPROFNASTILOM} element={<GateWithCorrugatedBoard />} />
           <Route path={RoutersPaths.ELITNIKOVANIVOROTA} element={<EliteIronGates />} />
           <Route path={RoutersPaths.NOFOUND} element={<NotFound />} />
