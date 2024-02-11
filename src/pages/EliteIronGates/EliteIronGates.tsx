@@ -1,4 +1,5 @@
-import { ArticalCard } from '../GateWithCorrugatedBoard/UI/Card/ArticalCard';
+import { ArticalCard } from '@/shared/components/ArticalCard/ArticalCard';
+
 import { mockdata } from './mockdata';
 
 export default function EliteIronGates() {

@@ -8,7 +8,7 @@ type CardData = {
   title: string;
   image: string;
   code: string;
-  cost: string;
+  cost: number;
   date: string;
 };
 
