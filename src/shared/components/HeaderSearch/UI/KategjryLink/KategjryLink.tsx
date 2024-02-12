@@ -1,8 +1,6 @@
 import { Group, Menu, rem, Text, UnstyledButton } from '@mantine/core';
 import { IconChevronDown } from '@tabler/icons-react';
-import cx from 'clsx';
 import type { FC } from 'react';
-import { useState } from 'react';
 
 import classes from './KategjryLink.module.css';
 
@@ -10,8 +8,7 @@ const links2 = [
   { id: '1', path: '/vorota-profnastilom-kovanimi', label: 'Ворота з профнастилом' },
   { id: '2', path: '/elitni-kovani-vorota', label: 'Елітні ворота' },
   { id: '3', path: '/kovani-kozirki', label: 'Козирки' },
-  { id: '4', path: '/adress', label: 'kovani-grati' },
-  { id: '5', path: '/community', label: 'kovani-grati' }
+  { id: '4', path: '/kovani-grati', label: 'Ковані грати' }
 ];
 
 const items = links2.map((link) => (
@@ -25,17 +22,17 @@ type Props = {
 };
 
 export const KategjryLink: FC<Props> = ({ title }) => {
-  const [userMenuOpened, setUserMenuOpened] = useState(false);
   return (
     <Menu
       width={260}
       position="bottom-end"
-      transitionProps={{ transition: 'pop-top-right' }}
-      onClose={() => setUserMenuOpened(false)}
-      onOpen={() => setUserMenuOpened(true)}
+      transitionProps={{ transition: 'pop-top-right', duration: 400 }}
+      trigger="hover"
+      openDelay={100}
+      closeDelay={50}
       withinPortal>
       <Menu.Target>
-        <UnstyledButton className={cx(classes.user, { [classes.userActive]: userMenuOpened })}>
+        <UnstyledButton className={classes.user}>
           <Group gap={7}>
             <Text fw={500} size="sm" lh={1} mr={3}>
               {title}

@@ -4,6 +4,7 @@ import { Outlet } from 'react-router-dom';
 import { FooterLinks } from '@/shared/components';
 import Breadcrumbs from '@/shared/components/breadcrumbs/Breadcrumbs';
 import { HeaderSearch } from '@/shared/components/HeaderSearch/HeaderSearch';
+import ScrollToTop from '@/shared/components/ScrollToTop/ScrollToTop';
 
 import s from './App.module.css';
 
@@ -24,6 +25,7 @@ export function Layout() {
       <Box>
         <FooterLinks />
       </Box>
+      <ScrollToTop />
     </Flex>
   );
 }
