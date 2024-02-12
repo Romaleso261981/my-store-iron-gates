@@ -12,8 +12,35 @@
   font-family: 'Greycliff CF', var(--mantine-font-family);
   font-weight: bold;
 }
-.cost {
+.oldCostWrapper {
+  text-decoration: line-through;
+}
+.oldCostTitle {
+  font-size: large;
+  font-weight: 500;
+  color: #0933ed;
+}
+.oldCost {
+  font-size: 25px;
+  font-weight: 700;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: rgb(55, 59, 56);
+  text-decoration: solid;
+}
+.newCostWrapper {
+}
+.newCost {
   font-size: 40px;
   font-weight: 900;
-  color: red;
+  color: rgb(255, 0, 0);
+}
+.newCostTitle {
+  font-size: large;
+  font-weight: 700;
+  color: rgb(255, 0, 0);
+}
+.newCostUnion {
+  margin-bottom: 10px;
+  font-size: larger;
+  color: #070707;
 }

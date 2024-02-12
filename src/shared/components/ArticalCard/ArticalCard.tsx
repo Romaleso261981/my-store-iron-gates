@@ -1,6 +1,9 @@
 import { AspectRatio, Button, Card, Container, Flex, Image, SimpleGrid, Text } from '@mantine/core';
 import type { FC } from 'react';
 
+const oldKoef = 1;
+const newKoef = 0.9;
+
 import classes from './ArticalCard.module.css';
 
 type CardData = {
@@ -40,9 +43,24 @@ export const ArticalCard: FC<Props> = ({ data }) => {
           {`${article.code}`}
         </Text>
       </Flex>
-      <Text className={classes.cost} mt={5}>
-        {`${article.cost} грн`}
-      </Text>
+      <Flex className={classes.oldCostWrapper} direction="column">
+        <Text className={classes.oldCostTitle}>Стара ціна</Text>
+        <Flex direction="row" justify="flex-start" align="flex-end">
+          <Text className={classes.oldCost} mr={20}>
+            {(article.cost * oldKoef).toFixed(1)}
+          </Text>
+          <Text className={classes.oldCostUnion}>грн</Text>
+        </Flex>
+      </Flex>
+      <Flex direction="column" className={classes.newCostWrapper}>
+        <Text className={classes.newCostTitle}>Акційна пропозиція</Text>
+        <Flex direction="row" justify="flex-start" align="flex-end">
+          <Text className={classes.newCost} mr={20}>
+            {(article.cost * newKoef).toFixed(1)}
+          </Text>
+          <Text className={classes.newCostUnion}>грн</Text>
+        </Flex>
+      </Flex>
       <Text className={classes.title} mt={5}>
         {article.title}
       </Text>
