@@ -16,10 +16,11 @@ type CardData = {
 };
 
 type Props = {
+  type?: string;
   data: CardData[];
 };
 
-export const ArticalCard: FC<Props> = ({ data }) => {
+export const ArticalCard: FC<Props> = ({ data, type }) => {
   const cards = data.map((article) => (
     <Card
       shadow="lg"
@@ -49,7 +50,9 @@ export const ArticalCard: FC<Props> = ({ data }) => {
           <Text className={classes.oldCost} mr={20}>
             {(article.cost * oldKoef).toFixed(1)}
           </Text>
-          <Text className={classes.oldCostUnion}>грн</Text>
+          <Text className={classes.oldCostUnion}>
+            {type === 'eliteIronGate' ? 'грн/м2' : 'грн'}
+          </Text>
         </Flex>
       </Flex>
       <Flex direction="column" className={classes.newCostWrapper}>
@@ -58,13 +61,17 @@ export const ArticalCard: FC<Props> = ({ data }) => {
           <Text className={classes.newCost} mr={20}>
             {(article.cost * newKoef).toFixed(1)}
           </Text>
-          <Text className={classes.newCostUnion}>грн</Text>
+          <Text className={classes.newCostUnion}>
+            {type === 'eliteIronGate' ? 'грн/м2' : 'грн'}
+          </Text>
         </Flex>
       </Flex>
       <Text className={classes.title} mt={5}>
         {article.title}
       </Text>
-      <Button variant="filled">Замовити</Button>
+      <Button onClick={() => alert(`Ви замовили товар ${article.code}`)} variant="filled">
+        Замовити
+      </Button>
     </Card>
   ));
   return (
