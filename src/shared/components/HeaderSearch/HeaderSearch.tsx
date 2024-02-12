@@ -2,6 +2,7 @@ import { Autocomplete, Box, Burger, Group, rem } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import { IconSearch } from '@tabler/icons-react';
 
+import MainLogo from '../MainLogo/MainLogo';
 // import logo from '../../../App/access/desheva-Kovka/desheva-kovka-logo.webp';
 import classes from './HeaderSearch.module.css';
 
@@ -26,6 +27,7 @@ export function HeaderSearch() {
       <div className={classes.inner}>
         <Group>
           <Burger opened={opened} onClick={toggle} size="sm" hiddenFrom="sm" />
+          <MainLogo />
         </Group>
         <Group>
           <Group ml={50} gap={15} className={classes.links} visibleFrom="sm">
