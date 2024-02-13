@@ -8,8 +8,6 @@ export default function Breadcrumbs() {
       <KategjryLink title="Головна" />
       <KategjryLink title="Товари" />
       <KategjryLink title="Ковані вироби" />
-      <KategjryLink title="Елементи" />
-      <KategjryLink title="Галерея" />
     </Flex>
   );
 }

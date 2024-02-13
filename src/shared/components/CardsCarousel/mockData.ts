@@ -40,7 +40,7 @@ export const mockdata = [
   {
     id: '1',
     title: 'КОВАНІ ВОРОТА З ПРОФНАСТИЛОМ ТА КОВАНИМИ І ЕЛЕМЕНТАМИ',
-    image: 'https://images.prom.ua/4643083809_kovani-vorota-z.jpg',
+    image: 'https://images.prom.ua/2806183699_2806183699.jpg',
     code: 'B-01221',
     cost: '24 200',
     date: 'August 18, 2022'
@@ -48,7 +48,7 @@ export const mockdata = [
   {
     id: '2',
     title: 'КОВАНІ ВОРОТА З ПРОФНАСТИЛОМ ТА КОВАНИМИ І ЕЛЕМЕНТАМИ',
-    image: 'https://images.prom.ua/5077803389_kovani-vorota-z.jpg',
+    image: 'https://images.prom.ua/2806138159_2806138159.jpg',
     code: 'B-0112',
     cost: '24 400',
     date: 'August 27, 2022'
@@ -56,7 +56,7 @@ export const mockdata = [
   {
     id: '3',
     title: 'КОВАНІ ВОРОТА З ПРОФНАСТИЛОМ ТА КОВАНИМИ І ЕЛЕМЕНТАМИ',
-    image: 'https://images.prom.ua/5191755770_vorota-kovani-z.jpg',
+    image: 'https://images.prom.ua/2810656459_2810656459.jpg',
     code: 'B-0101',
     cost: '23 700',
     date: 'September 9, 2022'
@@ -64,7 +64,7 @@ export const mockdata = [
   {
     id: '4',
     title: 'КОВАНІ ВОРОТА З ПРОФНАСТИЛОМ ТА КОВАНИМИ І ЕЛЕМЕНТАМИ',
-    image: 'https://images.prom.ua/4410285717_kovani-vorota-z.jpg',
+    image: 'https://images.prom.ua/3754838004_3754838004.jpg',
     code: 'B-0103',
     cost: '24 400',
     date: 'September 12, 2022'
@@ -72,7 +72,7 @@ export const mockdata = [
   {
     id: '5',
     title: 'КОВАНІ ВОРОТА З ПРОФНАСТИЛОМ ТА КОВАНИМИ І ЕЛЕМЕНТАМИ',
-    image: 'https://images.prom.ua/4351805732_vorota-z-profnastilom.jpg',
+    image: 'https://images.prom.ua/3264470453_3264470453.jpg',
     code: 'B-01003  ',
     cost: '18 270',
     date: 'September 12, 2022'
@@ -80,7 +80,7 @@ export const mockdata = [
   {
     id: '6',
     title: 'КОВАНІ ВОРОТА З ПРОФНАСТИЛОМ ТА КОВАНИМИ І ЕЛЕМЕНТАМИ',
-    image: 'https://images.prom.ua/3926049107_kovani-vorota-z.jpg',
+    image: 'https://images.prom.ua/2806183699_2806183699.jpg',
     code: 'B-0130',
     cost: '21 000 ',
     date: 'September 12, 2022'
@@ -88,7 +88,7 @@ export const mockdata = [
   {
     id: '7',
     title: 'КОВАНІ ВОРОТА З ПРОФНАСТИЛОМ ТА КОВАНИМИ І ЕЛЕМЕНТАМИ',
-    image: 'https://images.prom.ua/4410288518_kovani-vorota-z.jpg',
+    image: 'https://images.prom.ua/2332731040_2332731040.jpg',
     code: 'B-0104',
     cost: '18 480',
     date: 'September 12, 2022'
@@ -96,7 +96,31 @@ export const mockdata = [
   {
     id: '8',
     title: 'КОВАНІ ВОРОТА З ПРОФНАСТИЛОМ ТА КОВАНИМИ І ЕЛЕМЕНТАМИ',
-    image: 'https://images.prom.ua/5077844271_kovani-vorota-z.jpg',
+    image: 'https://images.prom.ua/2332728868_2332728868.jpg',
+    code: 'B-01137',
+    cost: '27 710',
+    date: 'September 12, 2022'
+  },
+  {
+    id: '8',
+    title: 'КОВАНІ ВОРОТА З ПРОФНАСТИЛОМ ТА КОВАНИМИ І ЕЛЕМЕНТАМИ',
+    image: 'https://images.prom.ua/3264305141_3264305141.jpg',
+    code: 'B-01137',
+    cost: '27 710',
+    date: 'September 12, 2022'
+  },
+  {
+    id: '8',
+    title: 'КОВАНІ ВОРОТА З ПРОФНАСТИЛОМ ТА КОВАНИМИ І ЕЛЕМЕНТАМИ',
+    image: 'https://images.prom.ua/2806183699_2806183699.jpg',
+    code: 'B-01137',
+    cost: '27 710',
+    date: 'September 12, 2022'
+  },
+  {
+    id: '8',
+    title: 'КОВАНІ ВОРОТА З ПРОФНАСТИЛОМ ТА КОВАНИМИ І ЕЛЕМЕНТАМИ',
+    image: 'https://images.prom.ua/2810656459_2810656459.jpg',
     code: 'B-01137',
     cost: '27 710',
     date: 'September 12, 2022'

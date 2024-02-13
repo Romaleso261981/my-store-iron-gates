@@ -1,4 +1,13 @@
-import { Avatar, Box, Flex, Group, Paper, Text, TypographyStylesProvider } from '@mantine/core';
+import {
+  Avatar,
+  Box,
+  Container,
+  Flex,
+  Group,
+  Paper,
+  Text,
+  TypographyStylesProvider
+} from '@mantine/core';
 
 import classes from './CommentHtml.module.css';
 
@@ -56,8 +65,8 @@ const comments = mocData.map((moc) => (
 
 export function CommentHtml() {
   return (
-    <Flex m="sm" mb="50" direction="row" justify="space-between">
-      {comments}
-    </Flex>
+    <Container>
+      <Flex className={classes.commentsWrapper}>{comments}</Flex>
+    </Container>
   );
 }

@@ -56,7 +56,10 @@ export const ArticalCard: FC<Props> = ({ data, type }) => {
         </Flex>
       </Flex>
       <Flex direction="column" className={classes.newCostWrapper}>
-        <Text className={classes.newCostTitle}>Акційна пропозиція</Text>
+        <Text
+          className={
+            classes.newCostTitle
+          }>{`Акційна пропозиція знижка ${newKoef * 100 - 100} %`}</Text>
         <Flex direction="row" justify="flex-start" align="flex-end">
           <Text className={classes.newCost} mr={20}>
             {(article.cost * newKoef).toFixed(1)}
@@ -75,7 +78,7 @@ export const ArticalCard: FC<Props> = ({ data, type }) => {
     </Card>
   ));
   return (
-    <Container py="xl">
+    <Container size="md">
       <SimpleGrid cols={{ base: 1, sm: 2 }}>{cards}</SimpleGrid>
     </Container>
   );

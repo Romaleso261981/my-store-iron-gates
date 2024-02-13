@@ -1,4 +1,4 @@
-import { Group, Paper, SimpleGrid, Text } from '@mantine/core';
+import { Container, Group, Paper, SimpleGrid, Text } from '@mantine/core';
 import {
   IconArrowDownRight,
   IconArrowUpRight,
@@ -53,8 +53,10 @@ export function StatsGrid() {
     );
   });
   return (
-    <div className={classes.root}>
-      <SimpleGrid cols={{ base: 1, xs: 2, md: 4 }}>{stats}</SimpleGrid>
-    </div>
+    <Container>
+      <div className={classes.root}>
+        <SimpleGrid cols={{ base: 1, xs: 2, md: 4 }}>{stats}</SimpleGrid>
+      </div>
+    </Container>
   );
 }

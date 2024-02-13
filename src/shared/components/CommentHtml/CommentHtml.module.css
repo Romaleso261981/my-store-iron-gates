@@ -7,3 +7,18 @@
   padding-top: var(--mantine-spacing-sm);
   font-size: var(--mantine-font-size-sm);
 }
+
+.commentsWrapper {
+  flex-direction: row;
+  gap: 10px;
+  justify-content: space-between;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
+@media (max-width: 320px) {
+  .commentsWrapper {
+    display: flex;
+    flex-direction: column;
+  }
+}
