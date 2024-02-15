@@ -13,6 +13,7 @@ const PricingPage = lazy(() => import('../pages/PricingPage/PricingPage'));
 const CommunityPage = lazy(() => import('../pages/CommunityPage/CommunityPage'));
 const AdressPage = lazy(() => import('../pages/AdressPage/AdressPage'));
 const AboutPage = lazy(() => import('../pages/AboutPage/AboutPage'));
+const CardDetail = lazy(() => import('../pages/CardDetail/CardDetail'));
 const AdminPage = lazy(() => import('../pages/AdminPage/AdminPage'));
 const NotFound = lazy(() => import('../pages/Error-404/Error-404'));
 const GateWithCorrugatedBoard = lazy(
@@ -29,6 +30,7 @@ export default function RootRouter() {
         <Route element={<Layout />}>
           <Route path={RoutersPaths.MAIN} element={<MainPage />} />
           <Route path={RoutersPaths.ABOUT} element={<AboutPage />} />
+          <Route path={RoutersPaths.CARDDETAIL} element={<CardDetail />} />
           <Route path={RoutersPaths.ADRESS} element={<AdressPage />} />
           <Route path={RoutersPaths.COMMUNITY} element={<CommunityPage />} />
           <Route path={RoutersPaths.PRICING} element={<PricingPage />} />

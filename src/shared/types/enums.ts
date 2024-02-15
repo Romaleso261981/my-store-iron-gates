@@ -10,6 +10,7 @@ export enum MessagesType {
 export enum RoutersPaths {
   MAIN = '/',
   ABOUT = '/about',
+  CARDDETAIL = '/:id',
   PRICING = '/pricing',
   ADRESS = '/adress',
   COMMUNITY = '/community',

@@ -4,6 +4,8 @@ import type { FC } from 'react';
 const oldKoef = 1;
 const newKoef = 0.9;
 
+import { useNavigate } from 'react-router-dom';
+
 import classes from './ArticalCard.module.css';
 
 type CardData = {
@@ -21,6 +23,10 @@ type Props = {
 };
 
 export const ArticalCard: FC<Props> = ({ data, type }) => {
+  const navigate = useNavigate();
+  const cardDetail = (id: string) => {
+    navigate(`${id}`);
+  };
   const cards = data.map((article) => (
     <Card
       shadow="lg"
@@ -72,7 +78,7 @@ export const ArticalCard: FC<Props> = ({ data, type }) => {
       <Text className={classes.title} mt={5}>
         {article.title}
       </Text>
-      <Button onClick={() => alert(`Ви замовили товар ${article.code}`)} variant="filled">
+      <Button onClick={() => cardDetail(article.id)} variant="filled">
         Замовити
       </Button>
     </Card>
