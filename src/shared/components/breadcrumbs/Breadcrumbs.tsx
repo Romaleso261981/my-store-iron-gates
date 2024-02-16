@@ -7,7 +7,7 @@ export default function Breadcrumbs() {
     <Flex gap={20} justify="space-around">
       <KategjryLink title="Головна" />
       <KategjryLink title="Товари" />
-      <KategjryLink title="Ковані вироби" />
+      <KategjryLink title="Ковані грати" />
     </Flex>
   );
 }

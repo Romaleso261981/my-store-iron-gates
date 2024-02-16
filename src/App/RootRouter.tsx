@@ -1,13 +1,14 @@
 import { lazy, Suspense } from 'react';
 import { Route, Routes } from 'react-router-dom';
 
-import KozirkiPage from '@/pages/KozirkiPage/KozirkiPage';
 import { Spiner } from '@/shared/components/Loader/Loader';
 import { RoutersPaths } from '@/shared/types/enums';
 
 import { Layout } from './layout';
 
 const AuthPage = lazy(() => import('../pages/AuthPage/AuthPage'));
+const KovaniGrati = lazy(() => import('../pages/KovaniGrati/KovaniGrati'));
+const KozirkiPage = lazy(() => import('../pages/KozirkiPage/KozirkiPage'));
 const MainPage = lazy(() => import('../pages/MainPage/MainPage'));
 const PricingPage = lazy(() => import('../pages/PricingPage/PricingPage'));
 const CommunityPage = lazy(() => import('../pages/CommunityPage/CommunityPage'));
@@ -36,6 +37,7 @@ export default function RootRouter() {
           <Route path={RoutersPaths.PRICING} element={<PricingPage />} />
           <Route path={RoutersPaths.VOROTAPROFNASTILOM} element={<GateWithCorrugatedBoard />} />
           <Route path={RoutersPaths.KOVANIKOZIRKI} element={<KozirkiPage />} />
+          <Route path={RoutersPaths.KOVANIGRATI} element={<KovaniGrati />} />
           <Route path={RoutersPaths.ELITNIKOVANIVOROTA} element={<EliteIronGates />} />
           <Route path={RoutersPaths.NOFOUND} element={<NotFound />} />
         </Route>
