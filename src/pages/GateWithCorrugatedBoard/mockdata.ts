@@ -846,5 +846,149 @@ export const mockdata = [
     cost: 43500,
     category: 'vorotaWithProfnastilom',
     date: 'September 12, 2022'
+  },
+  {
+    id: '93',
+    title: 'ВОРОТА З ВСТРОЄНОЮ ХВІРТКОЮ ТА ПРОФНАСТИЛОМ',
+    image: 'https://images.prom.ua/4351930960_vorota-z-vstroyenoyu.jpg',
+    code: 'A-0149',
+    cost: 29000,
+    category: 'vorotaWithProfnastilom',
+    date: 'September 12, 2022'
+  },
+  {
+    id: '94',
+    title: 'ВОРОТА З ПРОФНАСТИЛОМ ТА КОВАНИМИ ЕЛЕМЕНТАМИ',
+    image: 'https://images.prom.ua/2513145154_vorota-z-profnastilom.jpg',
+    code: 'A-0160',
+    cost: 31900,
+    category: 'vorotaWithProfnastilom',
+    date: 'September 12, 2022'
+  },
+  {
+    id: '95',
+    title: 'КОВАНІ ВОРОТА З ПРОФНАСТИЛОМ ТА КОВАНИМИ ЕЛЕМЕНТАМИ',
+    image: 'https://images.prom.ua/3289467295_kovani-vorota-z.jpg',
+    code: 'A-01141',
+    cost: 31100,
+    category: 'vorotaWithProfnastilom',
+    date: 'September 12, 2022'
+  },
+  {
+    id: '96',
+    title: 'ВОРОТА КОВАНІ З ПРОФНАСТИЛОМ',
+    image: 'https://images.prom.ua/2513729902_vorota-kovani-z.jpg',
+    code: 'A-01168',
+    cost: 39200,
+    category: 'vorotaWithProfnastilom',
+    date: 'September 12, 2022'
+  },
+  {
+    id: '97',
+    title: 'КОВАНІ ВОРОТА З ЗОВНІШНЬОЮ ХВІРТКОЮ ТА ПРОФНАСТИЛОМ',
+    image: 'https://images.prom.ua/2520540027_kovani-vorota-z.jpg',
+    code: 'A-01119',
+    cost: 32900,
+    category: 'vorotaWithProfnastilom',
+    date: 'September 12, 2022'
+  },
+  {
+    id: '98',
+    title: 'КОВАНІ ВОРОТА З ПРОФНАСТИЛОМ',
+    image: 'https://images.prom.ua/3800905722_kovani-vorota-z.jpg',
+    code: 'A-01218',
+    cost: 44700,
+    category: 'vorotaWithProfnastilom',
+    date: 'September 12, 2022'
+  },
+  {
+    id: '99',
+    title: 'КОВАНІ ВОРОТА З ПРОФНАСТИЛОМ',
+    image: 'https://images.prom.ua/4684228396_kovani-vorota-z.jpg',
+    code: 'A-01150',
+    cost: 32900,
+    category: 'vorotaWithProfnastilom',
+    date: 'September 12, 2022'
+  },
+  {
+    id: '100',
+    title: 'КОВАНІ ВОРОТА З ХУДОЖНЬОЮ КОВКОЮ ТА ПРОФНАСТИЛОМ',
+    image: 'https://images.prom.ua/2513742143_kovani-vorota-z.jpg',
+    code: 'A-0161',
+    cost: 31900,
+    category: 'vorotaWithProfnastilom',
+    date: 'September 12, 2022'
+  },
+  {
+    id: '101',
+    title: 'ВОРОТА З ЗОВНІШНЬОЮ ХВІРТКОЮ ТА КОВАНИМИ ЕЛЕМЕНТАМИ',
+    image: 'https://images.prom.ua/3289446658_vorota-z-zovnishnoyu.jpg',
+    code: 'A-01142',
+    cost: 27090,
+    category: 'vorotaWithProfnastilom',
+    date: 'September 12, 2022'
+  },
+  {
+    id: '102',
+    title: 'КОВАНІ ВОРОТА З ПРОФНАСТИЛОМ',
+    image: 'https://images.prom.ua/3289463348_kovani-vorota-z.jpg',
+    code: 'A-01143',
+    cost: 31700,
+    category: 'vorotaWithProfnastilom',
+    date: 'September 12, 2022'
+  },
+  {
+    id: '103',
+    title: 'КОВАНІ ВОРОТА З ПРОФНАСТИЛОМ І КОВКОЮ',
+    image: 'https://images.prom.ua/1754077112_kovani-vorota-z.jpg',
+    code: 'A-01151',
+    cost: 52700,
+    category: 'vorotaWithProfnastilom',
+    date: 'September 12, 2022'
+  },
+  {
+    id: '104',
+    title: 'КОВАНІ ВОРОТА З ПРОФНАСТИЛОМ ТА ХВІРТКОЮ',
+    image: 'https://images.prom.ua/2521457358_kovani-vorota-z.jpg',
+    code: 'A-01159',
+    cost: 34800,
+    category: 'vorotaWithProfnastilom',
+    date: 'September 12, 2022'
+  },
+  {
+    id: '105',
+    title: 'КОВАНІ ВОРОТА З ЗОВНІШНЬОЮ ХВІРТКОЮ ТА ПРОФНАСТИЛОМ',
+    image: 'https://images.prom.ua/1778616770_kovani-vorota-z.jpg',
+    code: 'A-0178',
+    cost: 25560,
+    category: 'vorotaWithProfnastilom',
+    date: 'September 12, 2022'
+  },
+  {
+    id: '106',
+    title: 'КОВАНІ ВОРОТА З ХВІРТКОЮ ТА ПРОФНАСТИЛОМ',
+    image: 'https://images.prom.ua/2521447234_kovani-vorota-z.jpg',
+    code: 'A-01152',
+    cost: 39200,
+    category: 'vorotaWithProfnastilom',
+    date: 'September 12, 2022'
+  },
+  {
+    id: '107',
+    title: 'КОВАНІ РОЗПАШНІ ВОРОТА З ПРОФНАСТИЛОМ',
+    image: 'https://images.prom.ua/1778618990_kovani-rozpashni-vorota.jpg',
+    code: 'A-0179',
+    cost: 29000,
+    category: 'vorotaWithProfnastilom',
+    date: 'September 12, 2022'
+  },
+  {
+    id: '108',
+    title: 'РОЗПАШНІ ВОРОТА З ХВІРТКОЮ ТА ПРОФНАСТИЛОМ',
+    image: 'https://images.prom.ua/2513740870_rozpashni-vorota-z.jpg',
+    code: 'A-0162',
+    cost: 31700,
+    category: 'vorotaWithProfnastilom',
+    date: 'September 12, 2022'
   }
 ];
