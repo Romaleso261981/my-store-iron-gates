@@ -10,7 +10,6 @@ import { mockdata } from './mockData';
 export function CardsCarousel() {
   const theme = useMantineTheme();
   const mobile = useMediaQuery(`(max-width: ${theme.breakpoints.sm})`);
-  console.log(mobile);
   const autoplay = useRef(Autoplay({ delay: 10000 }));
   const slides = mockdata.map((url) => (
     <Carousel.Slide key={url.id}>
@@ -20,6 +19,7 @@ export function CardsCarousel() {
 
   return (
     <Container size="md">
+      {mobile && <h1>Мобільна версія</h1>}
       <Flex className={s.carouselWrapper}>
         <Carousel
           plugins={[autoplay.current]}

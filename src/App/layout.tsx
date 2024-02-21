@@ -10,7 +10,6 @@ import ScrollToTop from '@/shared/components/ScrollToTop/ScrollToTop';
 import s from './App.module.css';
 
 export function Layout() {
-  console.log('Layout');
   return (
     <Flex justify="space-between" className={s.layoutWrapper} display="-ms-grid" direction="column">
       <Box mb={60}>
