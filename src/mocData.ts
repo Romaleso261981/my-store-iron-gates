@@ -1,4 +1,638 @@
-export const mockdata = [
+export const productsGroup = [
+  {
+    id: '1',
+    title: 'КОВАНІ ВОРОТА З ПРОФНАСТИЛОМ ТА ЕЛЕМЕНТАМИ КОВКИ',
+    image: 'https://images.prom.ua/5077792165_kovani-vorota-z.jpg',
+    code: 'З-0101',
+    cost: 1,
+    category: 'kovanye-vorota-profnastila',
+    date: 'August 18, 2022'
+  },
+  {
+    id: '2',
+    title: 'ВОРОТА КОВАНІ РОЗПАШНІ З ЕЛЕМЕНТАМИ КОВКИ ',
+    image: 'https://images.prom.ua/5125569884_vorota-kovani-rozpashni.jpg',
+    code: 'З-0102',
+    cost: 1,
+    category: 'vorota-kovani-rozpashni',
+    date: 'August 27, 2022'
+  },
+  {
+    id: '3',
+    title: 'КОВАНІ КОЗИРКИ',
+    image: 'https://images.prom.ua/5125569884_vorota-kovani-rozpashni.jpg',
+    code: 'З-0103',
+    cost: 1,
+    category: 'kovaniGrati',
+    date: 'September 9, 2022'
+  },
+  {
+    id: '4',
+    title: 'КОВАНІ КОЗИРКИ',
+    image: 'https://images.prom.ua/4643083809_kovani-vorota-z.jpg',
+    code: 'З-0104',
+    cost: 1,
+    category: 'kovaniGrati',
+    date: 'September 12, 2022'
+  },
+  {
+    id: '5',
+    title: 'КОВАНИЙ ЗАБОР',
+    image: 'https://images.prom.ua/1612796544_kovanij-zabor.jpg',
+    code: 'З-0105',
+    cost: 1,
+    category: 'kovaniGrati',
+    date: 'September 12, 2022'
+  },
+  {
+    id: '6',
+    title: 'КОВАНІ КОЗИРКИ',
+    image: 'https://images.prom.ua/1614752939_kovani-kozirki.jpg',
+    code: 'З-0106',
+    cost: 1,
+    category: 'kovaniGrati',
+    date: 'September 12, 2022'
+  }
+];
+
+export const mockdataKozirki = [
+  {
+    id: '1',
+    title: 'КОВАНІ КОЗИРКИ',
+    image: 'https://images.prom.ua/1614744006_kovani-kozirki.jpg',
+    code: 'З-0101',
+    cost: 1,
+    category: 'kovaniGrati',
+    date: 'August 18, 2022'
+  },
+  {
+    id: '2',
+    title: 'КОВАНІ КОЗИРКИ',
+    image: 'https://images.prom.ua/1614748280_kovani-kozirki.jpg',
+    code: 'З-0102',
+    cost: 1,
+    category: 'kovaniGrati',
+    date: 'August 27, 2022'
+  },
+  {
+    id: '3',
+    title: 'КОВАНІ КОЗИРКИ',
+    image: 'https://images.prom.ua/1614749468_kovani-kozirki.jpg',
+    code: 'З-0103',
+    cost: 1,
+    category: 'kovaniGrati',
+    date: 'September 9, 2022'
+  },
+  {
+    id: '4',
+    title: 'КОВАНІ КОЗИРКИ',
+    image: 'https://images.prom.ua/1614750215_kovani-kozirki.jpg',
+    code: 'З-0104',
+    cost: 1,
+    category: 'kovaniGrati',
+    date: 'September 12, 2022'
+  },
+  {
+    id: '5',
+    title: 'КОВАНІ КОЗИРКИ',
+    image: 'https://images.prom.ua/1614751247_kovani-kozirki.jpg',
+    code: 'З-0105',
+    cost: 1,
+    category: 'kovaniGrati',
+    date: 'September 12, 2022'
+  },
+  {
+    id: '6',
+    title: 'КОВАНІ КОЗИРКИ',
+    image: 'https://images.prom.ua/1614752939_kovani-kozirki.jpg',
+    code: 'З-0106',
+    cost: 1,
+    category: 'kovaniGrati',
+    date: 'September 12, 2022'
+  },
+  {
+    id: '7',
+    title: 'КОВАНІ КОЗИРКИ',
+    image: 'https://images.prom.ua/1614753946_kovani-kozirki.jpg',
+    code: 'З-0107',
+    cost: 1,
+    category: 'kovaniGrati',
+    date: 'September 12, 2022'
+  },
+  {
+    id: '8',
+    title: 'КОВАНІ КОЗИРКИ',
+    image: 'https://images.prom.ua/1614754857_kovani-kozirki.jpg',
+    code: 'З-0108',
+    cost: 1,
+    category: 'kovaniGrati',
+    date: 'September 12, 2022'
+  },
+  {
+    id: '9',
+    title: 'КОВАНІ КОЗИРКИ',
+    image: 'https://images.prom.ua/1614755440_kovani-kozirki.jpg',
+    code: 'З-0109',
+    cost: 1,
+    category: 'kovaniGrati',
+    date: 'September 12, 2022'
+  },
+  {
+    id: '10',
+    title: 'КОВАНІ КОЗИРКИ КОД: А-01248',
+    image: 'https://images.prom.ua/1614756541_kovani-kozirki.jpg',
+    code: 'З-0110',
+    cost: 1,
+    category: 'kovaniGrati',
+    date: 'September 12, 2022'
+  },
+  {
+    id: '11',
+    title: 'КОВАНІ КОЗИРКИ',
+    image: 'https://images.prom.ua/1614757689_kovani-kozirki.jpg',
+    code: 'З-0111',
+    cost: 1,
+    category: 'kovaniGrati',
+    date: 'September 12, 2022'
+  },
+  {
+    id: '12',
+    title: 'КОВАНІ КОЗИРКИ',
+    image: 'https://images.prom.ua/1614758457_kovani-kozirki.jpg',
+    code: 'З-0112',
+    cost: 1,
+    category: 'kovaniGrati',
+    date: 'September 12, 2022'
+  },
+  {
+    id: '13',
+    title: 'КОВАНІ КОЗИРКИ',
+    image: 'https://images.prom.ua/1614759122_kovani-kozirki.jpg',
+    code: 'З-0113',
+    cost: 1,
+    category: 'kovaniGrati',
+    date: 'September 12, 2022'
+  },
+  {
+    id: '14',
+    title: 'КОВАНІ КОЗИРКИ КОД: А-01228',
+    image: 'https://images.prom.ua/1739286138_kovani-kozirki.jpg',
+    code: 'З-0114',
+    cost: 1,
+    category: 'kovaniGrati',
+    date: 'September 12, 2022'
+  },
+  {
+    id: '15',
+    title: 'КОВАНІ ВОРОТА З ПРОФНАСТИЛОМ',
+    image: 'https://images.prom.ua/1739287633_kovani-kozirki.jpg',
+    code: 'З-0115',
+    cost: 1,
+    category: 'kovaniGrati',
+    date: 'September 12, 2022'
+  },
+  {
+    id: '16',
+    title: 'КОВАНІ РОЗПАШІ ВОРОТА З ПРОФНАСТИЛОМ',
+    image: 'https://images.prom.ua/1739291733_kovani-kozirki.jpg',
+    code: 'З-0116',
+    cost: 1,
+    category: 'kovaniGrati',
+    date: 'September 12, 2022'
+  },
+  {
+    id: '17',
+    title: 'ЕКСКЛЮЗИВНІ КОВАНІ ВОРОТА З ПРОФНАСТИЛОМ ТА КОВАНИМИ ЕЛЕМЕНТАМИ',
+    image: 'https://images.prom.ua/1739293056_kovani-kozirki.jpg',
+    code: 'З-0117',
+    cost: 1,
+    category: 'kovaniGrati',
+    date: 'September 12, 2022'
+  },
+  {
+    id: '18',
+    title: 'ВОРОТА КОВАНІ З ПРОФНАСТИЛОМ КОД: А-01201',
+    image: 'https://images.prom.ua/1739293611_kovani-kozirki.jpg',
+    code: 'З-0118',
+    cost: 1,
+    category: 'kovaniGrati',
+    date: 'September 12, 2022'
+  },
+  {
+    id: '19',
+    title: 'КОВАНІ КОЗИРКИ',
+    image: 'https://images.prom.ua/1739294165_kovani-kozirki.jpg',
+    code: 'З-0119',
+    cost: 1,
+    category: 'kovaniGrati',
+    date: 'September 12, 2022'
+  },
+  {
+    id: '20',
+    title: 'КОВАНІ ВОРОТА З ПРОФНАСТИЛОМ ТА ЕЛЕМЕНТАМИ КОВКИ',
+    image: 'https://images.prom.ua/1739294800_kovani-kozirki.jpg',
+    code: 'З-0120',
+    cost: 1,
+    category: 'kovaniGrati',
+    date: 'September 12, 2022'
+  },
+
+  {
+    id: '21',
+    title: 'КОВАНІ ВОРОТА З ПРОФНАСТИЛОМ ТА ЕЛЕМЕНТАМИ КОВКИ',
+    image: 'https://images.prom.ua/1739295472_kovani-kozirki.jpg',
+    code: 'З-0121',
+    cost: 1,
+    category: 'kovaniGrati',
+    date: 'September 12, 2022'
+  },
+  {
+    id: '22',
+    title: 'КОВАНІ ВОРОТА З ПРОФНАСТИЛОМ ТА ЕЛЕМЕНТАМИ КОВКИ',
+    image: 'https://images.prom.ua/1739295887_kovani-kozirki.jpg',
+    code: 'З-0122',
+    cost: 1,
+    category: 'kovaniGrati',
+    date: 'September 12, 2022'
+  },
+  {
+    id: '23',
+    title: 'КОВАНІ ВОРОТА З ПРОФНАСТИЛОМ ТА ЕЛЕМЕНТАМИ КОВКИ',
+    image: 'https://images.prom.ua/1739296435_kovani-kozirki.jpg',
+    code: 'З-0123',
+    cost: 1,
+    category: 'kovaniGrati',
+    date: 'September 12, 2022'
+  }
+];
+
+export const mockdataKovaniGrati = [
+  {
+    id: '1',
+    title: 'КОВАНІ ГРАТИ',
+    image: 'https://images.prom.ua/1736856428_kovani-grati.jpg',
+    code: '0101',
+    cost: 1,
+    category: 'kovaniGrati',
+    date: 'August 18, 2022'
+  },
+  {
+    id: '2',
+    title: 'КОВАНІ ГРАТИ',
+    image: 'https://images.prom.ua/1736871197_kovani-grati.jpg',
+    code: '0102',
+    cost: 1,
+    category: 'kovaniGrati',
+    date: 'August 18, 2022'
+  },
+  {
+    id: '3',
+    title: 'КОВАНІ ГРАТИ',
+    image: 'https://images.prom.ua/1736877862_kovani-grati.jpg',
+    code: '0103',
+    cost: 1,
+    category: 'kovaniGrati',
+    date: 'August 18, 2022'
+  },
+  {
+    id: '4',
+    title: 'КОВАНІ ГРАТИ',
+    image: 'https://images.prom.ua/1736880718_kovani-grati.jpg',
+    code: '0104',
+    cost: 1,
+    category: 'kovaniGrati',
+    date: 'August 18, 2022'
+  },
+  {
+    id: '5',
+    title: 'КОВАНІ ГРАТИ',
+    image: 'https://images.prom.ua/1736883082_kovani-grati.jpg',
+    code: '0105',
+    cost: 1,
+    category: 'kovaniGrati',
+    date: 'August 18, 2022'
+  },
+  {
+    id: '6',
+    title: 'КОВАНІ ГРАТИ',
+    image: 'https://images.prom.ua/1736885402_kovani-grati.jpg',
+    code: '0106',
+    cost: 1,
+    category: 'kovaniGrati',
+    date: 'August 18, 2022'
+  },
+  {
+    id: '7',
+    title: 'КОВАНІ ГРАТИ',
+    image: 'https://images.prom.ua/1736887538_kovani-grati.jpg',
+    code: '0107',
+    cost: 1,
+    category: 'kovaniGrati',
+    date: 'August 18, 2022'
+  },
+  {
+    id: '8',
+    title: 'КОВАНІ ГРАТИ',
+    image: 'https://images.prom.ua/1736889375_kovani-virobi.jpg',
+    code: '0108',
+    cost: 1,
+    category: 'kovaniGrati',
+    date: 'August 18, 2022'
+  },
+  {
+    id: '9',
+    title: 'КОВАНІ ГРАТИ',
+    image: 'https://images.prom.ua/1736891147_kovani-grati.jpg',
+    code: '0109',
+    cost: 1,
+    category: 'kovaniGrati',
+    date: 'August 18, 2022'
+  },
+  {
+    id: '10',
+    title: 'КОВАНІ ГРАТИ',
+    image: 'https://images.prom.ua/1736892894_kovani-grati.jpg',
+    code: '0110',
+    cost: 1,
+    category: 'kovaniGrati',
+    date: 'August 18, 2022'
+  },
+  {
+    id: '11',
+    title: 'КОВАНІ ГРАТИ',
+    image: 'https://images.prom.ua/1736895229_kovani-grati.jpg',
+    code: '0111',
+    cost: 1,
+    category: 'kovaniGrati',
+    date: 'August 18, 2022'
+  },
+  {
+    id: '12',
+    title: 'КОВАНІ ГРАТИ',
+    image: 'https://images.prom.ua/1736897176_kovani-grati.jpg',
+    code: '0112',
+    cost: 1,
+    category: 'kovaniGrati',
+    date: 'August 18, 2022'
+  },
+  {
+    id: '13',
+    title: 'КОВАНІ ГРАТИ',
+    image: 'https://images.prom.ua/1736899162_kovani-grati.jpg',
+    code: '0113',
+    cost: 1,
+    category: 'kovaniGrati',
+    date: 'August 18, 2022'
+  },
+  {
+    id: '14',
+    title: 'КОВАНІ ГРАТИ',
+    image: 'https://images.prom.ua/1736901109_kovani-grati.jpg',
+    code: '0114',
+    cost: 1,
+    category: 'kovaniGrati',
+    date: 'August 18, 2022'
+  },
+  {
+    id: '15',
+    title: 'КОВАНІ ГРАТИ',
+    image: 'https://images.prom.ua/1736902795_kovani-grati.jpg',
+    code: '0115',
+    cost: 1,
+    category: 'kovaniGrati',
+    date: 'August 18, 2022'
+  },
+  {
+    id: '16',
+    title: 'КОВАНІ ГРАТИ',
+    image: 'https://images.prom.ua/1736904266_kovani-grati.jpg',
+    code: '0116',
+    cost: 1,
+    category: 'kovaniGrati',
+    date: 'August 18, 2022'
+  },
+  {
+    id: '17',
+    title: 'КОВАНІ ГРАТИ',
+    image: 'https://images.prom.ua/1736906047_kovani-grati.jpg',
+    code: '0117',
+    cost: 1,
+    category: 'kovaniGrati',
+    date: 'August 18, 2022'
+  },
+  {
+    id: '18',
+    title: 'КОВАНІ ГРАТИ',
+    image: 'https://images.prom.ua/1736907488_kovani-grati.jpg',
+    code: '0118',
+    cost: 1,
+    category: 'kovaniGrati',
+    date: 'August 18, 2022'
+  },
+  {
+    id: '19',
+    title: 'КОВАНІ ГРАТИ',
+    image: 'https://images.prom.ua/1736909316_kovani-grati.jpg',
+    code: '0119',
+    cost: 1,
+    category: 'kovaniGrati',
+    date: 'August 18, 2022'
+  },
+  {
+    id: '20',
+    title: 'КОВАНІ ГРАТИ',
+    image: 'https://images.prom.ua/1736912073_kovani-grati.jpg',
+    code: '0121',
+    cost: 1,
+    category: 'kovaniGrati',
+    date: 'August 18, 2022'
+  },
+  {
+    id: '21',
+    title: 'КОВАНІ ГРАТИ',
+    image: 'https://images.prom.ua/1736913895_kovani-grati.jpg',
+    code: '0122',
+    cost: 1,
+    category: 'kovaniGrati',
+    date: 'August 18, 2022'
+  },
+  {
+    id: '22',
+    title: 'КОВАНІ ГРАТИ',
+    image: 'https://images.prom.ua/1736914894_kovani-grati.jpg',
+    code: '0123',
+    cost: 1,
+    category: 'kovaniGrati',
+    date: 'August 18, 2022'
+  },
+  {
+    id: '23',
+    title: 'КОВАНІ ГРАТИ',
+    image: 'https://images.prom.ua/1865225506_kovani-grati.jpg',
+    code: '0128',
+    cost: 1,
+    category: 'kovaniGrati',
+    date: 'August 18, 2022'
+  },
+  {
+    id: '24',
+    title: 'КОВАНІ ГРАТИ',
+    image: 'https://images.prom.ua/1736917428_kovani-grati.jpg',
+    code: '0126',
+    cost: 1,
+    category: 'kovaniGrati',
+    date: 'August 18, 2022'
+  }
+];
+
+export const mockdataEliteIronGates = [
+  {
+    id: '1',
+    title: 'КОВАНІ ВОРОТА З МОНТАЖЕМ',
+    image: 'https://images.prom.ua/5125569884_vorota-kovani-rozpashni.jpg',
+    code: 'B-0101',
+    category: 'elitniKovaniVorota',
+    cost: 7400,
+    date: 'August 18, 2022'
+  },
+  {
+    id: '2',
+    title: 'КОВАНІ ВОРОТА З МОНТАЖЕМ',
+    image: 'https://images.prom.ua/3311842859_vorota-kovani-z.jpg',
+    code: 'B-0102',
+    category: 'elitniKovaniVorota',
+    cost: 6500,
+    date: 'August 27, 2022'
+  },
+  {
+    id: '3',
+    title: 'КОВАНІ ВОРОТА З МОНТАЖЕМ',
+    image: 'https://images.prom.ua/3336002607_elitni-kovani-vorota.jpg',
+    code: 'B-01101',
+    category: 'elitniKovaniVorota',
+    cost: 6800,
+    date: 'September 9, 2022'
+  },
+  {
+    id: '4',
+    title: 'КОВАНІ ВОРОТА З МОНТАЖЕМ',
+    image: 'https://images.prom.ua/3336002977_kovani-vorota-z.jpg',
+    code: 'B-01149',
+    category: 'elitniKovaniVorota',
+    cost: 500,
+    date: 'September 12, 2022'
+  },
+  {
+    id: '5',
+    title: 'КОВАНІ ВОРОТА З МОНТАЖЕМ',
+    image: 'https://images.prom.ua/3336017347_kovani-vorota.jpg',
+    code: 'B-01147',
+    category: 'elitniKovaniVorota',
+    cost: 4400,
+    date: 'September 12, 2022'
+  },
+  {
+    id: '6',
+    title: 'КОВАНІ ВОРОТА З МОНТАЖЕМ',
+    image: 'https://images.prom.ua/3336016848_elitni-kovani-vorota.jpg',
+    code: 'B-01151',
+    category: 'elitniKovaniVorota',
+    cost: 5200,
+    date: 'September 12, 2022'
+  },
+  {
+    id: '7',
+    title: 'КОВАНІ ВОРОТА З МОНТАЖЕМ',
+    image: 'https://images.prom.ua/3336014558_kovani-rozpashni-vorota.jpg',
+    code: 'B-01108',
+    category: 'elitniKovaniVorota',
+    cost: 8800,
+    date: 'September 12, 2022'
+  },
+  {
+    id: '8',
+    title: 'КОВАНІ ВОРОТА З МОНТАЖЕМ',
+    image: 'https://images.prom.ua/5127091487_rozpashni-kovani-vorota.jpg',
+    code: 'B-01110',
+    category: 'elitniKovaniVorota',
+    cost: 4500,
+    date: 'September 12, 2022'
+  },
+  {
+    id: '9',
+    title: 'КОВАНІ ВОРОТА ТА ХВІРТКА',
+    image: 'https://images.prom.ua/5127091487_rozpashni-kovani-vorota.jpg',
+    code: 'B-01111',
+    category: 'elitniKovaniVorota',
+    cost: 9400,
+    date: 'September 12, 2022'
+  },
+  {
+    id: '10',
+    title: 'РОЗПАШНІ АЖУРНІ КОВАНІ ВОРОТА',
+    image: 'https://images.prom.ua/3336025866_rozpashni-azhurni-kovani.jpg',
+    code: 'B-01120',
+    category: 'elitniKovaniVorota',
+    cost: 5200,
+    date: 'September 12, 2022'
+  },
+  {
+    id: '11',
+    title: 'ВОРОТА З КОВКОЮ',
+    image: 'https://images.prom.ua/3336021526_vorota-z-kovkoyu.jpg',
+    code: 'B-01116',
+    category: 'elitniKovaniVorota',
+    cost: 5000,
+    date: 'September 12, 2022'
+  },
+  {
+    id: '12',
+    title: 'КОВАНІ ВОРОТА',
+    image: 'https://images.prom.ua/3336044198_kovani-vorota.jpg',
+    code: 'B-01141',
+    category: 'elitniKovaniVorota',
+    cost: 6900,
+    date: 'September 12, 2022'
+  },
+  {
+    id: '13',
+    title: 'КОВАНІ ВОРОТА З ХВІРТКОЮ',
+    image: 'https://images.prom.ua/3336032614_kovani-vorota.jpg',
+    code: 'B-0140',
+    category: 'elitniKovaniVorota',
+    cost: 6000,
+    date: 'September 12, 2022'
+  },
+  {
+    id: '14',
+    title: 'КОВАНІ ВОРОТА З ХВІРТКОЮ',
+    image: 'https://images.prom.ua/3330538370_kovani-vorota-z.jpg',
+    code: 'B-0193',
+    category: 'elitniKovaniVorota',
+    cost: 7000,
+    date: 'September 12, 2022'
+  },
+  {
+    id: '15',
+    title: 'ВОРОТА КОВАНІ РОЗПАШНІ',
+    image: 'https://images.prom.ua/3330538944_vorota-kovani-rozpashni.jpg',
+    code: 'B-0187',
+    category: 'elitniKovaniVorota',
+    cost: 6400,
+    date: 'September 12, 2022'
+  },
+  {
+    id: '16',
+    title: 'ВОРОТА КОВАНІ ВІДКАТНІ',
+    image: 'https://images.prom.ua/3336017472_vorota-kovani-vidkatni.jpg',
+    code: 'B-01103',
+    category: 'elitniKovaniVorota',
+    cost: 6200,
+    date: 'September 12, 2022'
+  }
+];
+
+export const mockdataGateWithCorrugatedBoard = [
   {
     id: '1',
     title: 'КОВАНІ ВОРОТА З ПРОФНАСТИЛОМ ТА КОВАНИМИ І ЕЛЕМЕНТАМИ',

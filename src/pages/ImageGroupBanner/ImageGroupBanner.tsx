@@ -1,5 +1,7 @@
-import { Grid, Skeleton } from '@mantine/core';
+import { Card, SimpleGrid, Skeleton } from '@mantine/core';
 import { useState } from 'react';
+
+import { productsGroup } from '@/mocData';
 
 import { GroupBannerItem } from './UI/GroupBannerItem/GroupBannerItem';
 
@@ -13,40 +15,20 @@ function ImageGroupBanner() {
   }, 1000);
 
   return (
-    <>
-      {isFeching && (
-        <Grid>
-          <Grid.Col span={{ base: 12, xs: 4 }}>
-            <GroupBannerItem />
-          </Grid.Col>
-          <Grid.Col span={{ base: 12, xs: 4 }}>
-            <GroupBannerItem />
-          </Grid.Col>
-          <Grid.Col span={{ base: 12, xs: 4 }}>
-            <GroupBannerItem />
-          </Grid.Col>
-          <Grid.Col span={{ base: 12, xs: 4 }}>
-            <GroupBannerItem />
-          </Grid.Col>
-          <Grid.Col span={{ base: 12, xs: 4 }}>
-            <GroupBannerItem />
-          </Grid.Col>
-          <Grid.Col span={{ base: 12, xs: 4 }}>
-            <GroupBannerItem />
-          </Grid.Col>
-        </Grid>
-      )}
-      {!isFeching && (
-        <Grid>
-          <Grid.Col span={{ base: 12, xs: 4 }}>{child}</Grid.Col>
-          <Grid.Col span={{ base: 12, xs: 4 }}>{child}</Grid.Col>
-          <Grid.Col span={{ base: 12, xs: 4 }}>{child}</Grid.Col>
-          <Grid.Col span={{ base: 12, xs: 4 }}>{child}</Grid.Col>
-          <Grid.Col span={{ base: 12, xs: 4 }}>{child}</Grid.Col>
-          <Grid.Col span={{ base: 12, xs: 4 }}>{child}</Grid.Col>
-        </Grid>
-      )}
-    </>
+    <SimpleGrid cols={{ base: 1, sm: 2 }} spacing="md">
+      {!isFeching &&
+        productsGroup.map((product) => (
+          <Card key={product.id} radius="md">
+            {child}
+          </Card>
+        ))}
+      {isFeching &&
+        productsGroup.map((product) => (
+          <Card key={product.id} radius="md">
+            <GroupBannerItem product={product} />
+          </Card>
+        ))}
+    </SimpleGrid>
   );
 }
 
