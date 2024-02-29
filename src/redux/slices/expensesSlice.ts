@@ -23,10 +23,9 @@ export const getAllExpenses = createAsyncThunk<
   Expenses[],
   { path: string; queryLimit: number; lastRefKey?: number },
   { rejectValue: string; state: RootState }
->('jobs/getAllJobs', async ({ path, queryLimit }, { rejectWithValue }) => {
+>('jobs/getAllExpenses', async ({ path, queryLimit }, { rejectWithValue }) => {
   try {
     const res = await getAllFirestoreData(path, queryLimit);
-    console.log('Expenses', res);
     return res as Expenses[];
   } catch (error) {
     return rejectWithValue(errorHandler(error, 'signIn Error'));
@@ -42,7 +41,9 @@ const expensesSlise = createSlice({
   initialState,
   reducers: {},
   extraReducers: (builder) => {
-    builder.addCase(getAllExpenses.fulfilled, () => {});
+    builder.addCase(getAllExpenses.fulfilled, (state, { payload }) => {
+      state.expenses = payload;
+    });
     builder.addCase(addExpenses.fulfilled, () => {});
   }
 });

@@ -1,9 +1,25 @@
-import type { Job } from '@/pages/CommunityPage/model/type';
+import type { Expenses, Job } from '../types/Types';
 
-export const calculateTotal = (arr: Job[]) => {
+export const expensesTotal = (arr: Expenses[]) => {
   if (!arr || arr?.length === 0) return 0;
 
-  const total = arr.reduce((acc, val) => acc + val.price, 0);
+  let value = 0;
 
-  return total.toFixed(2);
+  arr.forEach((val: Expenses) => {
+    value += val.price;
+  });
+
+  return value.toFixed(2);
+};
+
+export const incomeTotal = (arr: Job[]) => {
+  if (!arr || arr?.length === 0) return 0;
+
+  let value = 0;
+
+  arr.forEach((val: Job) => {
+    value += val.price;
+  });
+
+  return value.toFixed(2);
 };

@@ -2,11 +2,13 @@ import { configureStore } from '@reduxjs/toolkit';
 import type { TypedUseSelectorHook } from 'react-redux';
 import { useDispatch, useSelector } from 'react-redux';
 
+import expensesSlise from './slices/expensesSlice';
 import jobSlise from './slices/jobSlise';
 
 export const store = configureStore({
   reducer: {
-    jobSlise
+    jobSlise,
+    expensesSlise
   }
 });
 

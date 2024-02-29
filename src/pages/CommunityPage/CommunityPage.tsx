@@ -1,12 +1,13 @@
 import { Button, Center, Flex, Group, Table, Text } from '@mantine/core';
 import { useEffect, useState } from 'react';
 
+import { getAllExpenses } from '@/redux/slices/expensesSlice';
 import { useAppDispatch, useAppSelector } from '@/redux/store';
-import { calculateTotal } from '@/shared/helpers/calk';
+import { expensesTotal, incomeTotal } from '@/shared/helpers/calk';
 import { DataBasePath } from '@/shared/types/enums';
 import type { Job } from '@/shared/types/Types';
 
-import { getAllExpenses, getAllJobs } from '../../redux/slices/jobSlise';
+import { getAllJobs } from '../../redux/slices/jobSlise';
 import CardAddJob from './UI/CardAddJob/CardAddJob';
 import ExpensesPage from './UI/Expenses/Expenses';
 
@@ -14,13 +15,12 @@ const CommunityPage = () => {
   const [isShowCardAddProduct, setIsShowCardAddProduct] = useState(false);
   const [isShowCardExpenses, setIsShowCardExpenses] = useState(false);
 
+  const dispatch = useAppDispatch();
   // const theme = useMantineTheme();
-
   // const mobile = useMediaQuery(`(max-width: ${theme.breakpoints.sm})`);
 
   const jobs = useAppSelector((state) => state.jobSlise.jobs);
-
-  const dispatch = useAppDispatch();
+  const expenses = useAppSelector((state) => state.expensesSlise.expenses);
 
   const getAllData = async () => {
     dispatch(getAllJobs({ path: DataBasePath.JOBS, queryLimit: 12 }));
@@ -50,6 +50,9 @@ const CommunityPage = () => {
     );
   });
 
+  const incom = incomeTotal(jobs);
+  const expens = expensesTotal(expenses);
+
   return (
     <Center>
       <Flex mt={50} direction={'column'}>
@@ -59,10 +62,13 @@ const CommunityPage = () => {
         </Group>
         <Flex mt={50} direction="column" gap={20}>
           <Flex>
-            <Text>{`Загальна сумма заробленних ${calculateTotal(jobs)}`}</Text>
+            <Text>{`Залишок ${Number(incom) - Number(expens)}`}</Text>
           </Flex>
           <Flex>
-            <Text>{`Взяв за місяць ${calculateTotal(jobs)}`}</Text>
+            <Text>{`Загальна сумма заробленних ${incom}`}</Text>
+          </Flex>
+          <Flex>
+            <Text>{`Взяв за місяць ${expens}`}</Text>
           </Flex>
           <Table.ScrollContainer minWidth={800}>
             <Table verticalSpacing="xs">

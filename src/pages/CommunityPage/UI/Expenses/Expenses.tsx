@@ -2,10 +2,10 @@ import { Button, Flex, Group, NumberInput, TextInput } from '@mantine/core';
 import { useForm } from '@mantine/form';
 import type { FC } from 'react';
 
+import { addExpenses } from '@/redux/slices/expensesSlice';
 import { useAppDispatch } from '@/redux/store';
 import type { Expenses } from '@/shared/types/Types';
 
-import { addExpenses } from '../../../../redux/slices/jobSlise';
 import s from './Expenses.module.css';
 
 type FormValues = {
