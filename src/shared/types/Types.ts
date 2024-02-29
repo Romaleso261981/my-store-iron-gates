@@ -25,3 +25,30 @@ export type MessagesData = {
   title?: string;
   icon?: string;
 };
+
+export type Job = {
+  id: string;
+  date: string;
+  title: string;
+  description: string;
+  quantity: number;
+  price: number;
+  gotSalary: number;
+  dateAdded: number;
+  advance: number;
+};
+
+export type Expenses = {
+  id: string;
+  date: string;
+  price: number;
+  dateAdded: number;
+};
+
+export type JobTypes = {
+  jobs: Job[];
+};
+
+export type ExpensesTypes = {
+  expenses: Expenses[];
+};

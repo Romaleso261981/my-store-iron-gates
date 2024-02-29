@@ -80,6 +80,7 @@ export function HeaderTabs() {
               </Menu.Item> */}
             </Menu.Dropdown>
             {/* <ColorSchemeToggle /> */}
+            {/* <Notification /> */}
           </Menu>
         </Group>
       </Container>

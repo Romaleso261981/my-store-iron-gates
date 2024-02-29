@@ -10,7 +10,7 @@ const links = [
   { link: '/about', label: 'Про нас' },
   { link: '/pricing', label: 'Ціни' },
   { link: '/adress', label: 'Адресса' },
-  { link: '/community', label: 'Наша команда' }
+  { link: '/community', label: 'Робота' }
 ];
 
 export function HeaderSearch() {

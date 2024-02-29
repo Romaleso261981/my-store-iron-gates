@@ -1,22 +1,32 @@
-import { collection, getDocs, limit, query } from 'firebase/firestore';
+import type { DocumentData, QueryDocumentSnapshot } from 'firebase/firestore';
+import { collection, getDocs, limit, query, startAfter } from 'firebase/firestore';
 
 import { db } from '@/integations/firebase';
 
-import type { User } from '../types/Types';
-
-type DatabasePaths = string;
-
-export const getFirestoreData = async (path: DatabasePaths): Promise<User[]> => {
+export const getAllFirestoreData = async <T extends DocumentData>(
+  path: string,
+  queryLimit: number,
+  lastRefKey?: number
+): Promise<T[] | null> => {
   const collectionRef = collection(db, path);
 
-  const q = query(collectionRef, limit(20));
+  if (lastRefKey) {
+    const q = query(collectionRef, startAfter(lastRefKey), limit(queryLimit));
+    const querySnapshot = await getDocs(q);
+    const products: T[] = [];
 
-  const querySnapshot = await getDocs(q);
-  const data: User[] = [];
+    querySnapshot.forEach((doc: QueryDocumentSnapshot<DocumentData>) => {
+      products.push(doc.data() as T);
+    });
+    return products;
+  } else {
+    const q = query(collectionRef, limit(queryLimit));
+    const querySnapshot = await getDocs(q);
+    const products: T[] = [];
 
-  querySnapshot.forEach((doc) => {
-    data.push(doc.data() as User);
-  });
-
-  return data;
+    querySnapshot.forEach((doc: QueryDocumentSnapshot<DocumentData>) => {
+      products.push(doc.data() as T);
+    });
+    return products;
+  }
 };

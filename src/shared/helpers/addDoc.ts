@@ -1,9 +1,15 @@
-import { addDoc, collection } from 'firebase/firestore';
+import { doc, type DocumentData, type DocumentReference, setDoc } from 'firebase/firestore';
 
 import { db } from '../../integations/firebase';
 
-export const setFirestoreData = (nickName: string, path: string) => {
-  const collectionRef = collection(db, path);
+export const setFirestoreData = async <T extends DocumentData>(
+  path: string,
+  id: string,
+  data: T
+): Promise<DocumentReference<T>> => {
+  const docRef = doc(db, path, id) as DocumentReference<T>;
 
-  addDoc(collectionRef, { nickName });
+  await setDoc(docRef, data);
+
+  return docRef;
 };
