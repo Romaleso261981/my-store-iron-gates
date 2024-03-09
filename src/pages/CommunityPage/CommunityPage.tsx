@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 import { getExpenses, getJobs } from '@/redux/selectors';
 import { getAllExpenses } from '@/redux/slices/expensesSlice';
 import { useAppDispatch, useAppSelector } from '@/redux/store';
+import { HeaderSearch } from '@/shared/components';
 import { expensesTotal, incomeTotal } from '@/shared/helpers/calk';
 import { DataBasePath } from '@/shared/types/enums';
 import type { Job } from '@/shared/types/Types';
@@ -59,6 +60,7 @@ const CommunityPage = () => {
 
   return (
     <Center>
+      {matches && <HeaderSearch />}
       <Flex mt={50} direction={'column'}>
         {matches && (
           <Group>
