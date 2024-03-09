@@ -28,10 +28,10 @@ export default function RootRouter() {
       <Routes>
         <Route path={RoutersPaths.LOGIN} element={<AuthPage />} />
         <Route path={RoutersPaths.ADMIN} element={<AdminPage />} />
-        <Route path={RoutersPaths.COMMUNITY} element={<CommunityPage />} />
         <Route element={<Layout />}>
           <Route path={RoutersPaths.MAIN} element={<MainPage />} />
           <Route path={RoutersPaths.ABOUT} element={<AboutPage />} />
+          <Route path={RoutersPaths.COMMUNITY} element={<CommunityPage />} />
           <Route path={RoutersPaths.CARDDETAIL} element={<CardDetail />} />
           <Route path={RoutersPaths.ADRESS} element={<AdressPage />} />
           <Route path={RoutersPaths.PRICING} element={<PricingPage />} />
