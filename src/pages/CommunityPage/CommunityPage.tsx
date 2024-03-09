@@ -1,4 +1,5 @@
 import { Button, Center, Flex, Group, Table, Text } from '@mantine/core';
+import { useMediaQuery } from '@mantine/hooks';
 import { useEffect, useState } from 'react';
 
 import { getExpenses, getJobs } from '@/redux/selectors';
@@ -15,6 +16,8 @@ import ExpensesPage from './UI/Expenses/Expenses';
 const CommunityPage = () => {
   const [isShowCardAddProduct, setIsShowCardAddProduct] = useState(false);
   const [isShowCardExpenses, setIsShowCardExpenses] = useState(false);
+
+  const matches = useMediaQuery('(min-width: 1111px)');
 
   const dispatch = useAppDispatch();
 
@@ -43,8 +46,8 @@ const CommunityPage = () => {
     .map((row: Job) => {
       return (
         <Table.Tr key={row.id}>
-          <Table.Td>{row.date}</Table.Td>
-          <Table.Td>{row.title}</Table.Td>
+          {matches && <Table.Td>{row.date}</Table.Td>}
+          {matches && <Table.Td>{row.title}</Table.Td>}
           <Table.Td>{`${row.price}  грн.`}</Table.Td>
           <Table.Td>{row.description}</Table.Td>
         </Table.Tr>
@@ -57,10 +60,12 @@ const CommunityPage = () => {
   return (
     <Center>
       <Flex mt={50} direction={'column'}>
-        <Group>
-          <Button onClick={toggletoggleExpenses}>Взяв гроші</Button>
-          <Button onClick={toggleCardAddProduct}>Додати роботу</Button>
-        </Group>
+        {matches && (
+          <Group>
+            <Button onClick={toggletoggleExpenses}>Взяв гроші</Button>
+            <Button onClick={toggleCardAddProduct}>Додати роботу</Button>
+          </Group>
+        )}
         <Flex mt={50} direction="column" gap={20}>
           <Flex>
             <Text>{`Залишок ${Number(incom) - Number(expens)} грн.`}</Text>
@@ -75,8 +80,8 @@ const CommunityPage = () => {
             <Table verticalSpacing="xs">
               <Table.Thead>
                 <Table.Tr>
-                  <Table.Th>Дата</Table.Th>
-                  <Table.Th>Техніка</Table.Th>
+                  {matches && <Table.Th>Дата</Table.Th>}
+                  {matches && <Table.Th>Техніка</Table.Th>}
                   <Table.Th>Вартість</Table.Th>
                   <Table.Th>Опис</Table.Th>
                 </Table.Tr>
