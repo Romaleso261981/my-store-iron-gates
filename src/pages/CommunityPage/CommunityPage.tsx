@@ -1,6 +1,7 @@
 import { Button, Center, Flex, Group, Table, Text } from '@mantine/core';
 import { useEffect, useState } from 'react';
 
+import { getExpenses, getJobs } from '@/redux/selectors';
 import { getAllExpenses } from '@/redux/slices/expensesSlice';
 import { useAppDispatch, useAppSelector } from '@/redux/store';
 import { expensesTotal, incomeTotal } from '@/shared/helpers/calk';
@@ -16,11 +17,9 @@ const CommunityPage = () => {
   const [isShowCardExpenses, setIsShowCardExpenses] = useState(false);
 
   const dispatch = useAppDispatch();
-  // const theme = useMantineTheme();
-  // const mobile = useMediaQuery(`(max-width: ${theme.breakpoints.sm})`);
 
-  const jobs = useAppSelector((state) => state.jobSlise.jobs);
-  const expenses = useAppSelector((state) => state.expensesSlise.expenses);
+  const jobs = useAppSelector(getJobs);
+  const expenses = useAppSelector(getExpenses);
 
   const getAllData = async () => {
     dispatch(getAllJobs({ path: DataBasePath.JOBS, queryLimit: 100 }));
