@@ -1,11 +1,12 @@
 import { Button, Flex, Group, NumberInput, Textarea, TextInput } from '@mantine/core';
 import { useForm } from '@mantine/form';
+import dayjs from 'dayjs';
 import type { FC } from 'react';
 
 import { useAppDispatch } from '@/redux/store';
+import type { Job } from '@/shared/types/Types';
 
 import { addJob } from '../../../../redux/slices/jobSlise';
-import type { Job } from '../../model/type';
 import s from './CardAddJob.module.css';
 
 type FormValues = {
@@ -36,8 +37,9 @@ const CardAddJob: FC<CardAddJobProps> = ({ toggleCardAddProduct }) => {
   });
 
   const submit = (values: FormValues) => {
-    // values.Jobs.id = useId();
+    values.Jobs.id = dayjs().toString();
     values.Jobs.dateAdded = new Date().getTime();
+    console.log('values.Jobs', values.Jobs);
     dispatch(addJob(values.Jobs));
     form.reset();
   };
@@ -46,7 +48,6 @@ const CardAddJob: FC<CardAddJobProps> = ({ toggleCardAddProduct }) => {
     <Flex className={s.cardWrapper}>
       <form onSubmit={form.onSubmit((values) => submit(values))}>
         <Flex p={20} direction="column" gap={10}>
-          <TextInput label="Id" placeholder="Id" {...form.getInputProps('Jobs.id')} />
           <TextInput label="Дата" placeholder="Дата" {...form.getInputProps('Jobs.date')} />
           <TextInput
             label="Назва роботи"

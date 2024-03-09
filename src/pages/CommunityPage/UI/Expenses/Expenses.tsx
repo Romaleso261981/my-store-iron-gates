@@ -1,5 +1,6 @@
 import { Button, Flex, Group, NumberInput, TextInput } from '@mantine/core';
 import { useForm } from '@mantine/form';
+import * as dayjs from 'dayjs';
 import type { FC } from 'react';
 
 import { addExpenses } from '@/redux/slices/expensesSlice';
@@ -31,7 +32,7 @@ const ExpensesPage: FC<ExpensesProps> = ({ toggleExpenses }) => {
   });
 
   const submit = (values: FormValues) => {
-    // values.Jobs.id = useId();
+    values.expenses.id = dayjs().toString();
     values.expenses.dateAdded = new Date().getTime();
     dispatch(addExpenses(values.expenses));
     form.reset();
@@ -41,7 +42,6 @@ const ExpensesPage: FC<ExpensesProps> = ({ toggleExpenses }) => {
     <Flex className={s.cardWrapper}>
       <form onSubmit={form.onSubmit((values) => submit(values))}>
         <Flex p={20} direction="column" gap={10}>
-          <TextInput label="Id" placeholder="Id" {...form.getInputProps('expenses.id')} />
           <TextInput label="Дата" placeholder="Дата" {...form.getInputProps('expenses.date')} />
           <Group>
             <NumberInput size="xs" label="Price" {...form.getInputProps('expenses.price')} />

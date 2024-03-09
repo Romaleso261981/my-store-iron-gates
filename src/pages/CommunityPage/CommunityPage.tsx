@@ -23,8 +23,8 @@ const CommunityPage = () => {
   const expenses = useAppSelector((state) => state.expensesSlise.expenses);
 
   const getAllData = async () => {
-    dispatch(getAllJobs({ path: DataBasePath.JOBS, queryLimit: 12 }));
-    dispatch(getAllExpenses({ path: DataBasePath.EXPENSES, queryLimit: 12 }));
+    dispatch(getAllJobs({ path: DataBasePath.JOBS, queryLimit: 100 }));
+    dispatch(getAllExpenses({ path: DataBasePath.EXPENSES, queryLimit: 100 }));
   };
 
   useEffect(() => {
@@ -39,16 +39,18 @@ const CommunityPage = () => {
     setIsShowCardExpenses(!isShowCardExpenses);
   };
 
-  const rows = jobs.map((row: Job) => {
-    return (
-      <Table.Tr key={row.id}>
-        <Table.Td>{row.date}</Table.Td>
-        <Table.Td>{row.title}</Table.Td>
-        <Table.Td>{`${row.price}  грн.`}</Table.Td>
-        <Table.Td>{row.description}</Table.Td>
-      </Table.Tr>
-    );
-  });
+  const rows = [...jobs]
+    .sort((a, b) => (a?.dateAdded < b?.dateAdded ? 1 : -1))
+    .map((row: Job) => {
+      return (
+        <Table.Tr key={row.id}>
+          <Table.Td>{row.date}</Table.Td>
+          <Table.Td>{row.title}</Table.Td>
+          <Table.Td>{`${row.price}  грн.`}</Table.Td>
+          <Table.Td>{row.description}</Table.Td>
+        </Table.Tr>
+      );
+    });
 
   const incom = incomeTotal(jobs);
   const expens = expensesTotal(expenses);
@@ -62,13 +64,13 @@ const CommunityPage = () => {
         </Group>
         <Flex mt={50} direction="column" gap={20}>
           <Flex>
-            <Text>{`Залишок ${Number(incom) - Number(expens)}`}</Text>
+            <Text>{`Залишок ${Number(incom) - Number(expens)} грн.`}</Text>
           </Flex>
           <Flex>
-            <Text>{`Загальна сумма заробленних ${incom}`}</Text>
+            <Text>{`Загальна сумма заробленних ${incom} грн.`}</Text>
           </Flex>
           <Flex>
-            <Text>{`Взяв за місяць ${expens}`}</Text>
+            <Text>{`Взяв за місяць ${expens} грн.`}</Text>
           </Flex>
           <Table.ScrollContainer minWidth={800}>
             <Table verticalSpacing="xs">

@@ -47,8 +47,10 @@ export type Expenses = {
 
 export type JobTypes = {
   jobs: Job[];
+  lastId: string;
 };
 
 export type ExpensesTypes = {
   expenses: Expenses[];
+  lastId: string;
 };

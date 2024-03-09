@@ -33,14 +33,7 @@ export const getAllJobs = createAsyncThunk<
 
 const initialState = {
   jobs: [],
-  id: '',
-  description: '',
-  title: '',
-  gotSalary: 0,
-  quantity: 0,
-  advance: 0,
-  price: 0,
-  dateAdded: 0
+  lastId: ''
 } as JobTypes;
 
 const jobSlise = createSlice({
@@ -51,6 +44,7 @@ const jobSlise = createSlice({
     builder.addCase(addJob.fulfilled, () => {});
     builder.addCase(getAllJobs.fulfilled, (state, { payload }) => {
       state.jobs = payload;
+      state.lastId = payload[payload.length - 1].id;
     });
   }
 });
