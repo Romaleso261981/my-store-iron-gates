@@ -1,6 +1,8 @@
-import { Autocomplete, Box, Burger, Group, rem } from '@mantine/core';
+import { Autocomplete, Box, Burger, Button, Group, rem } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import { IconSearch } from '@tabler/icons-react';
+
+import { ADMIN } from '@/constans/constans';
 
 import MainLogo from '../MainLogo/MainLogo';
 // import logo from '../../../App/access/desheva-Kovka/desheva-kovka-logo.webp';
@@ -10,7 +12,7 @@ const links = [
   { link: '/about', label: 'Про нас' },
   { link: '/pricing', label: 'Ціни' },
   { link: '/adress', label: 'Адресса' },
-  { link: '/community', label: 'Робота' }
+  { link: '/our_team', label: 'Наша команда' }
 ];
 
 export function HeaderSearch() {
@@ -32,6 +34,11 @@ export function HeaderSearch() {
         <Group>
           <Group ml={50} gap={15} className={classes.links} visibleFrom="sm">
             {items}
+            {ADMIN === 'admin' && (
+              <Button>
+                <a href="/community">Робота Коля</a>
+              </Button>
+            )}
           </Group>
           <Autocomplete
             className={classes.search}
