@@ -20,6 +20,7 @@ const NotFound = lazy(() => import('../pages/Error-404/Error-404'));
 const GateWithCorrugatedBoard = lazy(
   () => import('../pages/GateWithCorrugatedBoard/GateWithCorrugatedBoard')
 );
+const SingleCard = lazy(() => import('../pages/GateWithCorrugatedBoard/ui/SingleCard/SingleCard'));
 const EliteIronGates = lazy(() => import('../pages/EliteIronGates/EliteIronGates'));
 
 export default function RootRouter() {
@@ -28,6 +29,7 @@ export default function RootRouter() {
       <Routes>
         <Route path={RoutersPaths.LOGIN} element={<AuthPage />} />
         <Route path={RoutersPaths.ADMIN} element={<AdminPage />} />
+        <Route path={RoutersPaths.VOROTAPROFNASTILOMBYID} element={<SingleCard />} />
         <Route element={<Layout />}>
           <Route path={RoutersPaths.MAIN} element={<MainPage />} />
           <Route path={RoutersPaths.ABOUT} element={<AboutPage />} />

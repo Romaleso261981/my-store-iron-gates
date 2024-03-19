@@ -24,11 +24,20 @@ type Props = {
 
 export const ArticalCard: FC<Props> = ({ data, type }) => {
   const navigate = useNavigate();
+
   const cardDetail = (id: string) => {
-    navigate(`${id}`);
+    navigate(`/vorota-profnastilom-kovanimi/${id}`);
   };
+
   const cards = data.map((article) => (
-    <Card shadow="lg" key={article.id} p="md" radius="md" component="a" className={classes.card}>
+    <Card
+      shadow="lg"
+      key={article.id}
+      p="md"
+      radius="md"
+      component="a"
+      className={classes.card}
+      onClick={() => cardDetail(article.id)}>
       <AspectRatio ratio={1920 / 1080}>
         <Image src={article.image} />
       </AspectRatio>

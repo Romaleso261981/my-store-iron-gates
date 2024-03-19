@@ -16,6 +16,22 @@ export type LanguagePickerProps = {
   label: string;
   image: string;
 };
+export type GateWithCorrugatedBoard = {
+  label: string;
+  id: string;
+  title: string;
+  image: string;
+  image2?: string;
+  image3?: string;
+  image4?: string;
+  image5?: string;
+  image6?: string;
+  image7?: string;
+  code: string;
+  cost: number;
+  category: string;
+  date: string;
+};
 
 export type MessagesData = {
   id: string;
