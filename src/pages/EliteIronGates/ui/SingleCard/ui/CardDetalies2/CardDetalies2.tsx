@@ -3,7 +3,7 @@ import { IconHeart } from '@tabler/icons-react';
 import { FaArrowLeftLong } from 'react-icons/fa6';
 import { Link, useParams } from 'react-router-dom';
 
-import { mockdataGateWithCorrugatedBoard } from '@/mocData';
+import { mockdataEliteIronGates } from '@/mocData';
 
 import classes from './CardDetalies2.module.css';
 
@@ -17,7 +17,7 @@ import classes from './CardDetalies2.module.css';
 export function CardDetalies2() {
   const { id } = useParams();
 
-  const product = mockdataGateWithCorrugatedBoard.find((item) => item.id === id);
+  const product = mockdataEliteIronGates.find((item) => item.id === id);
 
   // const features = mockdata.map((feature) => (
   //   <Center key={feature.label}>
@@ -30,7 +30,7 @@ export function CardDetalies2() {
     <Container pb={40}>
       <Flex direction="row" gap={10} align="center" mb={30}>
         <FaArrowLeftLong />
-        <Link className={classes.link} to="/vorota-profnastilom-kovanimi">
+        <Link className={classes.link} to="/elitni-kovani-vorota">
           Назад
         </Link>
       </Flex>

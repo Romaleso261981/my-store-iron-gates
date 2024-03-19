@@ -2,7 +2,7 @@ import { Group, Menu, rem, Text, UnstyledButton } from '@mantine/core';
 import { IconChevronDown } from '@tabler/icons-react';
 import type { FC } from 'react';
 
-import classes from './KategjryLink.module.css';
+import s from './KategjryLink.module.css';
 
 const links2 = [
   { id: '1', path: '/vorota-profnastilom-kovanimi', label: 'Ворота з профнастилом' },
@@ -13,7 +13,9 @@ const links2 = [
 
 const items = links2.map((link) => (
   <Menu.Item key={link.id}>
-    <a href={link.path}>{link.label}</a>
+    <a className={s.link} href={link.path}>
+      {link.label}
+    </a>
   </Menu.Item>
 ));
 
@@ -32,7 +34,7 @@ export const KategjryLink: FC<Props> = ({ title }) => {
       closeDelay={50}
       withinPortal>
       <Menu.Target>
-        <UnstyledButton className={classes.user}>
+        <UnstyledButton className={s.user}>
           <Group gap={7}>
             <Text fw={500} size="sm" lh={1} mr={3}>
               {title}

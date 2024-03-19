@@ -21,6 +21,12 @@ const GateWithCorrugatedBoard = lazy(
   () => import('../pages/GateWithCorrugatedBoard/GateWithCorrugatedBoard')
 );
 const SingleCard = lazy(() => import('../pages/GateWithCorrugatedBoard/ui/SingleCard/SingleCard'));
+const SingleCardElitni = lazy(
+  () => import('../pages/EliteIronGates/ui/SingleCard/SingleCardElitni')
+);
+const SingleCardKozirki = lazy(
+  () => import('../pages/KozirkiPage/ui/SingleCard/SingleCardKozirki')
+);
 const EliteIronGates = lazy(() => import('../pages/EliteIronGates/EliteIronGates'));
 
 export default function RootRouter() {
@@ -30,6 +36,8 @@ export default function RootRouter() {
         <Route path={RoutersPaths.LOGIN} element={<AuthPage />} />
         <Route path={RoutersPaths.ADMIN} element={<AdminPage />} />
         <Route path={RoutersPaths.VOROTAPROFNASTILOMBYID} element={<SingleCard />} />
+        <Route path={RoutersPaths.ELITNIKOVANIVOROTABYID} element={<SingleCardElitni />} />
+        <Route path={RoutersPaths.KOVANIKOZIRKIBYID} element={<SingleCardKozirki />} />
         <Route element={<Layout />}>
           <Route path={RoutersPaths.MAIN} element={<MainPage />} />
           <Route path={RoutersPaths.ABOUT} element={<AboutPage />} />

@@ -1,8 +1,13 @@
-import { Autocomplete, Box, Burger, Button, Group, rem } from '@mantine/core';
-import { useDisclosure } from '@mantine/hooks';
+import { Autocomplete, Burger, Button, Flex, Group, rem } from '@mantine/core';
+import { useDisclosure, useMediaQuery } from '@mantine/hooks';
 import { IconSearch } from '@tabler/icons-react';
+import { useState } from 'react';
+import { FaPhoneVolume } from 'react-icons/fa6';
+import { IoMdMail } from 'react-icons/io';
+import { Link } from 'react-router-dom';
 
 import { ADMIN } from '@/constans/constans';
+import { Basket, IconBasket } from '@/features';
 
 import MainLogo from '../MainLogo/MainLogo';
 // import logo from '../../../App/access/desheva-Kovka/desheva-kovka-logo.webp';
@@ -17,29 +22,64 @@ const links = [
 
 export function HeaderSearch() {
   const [opened, { toggle }] = useDisclosure(false);
+  const [isShowBasket, setIsShowBasket] = useState(false);
+
+  const toggleBasket = () => {
+    setIsShowBasket(!setIsShowBasket);
+  };
 
   const items = links.map((link) => (
-    <Box key={link.label} className={classes.link}>
-      <a href={link.link}>{link.label}</a>
-    </Box>
+    <Flex key={link.label}>
+      <Flex
+        key={link.label}
+        direction={!useMediaQuery('(min-width: 48rem)') ? 'row' : 'column'}></Flex>
+      <Link className={classes.link} to={link.link}>
+        {link.label}
+      </Link>
+    </Flex>
   ));
 
   return (
     <header className={classes.header}>
       <div className={classes.inner}>
         <Group>
-          <Burger opened={opened} onClick={toggle} size="sm" hiddenFrom="sm" />
+          {/* <Burger opened={opened} onClick={toggle} size="sm" hiddenFrom="sm" /> */}
           <MainLogo />
         </Group>
         <Group>
-          <Group ml={50} gap={15} className={classes.links} visibleFrom="sm">
-            {items}
-            {ADMIN === 'admin' && (
-              <Button>
-                <a href="/community">Робота Коля</a>
+          <Flex
+            ml={useMediaQuery('(min-width: 75rem)') ? 5 : 15}
+            gap={useMediaQuery('(min-width: 75rem)') ? 5 : 0}
+            direction={useMediaQuery('(min-width: 75rem)') ? 'row' : 'column'}>
+            <Flex align="center" direction={useMediaQuery('(min-width: 75rem)') ? 'row' : 'column'}>
+              {useMediaQuery('(min-width: 75rem)') && <IoMdMail />}
+              <Button c="gray" variant="transparent">
+                desheva.kovka1@gmail.com
               </Button>
-            )}
-          </Group>
+            </Flex>
+            <Group>
+              {useMediaQuery('(min-width: 75rem)') && <FaPhoneVolume />}
+              <Button c="gray" variant="transparent">
+                +380 (96) 536-41-01
+              </Button>
+            </Group>
+            <Group>
+              {useMediaQuery('(min-width: 75rem)') && <FaPhoneVolume />}
+              <Button c="gray" variant="transparent">
+                +380 (97) 706 32 27
+              </Button>
+              <Burger opened={opened} onClick={toggle} size="sm" hiddenFrom="sm" />
+            </Group>
+
+            <Group ml={50} gap={15} className={classes.links} visibleFrom="sm">
+              {items}
+              {ADMIN === 'admin' && (
+                <Button>
+                  <a href="/community">Робота Коля</a>
+                </Button>
+              )}
+            </Group>
+          </Flex>
           <Autocomplete
             className={classes.search}
             placeholder="Search"
@@ -47,7 +87,9 @@ export function HeaderSearch() {
             data={['React', 'Angular', 'Vue', 'Next.js', 'Riot.js', 'Svelte', 'Blitz.js']}
             visibleFrom="xs"
           />
+          {useMediaQuery('(min-width: 75rem)') && <IconBasket setIsShowBasket={toggleBasket} />}
         </Group>
+        <Basket setIsShowBasket={toggleBasket} opened={isShowBasket} />
       </div>
     </header>
   );

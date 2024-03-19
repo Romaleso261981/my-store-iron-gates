@@ -1,57 +1,39 @@
 export const productsGroup = [
   {
     id: '1',
-    title: 'КОВАНІ ВОРОТА З ПРОФНАСТИЛОМ ТА ЕЛЕМЕНТАМИ КОВКИ',
-    image: 'https://images.prom.ua/5077792165_kovani-vorota-z.jpg',
+    title: 'ЕЛІТНІ КОВАНІ ВОРОТА',
+    image: 'https://images.prom.ua/2332731040_2332731040.jpg',
     code: 'З-0101',
     cost: 1,
     category: 'kovanye-vorota-profnastila',
-    date: 'August 18, 2022'
+    to: '/elitni-kovani-vorota',
+    date: 'August 18, 2022',
+    description:
+      'Понад 25 років працюємо на ринку України. Потужність нашого виробництва дозволяє працювати нам не тільки в роздріб,а також з оптовими покупцями. Ковані вироби виготовляємо будь якої складності, якість гарантована. Виготовляємо ворота, забори, альтанки, ковані лавки, сходи, перила, монгали та грилі, прибори для каміну, грати, козирки, ганки та багато іншого'
   },
   {
     id: '2',
-    title: 'ВОРОТА КОВАНІ РОЗПАШНІ З ЕЛЕМЕНТАМИ КОВКИ ',
-    image: 'https://images.prom.ua/5125569884_vorota-kovani-rozpashni.jpg',
+    title: 'ВОРОТА З ПРОФНАСТИЛОМ І КОВАНИМИ ЕЛЕМЕНТАМИ',
+    image: 'https://images.prom.ua/2607060348_2607060348.jpg',
     code: 'З-0102',
     cost: 1,
-    category: 'vorota-kovani-rozpashni',
+    category: 'vorota-profnastilom-kovanimi',
+    to: '/vorota-profnastilom-kovanimi',
+    description:
+      'Понад 25 років працюємо на ринку України. Потужність нашого виробництва дозволяє працювати нам не тільки в роздріб,а також з оптовими покупцями. Ковані вироби виготовляємо будь якої складності, якість гарантована. Виготовляємо ворота, забори, альтанки, ковані лавки, сходи, перила, монгали та грилі, прибори для каміну, грати, козирки, ганки та багато іншого',
     date: 'August 27, 2022'
   },
   {
     id: '3',
     title: 'КОВАНІ КОЗИРКИ',
-    image: 'https://images.prom.ua/5125569884_vorota-kovani-rozpashni.jpg',
+    image: 'https://images.prom.ua/3264470453_3264470453.jpg',
     code: 'З-0103',
     cost: 1,
     category: 'kovaniGrati',
+    to: '/kovani-kozirki',
+    description:
+      'Понад 25 років працюємо на ринку України. Потужність нашого виробництва дозволяє працювати нам не тільки в роздріб,а також з оптовими покупцями. Ковані вироби виготовляємо будь якої складності, якість гарантована. Виготовляємо ворота, забори, альтанки, ковані лавки, сходи, перила, монгали та грилі, прибори для каміну, грати, козирки, ганки та багато іншого',
     date: 'September 9, 2022'
-  },
-  {
-    id: '4',
-    title: 'КОВАНІ КОЗИРКИ',
-    image: 'https://images.prom.ua/4643083809_kovani-vorota-z.jpg',
-    code: 'З-0104',
-    cost: 1,
-    category: 'kovaniGrati',
-    date: 'September 12, 2022'
-  },
-  {
-    id: '5',
-    title: 'КОВАНИЙ ЗАБОР',
-    image: 'https://images.prom.ua/1612796544_kovanij-zabor.jpg',
-    code: 'З-0105',
-    cost: 1,
-    category: 'kovaniGrati',
-    date: 'September 12, 2022'
-  },
-  {
-    id: '6',
-    title: 'КОВАНІ КОЗИРКИ',
-    image: 'https://images.prom.ua/1614752939_kovani-kozirki.jpg',
-    code: 'З-0106',
-    cost: 1,
-    category: 'kovaniGrati',
-    date: 'September 12, 2022'
   }
 ];
 
@@ -481,6 +463,306 @@ export const mockdataKovaniGrati = [
     code: '0126',
     cost: 1,
     category: 'kovaniGrati',
+    date: 'August 18, 2022'
+  }
+];
+
+export const mockdataKovaniZabori = [
+  {
+    id: '1',
+    title: 'КОВАНІ ЗАБОРИ',
+    image: 'https://images.prom.ua/1612796544_w262_h242_kovanij-zabor.jpg',
+    code: 'Б-0101',
+    cost: 24200,
+    category: 'kovaniZabori',
+    date: 'August 18, 2022'
+  },
+  {
+    id: '2',
+    title: 'КОВАНІ ЗАБОРИ',
+    image: 'https://images.prom.ua/1612796544_w262_h242_kovanij-zabor.jpg',
+    code: 'Б-0101',
+    cost: 24200,
+    category: 'kovaniZabori',
+    date: 'August 18, 2022'
+  },
+  {
+    id: '3',
+    title: 'КОВАНІ ЗАБОРИ',
+    image: 'https://images.prom.ua/1612796544_w262_h242_kovanij-zabor.jpg',
+    code: 'Б-0101',
+    cost: 24200,
+    category: 'kovaniZabori',
+    date: 'August 18, 2022'
+  },
+  {
+    id: '4',
+    title: 'КОВАНІ ЗАБОРИ',
+    image: 'https://images.prom.ua/1612796544_w262_h242_kovanij-zabor.jpg',
+    code: 'Б-0101',
+    cost: 24200,
+    category: 'kovaniZabori',
+    date: 'August 18, 2022'
+  },
+  {
+    id: '5',
+    title: 'КОВАНІ ЗАБОРИ',
+    image: 'https://images.prom.ua/1612796544_w262_h242_kovanij-zabor.jpg',
+    code: 'Б-0101',
+    cost: 24200,
+    category: 'kovaniZabori',
+    date: 'August 18, 2022'
+  },
+  {
+    id: '6',
+    title: 'КОВАНІ ЗАБОРИ',
+    image: 'https://images.prom.ua/1612796544_w262_h242_kovanij-zabor.jpg',
+    code: 'Б-0101',
+    cost: 24200,
+    category: 'kovaniZabori',
+    date: 'August 18, 2022'
+  },
+  {
+    id: '7',
+    title: 'КОВАНІ ЗАБОРИ',
+    image: 'https://images.prom.ua/1612796544_w262_h242_kovanij-zabor.jpg',
+    code: 'Б-0101',
+    cost: 24200,
+    category: 'kovaniZabori',
+    date: 'August 18, 2022'
+  },
+  {
+    id: '8',
+    title: 'КОВАНІ ЗАБОРИ',
+    image: 'https://images.prom.ua/1612796544_w262_h242_kovanij-zabor.jpg',
+    code: 'Б-0101',
+    cost: 24200,
+    category: 'kovaniZabori',
+    date: 'August 18, 2022'
+  },
+  {
+    id: '9',
+    title: 'КОВАНІ ЗАБОРИ',
+    image: 'https://images.prom.ua/1612796544_w262_h242_kovanij-zabor.jpg',
+    code: 'Б-0101',
+    cost: 24200,
+    category: 'kovaniZabori',
+    date: 'August 18, 2022'
+  },
+  {
+    id: '10',
+    title: 'КОВАНІ ЗАБОРИ',
+    image: 'https://images.prom.ua/1612796544_w262_h242_kovanij-zabor.jpg',
+    code: 'Б-0101',
+    cost: 24200,
+    category: 'kovaniZabori',
+    date: 'August 18, 2022'
+  },
+  {
+    id: '11',
+    title: 'КОВАНІ ЗАБОРИ',
+    image: 'https://images.prom.ua/1612796544_w262_h242_kovanij-zabor.jpg',
+    code: 'Б-0101',
+    cost: 24200,
+    category: 'kovaniZabori',
+    date: 'August 18, 2022'
+  },
+  {
+    id: '12',
+    title: 'КОВАНІ ЗАБОРИ',
+    image: 'https://images.prom.ua/1612796544_w262_h242_kovanij-zabor.jpg',
+    code: 'Б-0101',
+    cost: 24200,
+    category: 'kovaniZabori',
+    date: 'August 18, 2022'
+  },
+  {
+    id: '13',
+    title: 'КОВАНІ ЗАБОРИ',
+    image: 'https://images.prom.ua/1612796544_w262_h242_kovanij-zabor.jpg',
+    code: 'Б-0101',
+    cost: 24200,
+    category: 'kovaniZabori',
+    date: 'August 18, 2022'
+  },
+  {
+    id: '14',
+    title: 'КОВАНІ ЗАБОРИ',
+    image: 'https://images.prom.ua/1612796544_w262_h242_kovanij-zabor.jpg',
+    code: 'Б-0101',
+    cost: 24200,
+    category: 'kovaniZabori',
+    date: 'August 18, 2022'
+  },
+  {
+    id: '15',
+    title: 'КОВАНІ ЗАБОРИ',
+    image: 'https://images.prom.ua/1612796544_w262_h242_kovanij-zabor.jpg',
+    code: 'Б-0101',
+    cost: 24200,
+    category: 'kovaniZabori',
+    date: 'August 18, 2022'
+  },
+  {
+    id: '16',
+    title: 'КОВАНІ ЗАБОРИ',
+    image: 'https://images.prom.ua/1612796544_w262_h242_kovanij-zabor.jpg',
+    code: 'Б-0101',
+    cost: 24200,
+    category: 'kovaniZabori',
+    date: 'August 18, 2022'
+  },
+  {
+    id: '17',
+    title: 'КОВАНІ ЗАБОРИ',
+    image: 'https://images.prom.ua/1612796544_w262_h242_kovanij-zabor.jpg',
+    code: 'Б-0101',
+    cost: 24200,
+    category: 'kovaniZabori',
+    date: 'August 18, 2022'
+  },
+  {
+    id: '18',
+    title: 'КОВАНІ ЗАБОРИ',
+    image: 'https://images.prom.ua/1612796544_w262_h242_kovanij-zabor.jpg',
+    code: 'Б-0101',
+    cost: 24200,
+    category: 'kovaniZabori',
+    date: 'August 18, 2022'
+  },
+  {
+    id: '19',
+    title: 'КОВАНІ ЗАБОРИ',
+    image: 'https://images.prom.ua/1612796544_w262_h242_kovanij-zabor.jpg',
+    code: 'Б-0101',
+    cost: 24200,
+    category: 'kovaniZabori',
+    date: 'August 18, 2022'
+  },
+  {
+    id: '20',
+    title: 'КОВАНІ ЗАБОРИ',
+    image: 'https://images.prom.ua/1612796544_w262_h242_kovanij-zabor.jpg',
+    code: 'Б-0101',
+    cost: 24200,
+    category: 'kovaniZabori',
+    date: 'August 18, 2022'
+  },
+  {
+    id: '21',
+    title: 'КОВАНІ ЗАБОРИ',
+    image: 'https://images.prom.ua/1612796544_w262_h242_kovanij-zabor.jpg',
+    code: 'Б-0101',
+    cost: 24200,
+    category: 'kovaniZabori',
+    date: 'August 18, 2022'
+  },
+  {
+    id: '22',
+    title: 'КОВАНІ ЗАБОРИ',
+    image: 'https://images.prom.ua/1612796544_w262_h242_kovanij-zabor.jpg',
+    code: 'Б-0101',
+    cost: 24200,
+    category: 'kovaniZabori',
+    date: 'August 18, 2022'
+  },
+  {
+    id: '23',
+    title: 'КОВАНІ ЗАБОРИ',
+    image: 'https://images.prom.ua/1612796544_w262_h242_kovanij-zabor.jpg',
+    code: 'Б-0101',
+    cost: 24200,
+    category: 'kovaniZabori',
+    date: 'August 18, 2022'
+  },
+  {
+    id: '24',
+    title: 'КОВАНІ ЗАБОРИ',
+    image: 'https://images.prom.ua/1612796544_w262_h242_kovanij-zabor.jpg',
+    code: 'Б-0101',
+    cost: 24200,
+    category: 'kovaniZabori',
+    date: 'August 18, 2022'
+  },
+  {
+    id: '25',
+    title: 'КОВАНІ ЗАБОРИ',
+    image: 'https://images.prom.ua/1612796544_w262_h242_kovanij-zabor.jpg',
+    code: 'Б-0101',
+    cost: 24200,
+    category: 'kovaniZabori',
+    date: 'August 18, 2022'
+  },
+  {
+    id: '26',
+    title: 'КОВАНІ ЗАБОРИ',
+    image: 'https://images.prom.ua/1612796544_w262_h242_kovanij-zabor.jpg',
+    code: 'Б-0101',
+    cost: 24200,
+    category: 'kovaniZabori',
+    date: 'August 18, 2022'
+  },
+  {
+    id: '27',
+    title: 'КОВАНІ ЗАБОРИ',
+    image: 'https://images.prom.ua/1612796544_w262_h242_kovanij-zabor.jpg',
+    code: 'Б-0101',
+    cost: 24200,
+    category: 'kovaniZabori',
+    date: 'August 18, 2022'
+  },
+  {
+    id: '28',
+    title: 'КОВАНІ ЗАБОРИ',
+    image: 'https://images.prom.ua/1612796544_w262_h242_kovanij-zabor.jpg',
+    code: 'Б-0101',
+    cost: 24200,
+    category: 'kovaniZabori',
+    date: 'August 18, 2022'
+  },
+  {
+    id: '29',
+    title: 'КОВАНІ ЗАБОРИ',
+    image: 'https://images.prom.ua/1612796544_w262_h242_kovanij-zabor.jpg',
+    code: 'Б-0101',
+    cost: 24200,
+    category: 'kovaniZabori',
+    date: 'August 18, 2022'
+  },
+  {
+    id: '30',
+    title: 'КОВАНІ ЗАБОРИ',
+    image: 'https://images.prom.ua/1612796544_w262_h242_kovanij-zabor.jpg',
+    code: 'Б-0101',
+    cost: 24200,
+    category: 'kovaniZabori',
+    date: 'August 18, 2022'
+  },
+  {
+    id: '31',
+    title: 'КОВАНІ ЗАБОРИ',
+    image: 'https://images.prom.ua/1612796544_w262_h242_kovanij-zabor.jpg',
+    code: 'Б-0101',
+    cost: 24200,
+    category: 'kovaniZabori',
+    date: 'August 18, 2022'
+  },
+  {
+    id: '32',
+    title: 'КОВАНІ ЗАБОРИ',
+    image: 'https://images.prom.ua/1612796544_w262_h242_kovanij-zabor.jpg',
+    code: 'Б-0101',
+    cost: 24200,
+    category: 'kovaniZabori',
+    date: 'August 18, 2022'
+  },
+  {
+    id: '',
+    title: 'КОВАНІ ЗАБОРИ',
+    image: 'https://images.prom.ua/1612796544_w262_h242_kovanij-zabor.jpg',
+    code: 'Б-0101',
+    cost: 24200,
+    category: 'kovaniZabori',
     date: 'August 18, 2022'
   }
 ];

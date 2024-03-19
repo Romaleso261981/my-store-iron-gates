@@ -1,6 +1,7 @@
 import { mockdataEliteIronGates } from '@/mocData';
 import { CardsCarousel } from '@/shared/components';
-import { ArticalCard } from '@/shared/components/ArticalCard/ArticalCard';
+
+import { ArticalCard } from './ui/SingleCard/ui/ArticalCard/ArticalCard';
 
 export default function EliteIronGates() {
   return (

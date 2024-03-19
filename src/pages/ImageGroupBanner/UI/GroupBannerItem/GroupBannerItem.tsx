@@ -11,6 +11,8 @@ type Product = {
   cost: number;
   category: string;
   date: string;
+  to: string;
+  description: string;
 };
 
 type qroupBannerItemProps = {
@@ -19,26 +21,22 @@ type qroupBannerItemProps = {
 
 export const GroupBannerItem: FC<qroupBannerItemProps> = ({ product }) => {
   return (
-    <Card radius="md" className={classes.card}>
-      <Overlay className={classes.overlay} opacity={0.35} zIndex={0} />
+    <Card radius="md">
+      <Overlay opacity={0.01} zIndex={0} />
 
-      <Flex direction="column" className={classes.content}>
+      <Flex direction="column" justify="space-between">
         <Flex>
           <Image src={product.image} />
         </Flex>
-        <Flex direction="column">
-          <Text size="lg" fw={700} className={classes.title}>
+        <Flex direction="column" justify="space-around">
+          <Text size="lg" fw={700}>
             {product.title}
           </Text>
           <Text size="sm" className={classes.description}>
-            {product.category}
+            {product.description}
           </Text>
-          <Text size="sm" className={classes.description}>
-            {product.cost}
-          </Text>
-          animate
-          <Button className={classes.action} variant="gradient" color="dark" size="md">
-            <a href="https://desheva-kovka.com.ua/ua/g52276843-elitni-kovani-vorota">Перейти</a>
+          <Button variant="gradient" color="dark" size="md">
+            <a href={product.to}>Перейти</a>
           </Button>
         </Flex>
       </Flex>

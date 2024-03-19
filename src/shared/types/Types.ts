@@ -16,17 +16,21 @@ export type LanguagePickerProps = {
   label: string;
   image: string;
 };
-export type GateWithCorrugatedBoard = {
-  label: string;
-  id: string;
-  title: string;
-  image: string;
+
+export interface GateWithCorrugatedBoard extends Product {
   image2?: string;
   image3?: string;
   image4?: string;
   image5?: string;
   image6?: string;
   image7?: string;
+}
+
+export type Product = {
+  image: string;
+  title: string;
+  label: string;
+  id: string;
   code: string;
   cost: number;
   category: string;

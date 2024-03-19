@@ -1,10 +1,9 @@
-import { Box, Center, Container, Flex } from '@mantine/core';
+import { Box, Container, Flex } from '@mantine/core';
 import { Outlet } from 'react-router-dom';
 
 import { FooterLinks } from '@/shared/components';
 import Breadcrumbs from '@/shared/components/breadcrumbs/Breadcrumbs';
 import { HeaderSearch } from '@/shared/components/HeaderSearch/HeaderSearch';
-import { PaginationComponent } from '@/shared/components/Pagination/Pagination';
 import ScrollToTop from '@/shared/components/ScrollToTop/ScrollToTop';
 
 import s from './App.module.css';
@@ -21,9 +20,6 @@ export function Layout() {
       </Flex>
       <Container>
         <Outlet />
-        <Center mb={20}>
-          <PaginationComponent />
-        </Center>
       </Container>
       <Box>
         <FooterLinks />

@@ -5,9 +5,7 @@ import { KategjryLink } from '../HeaderSearch/UI';
 export default function Breadcrumbs() {
   return (
     <Flex gap={20} justify="space-around">
-      <KategjryLink title="Головна" />
-      <KategjryLink title="Товари" />
-      <KategjryLink title="Ковані грати" />
+      <KategjryLink title="Наші Вироби" />
     </Flex>
   );
 }

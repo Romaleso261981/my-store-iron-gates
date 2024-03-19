@@ -24,6 +24,8 @@ export enum RoutersPaths {
   KOVANIKOZIRKI = '/kovani-kozirki',
   VOROTAPROFNASTILOM = '/vorota-profnastilom-kovanimi',
   VOROTAPROFNASTILOMBYID = '/vorota-profnastilom-kovanimi/:id',
+  ELITNIKOVANIVOROTABYID = '/elitni-kovani-vorota/:id',
+  KOVANIKOZIRKIBYID = '/kovani-kozirki/:id',
   KOVANIGRATI = '/kovani-grati',
   KOVANIZABORI = '/kovani-zabori',
   ELITNIKOVANIVOROTA = '/elitni-kovani-vorota',
