@@ -35,7 +35,9 @@ export const Basket: FC<Props> = ({ setIsShowBasket, opened }) => {
           </Flex>
         ))}
       <Flex>
-        <Text>{`${t('basket.totalDue')} ${incomeTotal(orderedProduct).toLocaleString()} $.`}</Text>
+        <Flex>
+          <Text>{`${t('basket.totalDue')} ${incomeTotal(orderedProduct).toLocaleString()} грн.`}</Text>
+        </Flex>
       </Flex>
       :
       <Flex className={s.basketEmpty}>

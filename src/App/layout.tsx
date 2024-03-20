@@ -1,7 +1,8 @@
 import { Box, Container, Flex } from '@mantine/core';
 import { Outlet } from 'react-router-dom';
 
-import { FooterLinks } from '@/shared/components';
+import { BreadcrumbsComponent } from '@/features/Breadcrumbs/Breadcrumbs';
+import { CardsCarousel, FooterLinks } from '@/shared/components';
 import Breadcrumbs from '@/shared/components/breadcrumbs/Breadcrumbs';
 import { HeaderSearch } from '@/shared/components/HeaderSearch/HeaderSearch';
 import ScrollToTop from '@/shared/components/ScrollToTop/ScrollToTop';
@@ -15,9 +16,15 @@ export function Layout() {
         {/* <HeaderTabs /> */}
         <HeaderSearch />
       </Box>
-      <Flex ml={40}>
-        <Breadcrumbs />
+      <Flex>
+        <Box ml={40}>
+          <Breadcrumbs />
+        </Box>
+        <Flex ml={40}>
+          <BreadcrumbsComponent />
+        </Flex>
       </Flex>
+      <CardsCarousel />
       <Container>
         <Outlet />
       </Container>

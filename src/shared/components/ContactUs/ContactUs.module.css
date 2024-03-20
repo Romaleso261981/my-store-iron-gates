@@ -5,6 +5,8 @@
     var(--mantine-color-blue-4) 0%,
     var(--mantine-color-blue-7) 100%
   );
+  margin-top: var(--mantine-spacing-xl);
+  margin-bottom: var(--mantine-spacing-xl);
   border-radius: var(--mantine-radius-md);
   padding: calc(var(--mantine-spacing-xl) * 2.5);
 }

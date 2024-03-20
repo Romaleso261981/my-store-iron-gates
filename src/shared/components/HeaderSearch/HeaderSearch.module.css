@@ -3,7 +3,7 @@
   background-color: var(--mantine-color-body);
   border-bottom: rem(1px) solid light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-4));
   padding-left: var(--mantine-spacing-md);
-  padding-right: var(--mantine-spacing-md);
+  padding-right: var(--mantine-spacing-lg);
   padding-bottom: 2.5rem;
   padding-top: 2.5rem;
 }
@@ -11,6 +11,7 @@
 .inner {
   height: rem(56px);
   display: flex;
+  gap: 0.3125rem;
   justify-content: space-between;
   align-items: center;
 }
