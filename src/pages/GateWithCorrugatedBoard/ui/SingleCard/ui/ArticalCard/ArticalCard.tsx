@@ -1,4 +1,4 @@
-import { AspectRatio, Button, Card, Container, Flex, Image, SimpleGrid, Text } from '@mantine/core';
+import { AspectRatio, Button, Card, Flex, Image, SimpleGrid, Text } from '@mantine/core';
 import type { FC } from 'react';
 
 const oldKoef = 1;
@@ -31,6 +31,7 @@ export const ArticalCard: FC<Props> = ({ data, type }) => {
 
   const cards = data.map((article) => (
     <Card
+      mt={40}
       shadow="lg"
       key={article.id}
       p="md"
@@ -86,8 +87,13 @@ export const ArticalCard: FC<Props> = ({ data, type }) => {
     </Card>
   ));
   return (
-    <Container size="md">
-      <SimpleGrid cols={{ base: 1, sm: 2 }}>{cards}</SimpleGrid>
-    </Container>
+    <SimpleGrid
+      cols={{ base: 1, sm: 2, lg: 3 }}
+      spacing={{ base: 10, sm: 'xl' }}
+      verticalSpacing={{ base: 'md', sm: 'xl' }}
+      pl={{ base: 'xl', sm: 'xl' }}
+      pr={{ base: 'xl', sm: 'xl' }}>
+      {cards}
+    </SimpleGrid>
   );
 };
