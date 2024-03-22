@@ -1,6 +1,7 @@
 import '@mantine/core/styles.css';
 
 import { Container, Flex } from '@mantine/core';
+import { useMediaQuery } from '@mantine/hooks';
 import { type FC, useEffect } from 'react';
 
 import { EmailBanner } from '@/features/Banner/EmailBanner';
@@ -10,6 +11,8 @@ import useScrollTop from '@/shared/helpers/useScrollTop';
 import ImageGroupBanner from '../ImageGroupBanner/ImageGroupBanner';
 
 const MainPage: FC = () => {
+  const matches = useMediaQuery('(min-width: 25em)');
+
   useScrollTop();
 
   const getData = async () => {
@@ -23,7 +26,7 @@ const MainPage: FC = () => {
   }, []);
 
   return (
-    <Flex direction="column" mt={40}>
+    <Flex direction="column" mt={matches ? 40 : 10}>
       <EmailBanner />
       <CardsCarousel />
       <Container size="lg">
@@ -33,7 +36,9 @@ const MainPage: FC = () => {
       {/* <FaqWithHeader /> */}
       {/* <Asymmetrical /> */}
       {/* <CommentHtml /> */}
-      <ContactUs />
+      <Container size="lg">
+        <ContactUs />
+      </Container>
     </Flex>
   );
 };

@@ -1,4 +1,5 @@
 import { Box, Flex } from '@mantine/core';
+import { useMediaQuery } from '@mantine/hooks';
 import { Outlet } from 'react-router-dom';
 
 import { BreadcrumbsComponent } from '@/features/Breadcrumbs/Breadcrumbs';
@@ -10,13 +11,15 @@ import ScrollToTop from '@/shared/components/ScrollToTop/ScrollToTop';
 import s from './App.module.css';
 
 export function Layout() {
+  const matches = useMediaQuery('(min-width: 25em)');
+
   return (
     <Flex justify="space-between" className={s.layoutWrapper} display="-ms-grid" direction="column">
-      <Box mb={60}>
+      <Box mb={matches ? 60 : 15}>
         {/* <HeaderTabs /> */}
         <HeaderSearch />
       </Box>
-      <Flex>
+      <Flex mb={matches ? 40 : 10}>
         <Box ml={40}>
           <Breadcrumbs />
         </Box>

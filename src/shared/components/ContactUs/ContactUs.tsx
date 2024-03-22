@@ -1,6 +1,7 @@
 import {
   ActionIcon,
   Button,
+  Flex,
   Group,
   SimpleGrid,
   Text,
@@ -23,7 +24,7 @@ export function ContactUs() {
   ));
 
   return (
-    <div className={classes.wrapper}>
+    <Flex className={classes.wrapper}>
       <SimpleGrid cols={{ base: 1, sm: 2 }} spacing={50}>
         <div>
           <Title className={classes.title}>Контактна особа</Title>
@@ -33,7 +34,9 @@ export function ContactUs() {
 
           <ContactIconsList />
 
-          <Group mt="xl">{icons}</Group>
+          <Group className={classes.socialList} mt="xl">
+            {icons}
+          </Group>
         </div>
         <div className={classes.form}>
           <TextInput
@@ -62,6 +65,6 @@ export function ContactUs() {
           </Group>
         </div>
       </SimpleGrid>
-    </div>
+    </Flex>
   );
 }

@@ -6,9 +6,8 @@
     var(--mantine-color-blue-7) 100%
   );
   margin-top: var(--mantine-spacing-xl);
-  margin-bottom: var(--mantine-spacing-xl);
   border-radius: var(--mantine-radius-md);
-  padding: calc(var(--mantine-spacing-xl) * 2.5);
+  padding: calc(var(--mantine-spacing-md));
 }
 
 .title {
@@ -56,11 +55,11 @@
   background-color: var(--mantine-color-blue-6);
 }
 
-@media (max-width: 320px) {
-  .wrapper {
-    padding: calc(var(--mantine-spacing-xl) * 1.5);
-  }
+@media (max-width: 380px) {
   .description {
     max-width: 100%;
+  }
+  .socialList {
+    justify-content: center;
   }
 }

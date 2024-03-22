@@ -15,7 +15,7 @@ function ImageGroupBanner() {
   }, 1000);
 
   return (
-    <SimpleGrid cols={{ base: 1, sm: 2 }} spacing="md">
+    <SimpleGrid cols={{ base: 1, sm: 2, lg: 3 }} spacing="md">
       {!isFeching &&
         productsGroup.map((product) => (
           <Card key={product.id} radius="md">

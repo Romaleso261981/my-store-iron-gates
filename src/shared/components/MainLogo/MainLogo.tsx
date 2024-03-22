@@ -1,8 +1,10 @@
-import { Box, Image } from '@mantine/core';
+import { Flex, Image } from '@mantine/core';
+
+import s from './MainLogo.module.css';
 
 export default function MainLogo() {
   return (
-    <Box pl={40}>
+    <Flex className={s.imageWrapper}>
       <a href="/">
         <Image
           radius="md"
@@ -10,6 +12,6 @@ export default function MainLogo() {
           src="https://images.prom.ua/4643099495_w270_h100_desheva-kovka.jpg"
         />
       </a>
-    </Box>
+    </Flex>
   );
 }

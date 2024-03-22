@@ -31,7 +31,6 @@ export const ArticalCard: FC<Props> = ({ data, type }) => {
 
   const cards = data.map((article) => (
     <Card
-      mt={40}
       shadow="lg"
       key={article.id}
       p="md"

@@ -1,30 +1,48 @@
-import { Button, Image, Text, TextInput, Title } from '@mantine/core';
+import { Button, Flex, Text, TextInput, Title } from '@mantine/core';
 
+import { CarouselCard } from './CarouselCard/CarouselCard';
 import classes from './EmailBanner.module.css';
-import image from './image.svg';
+// import image from './image.svg';
 
 export function EmailBanner() {
+  const sendMessage = () => {
+    alert('Ваше повідомлення відправленно');
+  };
   return (
-    <div className={classes.wrapper}>
+    <Flex className={classes.wrapper}>
       <div className={classes.body}>
-        <Title className={classes.title}>Wait a minute...</Title>
+        <Title className={classes.title}>Дешева ковка</Title>
         <Text fw={500} fz="lg" mb={5}>
-          Subscribe to our newsletter!
+          Що ми пропонуємо нашим клієнтам
         </Text>
-        <Text fz="sm" c="dimmed">
-          You will never miss important product updates, latest news and community QA sessions. Our
-          newsletter is once a week, every Sunday.
+        <Text fz="sm" c="cyan">
+          Ми зрадістю відповімо Вам на всі запитання та допоможемо оформити замовлення, для
+          консультації телефон +380680013381.
+        </Text>
+        <Text fz="sm" c="cyan">
+          Понад 25 років працюємо на ринку України. Потужність нашого виробництва дозволяє працювати
+          нам не тільки в роздріб,а також з оптовими покупцями.
+        </Text>
+        <Text fz="sm" c="cyan">
+          Ковані вироби виготовляємо будь якої складності, якість гарантована. Виготовляємо ворота,
+          забори, альтанки, ковані лавочки, сходи, перила, монгали та грилі, прибори для каміну,
+          грати, козирки, ганки та багато іншого.
         </Text>
 
-        <div className={classes.controls}>
+        <Flex className={classes.controls}>
           <TextInput
-            placeholder="Your email"
+            placeholder="Ваш електронна пошта"
             classNames={{ input: classes.input, root: classes.inputWrapper }}
           />
-          <Button className={classes.control}>Subscribe</Button>
-        </div>
+          <Button onClick={sendMessage} ml={10} className={classes.control}>
+            Замовити
+          </Button>
+        </Flex>
       </div>
-      <Image src={image} className={classes.image} />
-    </div>
+      <Flex className={classes.slide}>
+        <CarouselCard />
+      </Flex>
+      {/* <Image src={image} className={classes.image} /> */}
+    </Flex>
   );
 }

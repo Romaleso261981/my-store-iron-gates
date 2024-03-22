@@ -1,4 +1,4 @@
-import { ActionIcon, Button, Card, Container, Flex, Group, Image, Text } from '@mantine/core'; // import { IconGasStation, IconGauge, IconManualGearbox, IconUsers } from '@tabler/icons-react';
+import { ActionIcon, Button, Card, Flex, Group, Image, Text } from '@mantine/core'; // import { IconGasStation, IconGauge, IconManualGearbox, IconUsers } from '@tabler/icons-react';
 import { IconHeart } from '@tabler/icons-react';
 import { FaArrowLeftLong } from 'react-icons/fa6';
 import { Link, useParams } from 'react-router-dom';
@@ -27,7 +27,7 @@ export function CardDetalies2() {
   // ));
 
   return (
-    <Container pb={40}>
+    <Flex direction="column" ml="auto" mr="auto">
       <Flex direction="row" gap={10} align="center" mb={30}>
         <FaArrowLeftLong />
         <Link className={classes.link} to="/elitni-kovani-vorota">
@@ -38,7 +38,6 @@ export function CardDetalies2() {
         <Card.Section className={classes.imageSection}>
           <Image src={product?.image} alt="Tesla Model S" />
         </Card.Section>
-
         <Group justify="space-between" mt="md">
           <div>
             <Text fw={500}>{product?.title}</Text>
@@ -59,14 +58,6 @@ export function CardDetalies2() {
             Базова комплектація
           </Text>
         </Group>
-
-        <Card.Section className={classes.section} mt="md">
-          {/*
-          <Group gap={8} mb={-8}>
-            {features}
-          </Group> */}
-        </Card.Section>
-
         <Card.Section className={classes.section}>
           <Group gap={30}>
             <Button radius="xl" style={{ flex: 1 }}>
@@ -78,6 +69,6 @@ export function CardDetalies2() {
           </Group>
         </Card.Section>
       </Card>
-    </Container>
+    </Flex>
   );
 }

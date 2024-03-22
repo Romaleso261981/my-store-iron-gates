@@ -1,7 +1,10 @@
-import { ActionIcon, Box, Container, Group, rem, Text } from '@mantine/core';
-import { MantineLogo } from '@mantinex/mantine-logo';
+import { ActionIcon, Box, Flex, rem, Text } from '@mantine/core';
 import { IconBrandInstagram, IconBrandTwitter, IconBrandYoutube } from '@tabler/icons-react';
+// import { FaPhoneVolume } from 'react-icons/fa6';
+// import { IoMdMail } from 'react-icons/io';
+import { Link } from 'react-router-dom';
 
+import MainLogo from '../MainLogo/MainLogo';
 import classes from './FooterLinks.module.css';
 
 const data = [
@@ -57,32 +60,54 @@ export function FooterLinks() {
 
   return (
     <footer className={classes.footer}>
-      <Container className={classes.inner}>
-        <Box className={classes.logo}>
-          <MantineLogo size={30} />
-          <Text size="xs" c="dimmed" className={classes.description}>
-            Build fully functional accessible web applications faster than ever
-          </Text>
+      <Flex className={classes.inner}>
+        <Flex className={classes.logoWrapper}>
+          <Flex>
+            <MainLogo />
+          </Flex>
+          <Flex direction="column">
+            <Text mt={20} mb={20} fw={900} size="sm">
+              Додаткові види зв &rsquo; язку
+            </Text>
+            <Flex>
+              {/* <IoMdMail /> */}
+              <Text>desheva.kovka1@gmail.com</Text>
+            </Flex>
+            <Box>
+              {/* <FaPhoneVolume /> */}
+              <Link className={classes.link} to="/">
+                +380 (96) 536-41-01
+              </Link>
+            </Box>
+          </Flex>
+          <Flex
+            gap={0}
+            mt={20}
+            className={classes.social}
+            direction="row"
+            display="flex"
+            justify="flex-end"
+            wrap="nowrap">
+            <ActionIcon size="lg" color="gray" variant="subtle">
+              <IconBrandTwitter style={{ width: rem(18), height: rem(18) }} stroke={1.5} />
+            </ActionIcon>
+            <ActionIcon size="lg" color="gray" variant="subtle">
+              <IconBrandYoutube style={{ width: rem(18), height: rem(18) }} stroke={1.5} />
+            </ActionIcon>
+            <ActionIcon size="lg" color="gray" variant="subtle">
+              <IconBrandInstagram style={{ width: rem(18), height: rem(18) }} stroke={1.5} />
+            </ActionIcon>
+          </Flex>
+        </Flex>
+        <Box visibleFrom="sm" className={classes.groups}>
+          {groups}
         </Box>
-        <Box className={classes.groups}>{groups}</Box>
-      </Container>
-      <Container className={classes.afterFooter}>
+      </Flex>
+      <Flex className={classes.afterFooter}>
         <Text c="dimmed" size="sm">
           © 2020 mantine.dev. All rights reserved.
         </Text>
-
-        <Group gap={0} className={classes.social} justify="flex-end" wrap="nowrap">
-          <ActionIcon size="lg" color="gray" variant="subtle">
-            <IconBrandTwitter style={{ width: rem(18), height: rem(18) }} stroke={1.5} />
-          </ActionIcon>
-          <ActionIcon size="lg" color="gray" variant="subtle">
-            <IconBrandYoutube style={{ width: rem(18), height: rem(18) }} stroke={1.5} />
-          </ActionIcon>
-          <ActionIcon size="lg" color="gray" variant="subtle">
-            <IconBrandInstagram style={{ width: rem(18), height: rem(18) }} stroke={1.5} />
-          </ActionIcon>
-        </Group>
-      </Container>
+      </Flex>
     </footer>
   );
 }

@@ -12,7 +12,7 @@ export default function SingleCardElitni() {
   return (
     <>
       <HeaderSearch />
-      <Flex mt={40}>
+      <Flex mt={40} mb={40}>
         <CardDetalies2 />;
       </Flex>
     </>

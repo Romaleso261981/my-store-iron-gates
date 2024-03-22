@@ -26,6 +26,8 @@ export function HeaderSearch() {
   // const [opened, { toggle }] = useDisclosure(false);
   const [isShowBasket, setIsShowBasket] = useState(false);
 
+  const matches = useMediaQuery('(min-width: 23.75em)');
+
   const { t } = useTranslation();
 
   const toggleBasket = () => {
@@ -43,7 +45,7 @@ export function HeaderSearch() {
   return (
     <header className={classes.header}>
       <div className={classes.inner}>
-        <Group>
+        <Group ml={40}>
           <MainLogo />
         </Group>
         <Flex
@@ -51,7 +53,7 @@ export function HeaderSearch() {
           align={useMediaQuery('(min-width: 75rem)') ? 'flex-start' : 'flex-start'}
           direction="column">
           <Group>
-            <IoMdMail />
+            {matches && <IoMdMail />}
             <Link className={classes.link} to="/">
               desheva.kovka1@gmail.com
             </Link>
