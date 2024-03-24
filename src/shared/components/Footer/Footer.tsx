@@ -76,7 +76,7 @@ export function FooterLinks() {
             <Box>
               {/* <FaPhoneVolume /> */}
               <Link className={classes.link} to="/">
-                +380 (96) 536-41-01
+                +380 (97) 706 32 27
               </Link>
             </Box>
           </Flex>

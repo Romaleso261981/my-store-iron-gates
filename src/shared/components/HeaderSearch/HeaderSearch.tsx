@@ -61,7 +61,7 @@ export function HeaderSearch() {
           <Group>
             <FaPhoneVolume />
             <Link className={classes.link} to="/">
-              +380 (96) 536-41-01
+              +380 (97) 706 32 27
             </Link>
           </Group>
           <Group>
