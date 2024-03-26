@@ -11,7 +11,7 @@ export function EmailBanner() {
   const [value, setValue] = useState('');
 
   const handleSendMessage = () => {
-    sendMessage(`Повідомлення від my-store-iron-gates ${value}`);
+    sendMessage(value);
     setValue('');
   };
 
