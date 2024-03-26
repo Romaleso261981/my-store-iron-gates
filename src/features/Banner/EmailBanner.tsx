@@ -1,12 +1,24 @@
 import { Button, Flex, Text, TextInput, Title } from '@mantine/core';
+import { useState } from 'react';
+
+import { sendMessage } from '@/shared/helpers/sendMessageIntoTelegram';
 
 import { CarouselCard } from './CarouselCard/CarouselCard';
 import classes from './EmailBanner.module.css';
 // import image from './image.svg';
 
 export function EmailBanner() {
-  const sendMessage = () => {
-    alert('Ваше повідомлення відправленно');
+  const [value, setValue] = useState('');
+
+  const handleSendMessage = () => {
+    sendMessage(`Повідомлення від my-store-iron-gates ${value}`);
+    setValue('');
+  };
+
+  const handleKeyPress = (event: React.KeyboardEvent<HTMLInputElement>) => {
+    if (event.key === 'Enter') {
+      handleSendMessage();
+    }
   };
   return (
     <Flex className={classes.wrapper}>
@@ -31,10 +43,13 @@ export function EmailBanner() {
 
         <Flex className={classes.controls}>
           <TextInput
-            placeholder="Ваш електронна пошта"
+            value={value}
+            onChange={(event) => setValue(event.currentTarget.value)}
+            placeholder="Ваш номер телефону"
             classNames={{ input: classes.input, root: classes.inputWrapper }}
+            onKeyDown={handleKeyPress}
           />
-          <Button onClick={sendMessage} ml={10} className={classes.control}>
+          <Button onClick={handleSendMessage} ml={10} className={classes.control}>
             Замовити
           </Button>
         </Flex>
