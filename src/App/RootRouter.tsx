@@ -15,7 +15,6 @@ const CommunityPage = lazy(() => import('../pages/CommunityPage/CommunityPage'))
 const AdressPage = lazy(() => import('../pages/AdressPage/AdressPage'));
 const AboutPage = lazy(() => import('../pages/AboutPage/AboutPage'));
 const CardDetail = lazy(() => import('../pages/CardDetail/CardDetail'));
-const AdminPage = lazy(() => import('../pages/AdminPage/AdminPage'));
 const NotFound = lazy(() => import('../pages/Error-404/Error-404'));
 const GateWithCorrugatedBoard = lazy(
   () => import('../pages/GateWithCorrugatedBoard/GateWithCorrugatedBoard')
@@ -34,14 +33,13 @@ export default function RootRouter() {
     <Suspense fallback={<Spiner />}>
       <Routes>
         <Route path={RoutersPaths.LOGIN} element={<AuthPage />} />
-        <Route path={RoutersPaths.ADMIN} element={<AdminPage />} />
         <Route path={RoutersPaths.VOROTAPROFNASTILOMBYID} element={<SingleCard />} />
         <Route path={RoutersPaths.ELITNIKOVANIVOROTABYID} element={<SingleCardElitni />} />
         <Route path={RoutersPaths.KOVANIKOZIRKIBYID} element={<SingleCardKozirki />} />
         <Route element={<Layout />}>
           <Route path={RoutersPaths.MAIN} element={<MainPage />} />
           <Route path={RoutersPaths.ABOUT} element={<AboutPage />} />
-          <Route path={RoutersPaths.COMMUNITY} element={<CommunityPage />} />
+          <Route path={RoutersPaths.ADMIN} element={<CommunityPage />} />
           <Route path={RoutersPaths.CARDDETAIL} element={<CardDetail />} />
           <Route path={RoutersPaths.ADRESS} element={<AdressPage />} />
           <Route path={RoutersPaths.PRICING} element={<PricingPage />} />
