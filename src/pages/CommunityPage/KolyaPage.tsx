@@ -13,7 +13,7 @@ import { getAllJobs } from '../../redux/slices/jobSlise';
 import CardAddJob from './UI/CardAddJob/CardAddJob';
 import ExpensesPage from './UI/Expenses/Expenses';
 
-const CommunityPage = () => {
+const KolyaPage = () => {
   const [isShowCardAddProduct, setIsShowCardAddProduct] = useState(false);
   const [isShowCardExpenses, setIsShowCardExpenses] = useState(false);
 
@@ -96,4 +96,4 @@ const CommunityPage = () => {
     </Center>
   );
 };
-export default CommunityPage;
+export default KolyaPage;

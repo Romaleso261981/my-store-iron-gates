@@ -29,7 +29,8 @@ export enum RoutersPaths {
   KOVANIGRATI = '/kovani-grati',
   KOVANIZABORI = '/kovani-zabori',
   ELITNIKOVANIVOROTA = '/elitni-kovani-vorota',
-  ADMIN = '/admin',
+  KOLYA = '/kolya',
+  DIMA = '/dima',
   LOGIN = '/login',
   NOFOUND = '*'
 }
