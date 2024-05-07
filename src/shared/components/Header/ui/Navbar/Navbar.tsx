@@ -36,7 +36,7 @@ export const Navbar = () => {
           />
           <NavbarLink path={RoutersPaths.MAIN} icon={IconBuildingStore} label={t('navBar.store')} />
           <NavbarLink path={RoutersPaths.MAIN} icon={IconUser} label={t('navBar.user')} />
-          <NavbarLink path={RoutersPaths.ADMIN} icon={IconUsers} label={t('navBar.users')} />
+          <NavbarLink path={RoutersPaths.MAIN} icon={IconUsers} label={t('navBar.users')} />
         </Group>
         <Group>
           <NavbarLink path={RoutersPaths.MAIN} icon={IconSettings} label={t('navBar.settings')} />
