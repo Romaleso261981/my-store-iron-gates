@@ -1,13 +1,13 @@
-import { Burger, Container, Group, Menu, rem, Text, UnstyledButton } from '@mantine/core';
-import { useDisclosure } from '@mantine/hooks';
-import { IconChevronDown } from '@tabler/icons-react';
-import cx from 'clsx';
-import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Burger, Container, Group, Menu, rem, Text, UnstyledButton } from "@mantine/core";
+import { useDisclosure } from "@mantine/hooks";
+import { IconChevronDown } from "@tabler/icons-react";
+import cx from "clsx";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
-import { RoutersPaths } from '@/shared/types/enums';
+import { RoutersPaths } from "@/shared/types/enums";
 
-import classes from './HeaderTabs.module.css';
+import classes from "./HeaderTabs.module.css";
 
 export function HeaderTabs() {
   const [opened, { toggle }] = useDisclosure(false);
@@ -31,7 +31,7 @@ export function HeaderTabs() {
           <Menu
             width={260}
             position="bottom-end"
-            transitionProps={{ transition: 'pop-top-right' }}
+            transitionProps={{ transition: "pop-top-right" }}
             onClose={() => setUserMenuOpened(false)}
             onOpen={() => setUserMenuOpened(true)}
             withinPortal>

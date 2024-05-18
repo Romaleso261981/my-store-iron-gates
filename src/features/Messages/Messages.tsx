@@ -1,7 +1,7 @@
 import { ActionIcon, Indicator, Menu, Tooltip } from "@mantine/core";
 import { IconMessageCircle } from "@tabler/icons-react";
 
-import { MESSAGES } from "./data";
+import { MESSAGES } from "@/features/Messages/data.ts";
 
 export const Messages = () => {
   return (
