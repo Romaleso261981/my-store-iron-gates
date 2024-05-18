@@ -1,8 +1,8 @@
-import { Button, Container, Group, Text, Title } from '@mantine/core';
-import { Link } from 'react-router-dom';
+import { Button, Container, Group, Text, Title } from "@mantine/core";
+import { Link } from "react-router-dom";
 
-import classes from './Error-404.module.css';
-import { Illustration } from './Illustration';
+import classes from "./Error-404.module.css";
+import { Illustration } from "./Illustration";
 
 const NotFound = () => {
   return (

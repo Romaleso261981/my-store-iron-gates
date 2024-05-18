@@ -1,9 +1,9 @@
-import { Flex, Image, Text } from '@mantine/core';
-import type { FC } from 'react';
+import { Flex, Image, Text } from "@mantine/core";
+import type { FC } from "react";
 
-import type { Product } from '@/shared/types/Types';
+import type { Product } from "@/shared/types/Types";
 
-import s from './SingleCard.module.css';
+import s from "./SingleCard.module.css";
 
 type SingleCardProps = {
   data: Product;

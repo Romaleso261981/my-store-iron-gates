@@ -9,21 +9,21 @@ import {
   Image,
   Text,
   Title
-} from '@mantine/core';
-import { IconHeart } from '@tabler/icons-react';
-import { FaArrowLeftLong } from 'react-icons/fa6';
-import { Link, useParams } from 'react-router-dom';
+} from "@mantine/core";
+import { IconHeart } from "@tabler/icons-react";
+import { FaArrowLeftLong } from "react-icons/fa6";
+import { Link, useParams } from "react-router-dom";
 
-import { mockdataGateWithCorrugatedBoard } from '@/mocData';
+import { mockdataGateWithCorrugatedBoard } from "@/mocData";
 
-import classes from './CardDetalies.module.css';
+import classes from "./CardDetalies.module.css";
 
 const badges = [
-  { emoji: '☀️', label: 'Sunny weather' },
-  { emoji: '🦓', label: 'Onsite zoo' },
-  { emoji: '🌊', label: 'Sea' },
-  { emoji: '🌲', label: 'Nature' },
-  { emoji: '🤽', label: 'Water sports' }
+  { emoji: "☀️", label: "Sunny weather" },
+  { emoji: "🦓", label: "Onsite zoo" },
+  { emoji: "🌊", label: "Sea" },
+  { emoji: "🌲", label: "Nature" },
+  { emoji: "🤽", label: "Water sports" }
 ];
 
 export default function CardDetalies() {

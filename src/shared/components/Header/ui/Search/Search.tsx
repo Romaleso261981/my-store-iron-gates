@@ -1,5 +1,5 @@
-import { Autocomplete, rem } from '@mantine/core';
-import { IconSearch } from '@tabler/icons-react';
+import { Autocomplete, rem } from "@mantine/core";
+import { IconSearch } from "@tabler/icons-react";
 
 export const Search = () => {
   return (

@@ -1,7 +1,7 @@
-import type { DocumentData, QueryDocumentSnapshot } from 'firebase/firestore';
-import { collection, getDocs, limit, query, startAfter } from 'firebase/firestore';
+import type { DocumentData, QueryDocumentSnapshot } from "firebase/firestore";
+import { collection, getDocs, limit, query, startAfter } from "firebase/firestore";
 
-import { db } from '@/integations/firebase';
+import { db } from "@/integations/firebase";
 
 export const getAllFirestoreData = async <T extends DocumentData>(
   path: string,

@@ -1,14 +1,14 @@
-import { Group, Menu, rem, Text, UnstyledButton } from '@mantine/core';
-import { IconChevronDown } from '@tabler/icons-react';
-import type { FC } from 'react';
+import { Group, Menu, rem, Text, UnstyledButton } from "@mantine/core";
+import { IconChevronDown } from "@tabler/icons-react";
+import type { FC } from "react";
 
-import s from './KategjryLink.module.css';
+import s from "./KategjryLink.module.css";
 
 const links2 = [
-  { id: '1', path: '/vorota-profnastilom-kovanimi', label: 'Ворота з профнастилом' },
-  { id: '2', path: '/elitni-kovani-vorota', label: 'Елітні ворота' },
-  { id: '3', path: '/kovani-kozirki', label: 'Козирки' },
-  { id: '4', path: '/kovani-grati', label: 'Ковані грати' }
+  { id: "1", path: "/vorota-profnastilom-kovanimi", label: "Ворота з профнастилом" },
+  { id: "2", path: "/elitni-kovani-vorota", label: "Елітні ворота" },
+  { id: "3", path: "/kovani-kozirki", label: "Козирки" },
+  { id: "4", path: "/kovani-grati", label: "Ковані грати" }
 ];
 
 const items = links2.map((link) => (
@@ -28,7 +28,7 @@ export const KategjryLink: FC<Props> = ({ title }) => {
     <Menu
       width={260}
       position="bottom-end"
-      transitionProps={{ transition: 'pop-top-right', duration: 400 }}
+      transitionProps={{ transition: "pop-top-right", duration: 400 }}
       trigger="hover"
       openDelay={100}
       closeDelay={50}

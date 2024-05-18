@@ -1,8 +1,8 @@
-import { Button, Flex, Input, Text, Title } from '@mantine/core';
+import { Button, Flex, Input, Text, Title } from "@mantine/core";
 
-import type { User } from '@/shared/types/Types';
+import type { User } from "@/shared/types/Types";
 
-import s from './FormAddClient.module.css';
+import s from "./FormAddClient.module.css";
 
 type Props = {
   userData: User[];

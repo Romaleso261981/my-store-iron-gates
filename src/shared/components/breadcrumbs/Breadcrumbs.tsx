@@ -1,6 +1,6 @@
-import { Flex } from '@mantine/core';
+import { Flex } from "@mantine/core";
 
-import { KategjryLink } from '../HeaderSearch/UI';
+import { KategjryLink } from "../HeaderSearch/UI";
 
 export default function Breadcrumbs() {
   return (

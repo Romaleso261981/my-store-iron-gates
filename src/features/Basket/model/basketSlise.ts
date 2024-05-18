@@ -1,6 +1,6 @@
-import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
-import type { Product } from '@/shared/types/Types';
+import type { Product } from "@/shared/types/Types";
 
 type BasketTypes = {
   basket: Product[];
@@ -13,16 +13,16 @@ const initialState: BasketTypes = {
 };
 
 export const getUserProductsInBasket = createAsyncThunk(
-  'basket/getUserProductsInBasket',
+  "basket/getUserProductsInBasket",
   async () => {}
 );
 
 const basket = createSlice({
-  name: 'basket',
+  name: "basket",
   initialState,
   reducers: {
     setIsBasketShow(state) {
-      console.log('!state.isBasketShow', !state.isBasketShow);
+      console.log("!state.isBasketShow", !state.isBasketShow);
       state.isBasketShow = !state.isBasketShow;
     }
   },

@@ -1,4 +1,4 @@
-import type { Expenses, Job } from '../types/Types';
+import type { Expenses, Job } from "../types/Types";
 
 export const expensesTotal = (arr: Expenses[]) => {
   if (!arr || arr?.length === 0) return 0;

@@ -1,9 +1,9 @@
-import { Container, rem, SimpleGrid, Text } from '@mantine/core';
-import { IconCertificate, IconCoin, IconTruck } from '@tabler/icons-react';
+import { Container, rem, SimpleGrid, Text } from "@mantine/core";
+import { IconCertificate, IconCoin, IconTruck } from "@tabler/icons-react";
 
-import classes from './Asymmetrical.module.css';
+import classes from "./Asymmetrical.module.css";
 
-interface FeatureProps extends React.ComponentPropsWithoutRef<'div'> {
+interface FeatureProps extends React.ComponentPropsWithoutRef<"div"> {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   icon: React.FC<any>;
   title: string;
@@ -31,21 +31,21 @@ function Feature({ icon: Icon, title, description, ...others }: FeatureProps) {
 const mockdata = [
   {
     icon: IconTruck,
-    title: 'Free Worldwide shipping',
+    title: "Free Worldwide shipping",
     description:
-      'As electricity builds up inside its body, it becomes more aggressive. One theory is that the electricity.'
+      "As electricity builds up inside its body, it becomes more aggressive. One theory is that the electricity."
   },
   {
     icon: IconCertificate,
-    title: 'Best Quality Product',
+    title: "Best Quality Product",
     description:
-      'Slakoth’s heart beats just once a minute. Whatever happens, it is content to loaf around motionless.'
+      "Slakoth’s heart beats just once a minute. Whatever happens, it is content to loaf around motionless."
   },
   {
     icon: IconCoin,
-    title: 'Very Affordable Pricing',
+    title: "Very Affordable Pricing",
     description:
-      'Thought to have gone extinct, Relicanth was given a name that is a variation of the name of the person who discovered.'
+      "Thought to have gone extinct, Relicanth was given a name that is a variation of the name of the person who discovered."
   }
 ];
 

@@ -1,23 +1,23 @@
-import { Avatar, Box, Group, rem, Stack, Text, UnstyledButton } from '@mantine/core';
-import { IconChevronRight, IconCoin, IconLogin } from '@tabler/icons-react';
-import { useTranslation } from 'react-i18next';
-import { useNavigate } from 'react-router-dom';
+import { Avatar, Box, Group, rem, Stack, Text, UnstyledButton } from "@mantine/core";
+import { IconChevronRight, IconCoin, IconLogin } from "@tabler/icons-react";
+import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
 
-import styles from './UserInfo.module.css';
+import styles from "./UserInfo.module.css";
 
 export const UserInfo = () => {
   const { t } = useTranslation();
 
   const user = {
-    id: 'kjdfvkjndfnk'
+    id: "kjdfvkjndfnk"
   };
   const navigate = useNavigate();
 
   const hendlelogOut = () => {
-    navigate('/');
+    navigate("/");
   };
   const hendlelogin = () => {
-    navigate('/admin');
+    navigate("/admin");
   };
 
   return (
@@ -32,7 +32,7 @@ export const UserInfo = () => {
             />
             <Box style={{ flex: 1 }}>
               <Text size="sm" fw={500}>
-                {t('header.name')}
+                {t("header.name")}
               </Text>
               <Group>
                 <IconCoin color="#f1a708" />

@@ -1,8 +1,8 @@
-import { Image } from '@mantine/core';
+import { Image } from "@mantine/core";
 
-import icon from '@/App/access/test.svg';
+import icon from "@/App/access/test.svg";
 
-import classes from './HeaderTitle.module.css';
+import classes from "./HeaderTitle.module.css";
 
 export const HeaderTitle = () => {
   return (

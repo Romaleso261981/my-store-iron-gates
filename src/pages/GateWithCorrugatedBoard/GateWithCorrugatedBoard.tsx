@@ -1,6 +1,6 @@
-import { mockdataGateWithCorrugatedBoard } from '@/mocData';
+import { mockdataGateWithCorrugatedBoard } from "@/mocData";
 
-import { ArticalCard } from './ui/SingleCard/ui/ArticalCard/ArticalCard';
+import { ArticalCard } from "./ui/SingleCard/ui/ArticalCard/ArticalCard";
 
 export default function GateWithCorrugatedBoard() {
   return <ArticalCard data={mockdataGateWithCorrugatedBoard} />;

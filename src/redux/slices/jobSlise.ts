@@ -1,19 +1,19 @@
-import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
-import type { RootState } from '@/redux/store';
-import { setFirestoreData } from '@/shared/helpers/addDoc';
-import errorHandler from '@/shared/helpers/errorsHandler';
-import { getAllFirestoreData } from '@/shared/helpers/getData';
-import { DataBasePath } from '@/shared/types/enums';
-import type { Job, JobTypes } from '@/shared/types/Types';
+import type { RootState } from "@/redux/store";
+import { setFirestoreData } from "@/shared/helpers/addDoc";
+import errorHandler from "@/shared/helpers/errorsHandler";
+import { getAllFirestoreData } from "@/shared/helpers/getData";
+import { DataBasePath } from "@/shared/types/enums";
+import type { Job, JobTypes } from "@/shared/types/Types";
 
 export const addJob = createAsyncThunk<void, Job, { rejectValue: string; state: RootState }>(
-  'jobs/addJob',
+  "jobs/addJob",
   async (data: Job, { rejectWithValue }) => {
     try {
       await setFirestoreData(DataBasePath.JOBS, data.id, data);
     } catch (error) {
-      return rejectWithValue(errorHandler(error, 'signIn Error'));
+      return rejectWithValue(errorHandler(error, "signIn Error"));
     }
   }
 );
@@ -22,22 +22,22 @@ export const getAllJobs = createAsyncThunk<
   Job[],
   { path: string; queryLimit: number; lastRefKey?: number },
   { rejectValue: string; state: RootState }
->('jobs/getAllJobs', async ({ path, queryLimit }, { rejectWithValue }) => {
+>("jobs/getAllJobs", async ({ path, queryLimit }, { rejectWithValue }) => {
   try {
     const res = await getAllFirestoreData(path, queryLimit);
     return res as Job[];
   } catch (error) {
-    return rejectWithValue(errorHandler(error, 'signIn Error'));
+    return rejectWithValue(errorHandler(error, "signIn Error"));
   }
 });
 
 const initialState = {
   jobs: [],
-  lastId: ''
+  lastId: ""
 } as JobTypes;
 
 const jobSlise = createSlice({
-  name: 'products',
+  name: "products",
   initialState,
   reducers: {},
   extraReducers: (builder) => {

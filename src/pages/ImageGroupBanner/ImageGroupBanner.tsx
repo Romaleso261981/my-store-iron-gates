@@ -1,9 +1,9 @@
-import { Card, SimpleGrid, Skeleton } from '@mantine/core';
-import { useState } from 'react';
+import { Card, SimpleGrid, Skeleton } from "@mantine/core";
+import { useState } from "react";
 
-import { productsGroup } from '@/mocData';
+import { productsGroup } from "@/mocData";
 
-import { GroupBannerItem } from './UI/GroupBannerItem/GroupBannerItem';
+import { GroupBannerItem } from "./UI/GroupBannerItem/GroupBannerItem";
 
 const child = <Skeleton height={140} radius="md" animate={false} />;
 

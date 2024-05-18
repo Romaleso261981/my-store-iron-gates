@@ -1,4 +1,4 @@
-import { Container, Group, Paper, SimpleGrid, Text } from '@mantine/core';
+import { Container, Group, Paper, SimpleGrid, Text } from "@mantine/core";
 import {
   IconArrowDownRight,
   IconArrowUpRight,
@@ -6,9 +6,9 @@ import {
   IconDiscount2,
   IconReceipt2,
   IconUserPlus
-} from '@tabler/icons-react';
+} from "@tabler/icons-react";
 
-import classes from './StatsGrid.module.css';
+import classes from "./StatsGrid.module.css";
 
 const icons = {
   user: IconUserPlus,
@@ -18,10 +18,10 @@ const icons = {
 };
 
 const data = [
-  { title: 'Revenue', icon: 'receipt', value: '13,456', diff: 34 },
-  { title: 'Profit', icon: 'coin', value: '4,145', diff: -13 },
-  { title: 'Coupons usage', icon: 'discount', value: '745', diff: 18 },
-  { title: 'New customers', icon: 'user', value: '188', diff: -30 }
+  { title: "Revenue", icon: "receipt", value: "13,456", diff: 34 },
+  { title: "Profit", icon: "coin", value: "4,145", diff: -13 },
+  { title: "Coupons usage", icon: "discount", value: "745", diff: 18 },
+  { title: "New customers", icon: "user", value: "188", diff: -30 }
 ] as const;
 
 export function StatsGrid() {
@@ -40,7 +40,7 @@ export function StatsGrid() {
 
         <Group align="flex-end" gap="xs" mt={25}>
           <Text className={classes.value}>{stat.value}</Text>
-          <Text c={stat.diff > 0 ? 'teal' : 'red'} fz="sm" fw={500} className={classes.diff}>
+          <Text c={stat.diff > 0 ? "teal" : "red"} fz="sm" fw={500} className={classes.diff}>
             <span>{stat.diff}%</span>
             <DiffIcon size="1rem" stroke={1.5} />
           </Text>

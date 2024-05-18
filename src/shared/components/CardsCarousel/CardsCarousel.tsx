@@ -1,11 +1,11 @@
-import { Carousel } from '@mantine/carousel';
-import { Container, Flex, Image } from '@mantine/core';
+import { Carousel } from "@mantine/carousel";
+import { Container, Flex, Image } from "@mantine/core";
 // import { useMediaQuery } from '@mantine/hooks';
-import Autoplay from 'embla-carousel-autoplay';
-import { useRef } from 'react';
+import Autoplay from "embla-carousel-autoplay";
+import { useRef } from "react";
 
-import s from './CardsCarousel.module.css';
-import { mockdata } from './mockData';
+import s from "./CardsCarousel.module.css";
+import { mockdata } from "./mockData";
 
 export function CardsCarousel() {
   // const theme = useMantineTheme();

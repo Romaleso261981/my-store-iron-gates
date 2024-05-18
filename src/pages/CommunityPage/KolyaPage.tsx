@@ -1,23 +1,23 @@
-import { Button, Center, Flex, Group, Table, Text } from '@mantine/core';
-import { useMediaQuery } from '@mantine/hooks';
-import { useEffect, useState } from 'react';
+import { Button, Center, Flex, Group, Table, Text } from "@mantine/core";
+import { useMediaQuery } from "@mantine/hooks";
+import { useEffect, useState } from "react";
 
-import { getExpenses, getJobs } from '@/redux/selectors';
-import { getAllExpenses } from '@/redux/slices/expensesSlice';
-import { useAppDispatch, useAppSelector } from '@/redux/store';
-import { expensesTotal, incomeTotal } from '@/shared/helpers/calk';
-import { DataBasePath } from '@/shared/types/enums';
-import type { Job } from '@/shared/types/Types';
+import { getExpenses, getJobs } from "@/redux/selectors";
+import { getAllExpenses } from "@/redux/slices/expensesSlice";
+import { useAppDispatch, useAppSelector } from "@/redux/store";
+import { expensesTotal, incomeTotal } from "@/shared/helpers/calk";
+import { DataBasePath } from "@/shared/types/enums";
+import type { Job } from "@/shared/types/Types";
 
-import { getAllJobs } from '../../redux/slices/jobSlise';
-import CardAddJob from './UI/CardAddJob/CardAddJob';
-import ExpensesPage from './UI/Expenses/Expenses';
+import { getAllJobs } from "../../redux/slices/jobSlise";
+import CardAddJob from "./UI/CardAddJob/CardAddJob";
+import ExpensesPage from "./UI/Expenses/Expenses";
 
 const KolyaPage = () => {
   const [isShowCardAddProduct, setIsShowCardAddProduct] = useState(false);
   const [isShowCardExpenses, setIsShowCardExpenses] = useState(false);
 
-  const matches = useMediaQuery('(min-width: 1111px)');
+  const matches = useMediaQuery("(min-width: 1111px)");
 
   const dispatch = useAppDispatch();
 
@@ -59,7 +59,7 @@ const KolyaPage = () => {
 
   return (
     <Center>
-      <Flex mt={50} direction={'column'}>
+      <Flex mt={50} direction={"column"}>
         {matches && (
           <Group>
             <Button onClick={toggletoggleExpenses}>Взяв гроші</Button>

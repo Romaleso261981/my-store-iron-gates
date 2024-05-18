@@ -1,7 +1,7 @@
-import { Button, Card, Flex, Image, Overlay, Text } from '@mantine/core';
-import type { FC } from 'react';
+import { Button, Card, Flex, Image, Overlay, Text } from "@mantine/core";
+import type { FC } from "react";
 
-import classes from './GroupBannerItem.module.css';
+import classes from "./GroupBannerItem.module.css";
 
 type Product = {
   id: string;

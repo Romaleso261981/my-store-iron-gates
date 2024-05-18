@@ -1,6 +1,6 @@
-import { Center } from '@mantine/core';
+import { Center } from "@mantine/core";
 
-import styles from './ProfilePage.module.css';
+import styles from "./ProfilePage.module.css";
 
 function ProfilePage() {
   return (

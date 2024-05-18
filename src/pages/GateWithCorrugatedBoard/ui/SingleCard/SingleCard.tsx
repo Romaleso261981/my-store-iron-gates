@@ -1,10 +1,10 @@
-import { Flex } from '@mantine/core';
+import { Flex } from "@mantine/core";
 
-import { HeaderSearch } from '@/shared/components';
-import useScrollTop from '@/shared/helpers/useScrollTop';
+import { HeaderSearch } from "@/shared/components";
+import useScrollTop from "@/shared/helpers/useScrollTop";
 
 // import CardDetalies from './ui/CardDetalies/CardDetalies';
-import { CardDetalies2 } from './ui/CardDetalies2/CardDetalies2';
+import { CardDetalies2 } from "./ui/CardDetalies2/CardDetalies2";
 
 export default function SingleCard() {
   useScrollTop();

@@ -1,11 +1,11 @@
-import { Anchor, Breadcrumbs } from '@mantine/core';
+import { Anchor, Breadcrumbs } from "@mantine/core";
 
-import classes from './Breadcrumbs.module.css';
+import classes from "./Breadcrumbs.module.css";
 
 const items = [
-  { title: 'Home', href: '/' },
-  { title: 'Elitni-kovani-Vorota', href: '/elitni-kovani-vorota' },
-  { title: 'use-id', href: '#' }
+  { title: "Home", href: "/" },
+  { title: "Elitni-kovani-Vorota", href: "/elitni-kovani-vorota" },
+  { title: "use-id", href: "#" }
 ].map((item, index) => (
   <Anchor className={classes.link} href={item.href} key={index}>
     {item.title}

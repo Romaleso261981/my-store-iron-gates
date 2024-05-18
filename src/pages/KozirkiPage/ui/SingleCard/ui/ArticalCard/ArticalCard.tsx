@@ -1,14 +1,14 @@
-import { AspectRatio, Button, Card, Flex, Image, SimpleGrid, Text } from '@mantine/core';
-import type { FC } from 'react';
+import { AspectRatio, Button, Card, Flex, Image, SimpleGrid, Text } from "@mantine/core";
+import type { FC } from "react";
 
 const oldKoef = 1;
 const newKoef = 0.9;
 
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 
-import { NEWKOEF, OLDKOEF } from '@/constans/constans';
+import { NEWKOEF, OLDKOEF } from "@/constans/constans";
 
-import classes from './ArticalCard.module.css';
+import classes from "./ArticalCard.module.css";
 
 type CardData = {
   id: string;
@@ -61,7 +61,7 @@ export const ArticalCard: FC<Props> = ({ data, type }) => {
             {(article.cost * oldKoef * OLDKOEF).toFixed(1)}
           </Text>
           <Text className={classes.oldCostUnion}>
-            {type === 'eliteIronGate' ? 'грн/м2' : 'грн'}
+            {type === "eliteIronGate" ? "грн/м2" : "грн"}
           </Text>
         </Flex>
       </Flex>
@@ -75,7 +75,7 @@ export const ArticalCard: FC<Props> = ({ data, type }) => {
             {(article.cost * newKoef * NEWKOEF).toFixed(1)}
           </Text>
           <Text className={classes.newCostUnion}>
-            {type === 'eliteIronGate' ? 'грн/м2' : 'грн'}
+            {type === "eliteIronGate" ? "грн/м2" : "грн"}
           </Text>
         </Flex>
       </Flex>
@@ -90,10 +90,10 @@ export const ArticalCard: FC<Props> = ({ data, type }) => {
   return (
     <SimpleGrid
       cols={{ base: 1, sm: 2, lg: 3 }}
-      spacing={{ base: 10, sm: 'xl' }}
-      verticalSpacing={{ base: 'md', sm: 'xl' }}
-      pl={{ base: 'md', sm: 'sm' }}
-      pr={{ base: 'md', sm: 'sm' }}>
+      spacing={{ base: 10, sm: "xl" }}
+      verticalSpacing={{ base: "md", sm: "xl" }}
+      pl={{ base: "md", sm: "sm" }}
+      pr={{ base: "md", sm: "sm" }}>
       {cards}
     </SimpleGrid>
   );

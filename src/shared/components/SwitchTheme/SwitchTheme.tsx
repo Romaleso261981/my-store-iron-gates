@@ -1,9 +1,9 @@
-import '@mantine/core/styles.css';
+import "@mantine/core/styles.css";
 
-import { rem, Switch, useMantineColorScheme, useMantineTheme } from '@mantine/core';
-import { IconMoonStars, IconSun } from '@tabler/icons-react';
-import type { FC } from 'react';
-import { useState } from 'react';
+import { rem, Switch, useMantineColorScheme, useMantineTheme } from "@mantine/core";
+import { IconMoonStars, IconSun } from "@tabler/icons-react";
+import type { FC } from "react";
+import { useState } from "react";
 
 const SwitchTheme: FC = () => {
   const [checked, setChecked] = useState(false);
@@ -35,10 +35,10 @@ const SwitchTheme: FC = () => {
       mr={20}
       onChange={() => {
         if (checked) {
-          setColorScheme('dark');
+          setColorScheme("dark");
           setChecked(!checked);
         } else {
-          setColorScheme('light');
+          setColorScheme("light");
           setChecked(!checked);
         }
       }}

@@ -1,11 +1,11 @@
-import { ActionIcon, Button, Card, Container, Flex, Group, Image, Text } from '@mantine/core'; // import { IconGasStation, IconGauge, IconManualGearbox, IconUsers } from '@tabler/icons-react';
-import { IconHeart } from '@tabler/icons-react';
-import { FaArrowLeftLong } from 'react-icons/fa6';
-import { Link, useParams } from 'react-router-dom';
+import { ActionIcon, Button, Card, Container, Flex, Group, Image, Text } from "@mantine/core"; // import { IconGasStation, IconGauge, IconManualGearbox, IconUsers } from '@tabler/icons-react';
+import { IconHeart } from "@tabler/icons-react";
+import { FaArrowLeftLong } from "react-icons/fa6";
+import { Link, useParams } from "react-router-dom";
 
-import { mockdataGateWithCorrugatedBoard } from '@/mocData';
+import { mockdataGateWithCorrugatedBoard } from "@/mocData";
 
-import classes from './CardDetalies2.module.css';
+import classes from "./CardDetalies2.module.css";
 
 // const mockdata = [
 //   { label: '4 passengers', icon: IconUsers },
@@ -53,7 +53,7 @@ export function CardDetalies2() {
             </Group>
           </div>
           <Text fw={900} c="red">
-            Скидка 25%{' '}
+            Скидка 25%{" "}
           </Text>
           <Text fz="sm" c="green" className={classes.label}>
             Базова комплектація

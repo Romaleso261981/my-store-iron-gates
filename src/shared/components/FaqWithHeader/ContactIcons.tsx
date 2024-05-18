@@ -1,9 +1,9 @@
-import { rem, Stack, Text, ThemeIcon } from '@mantine/core';
-import { IconAt, IconMapPin, IconPhone, IconSun } from '@tabler/icons-react';
+import { rem, Stack, Text, ThemeIcon } from "@mantine/core";
+import { IconAt, IconMapPin, IconPhone, IconSun } from "@tabler/icons-react";
 
-import classes from './ContactIcons.module.css';
+import classes from "./ContactIcons.module.css";
 
-interface ContactIconProps extends Omit<React.ComponentPropsWithoutRef<'div'>, 'title'> {
+interface ContactIconProps extends Omit<React.ComponentPropsWithoutRef<"div">, "title"> {
   icon: typeof IconSun;
   title: React.ReactNode;
   description: React.ReactNode;
@@ -27,10 +27,10 @@ function ContactIcon({ icon: Icon, title, description, ...others }: ContactIconP
 }
 
 const MOCKDATA = [
-  { title: 'Email', description: 'hello@mantine.dev', icon: IconAt },
-  { title: 'Phone', description: '+49 (800) 335 35 35', icon: IconPhone },
-  { title: 'Address', description: '844 Morris Park avenue', icon: IconMapPin },
-  { title: 'Working hours', description: '8 a.m. – 11 p.m.', icon: IconSun }
+  { title: "Email", description: "hello@mantine.dev", icon: IconAt },
+  { title: "Phone", description: "+49 (800) 335 35 35", icon: IconPhone },
+  { title: "Address", description: "844 Morris Park avenue", icon: IconMapPin },
+  { title: "Working hours", description: "8 a.m. – 11 p.m.", icon: IconSun }
 ];
 
 export function ContactIconsList() {

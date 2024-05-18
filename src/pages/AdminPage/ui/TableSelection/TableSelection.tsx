@@ -1,12 +1,12 @@
-import { Avatar, Checkbox, Group, rem, ScrollArea, Table, Text } from '@mantine/core';
-import cx from 'clsx';
-import { useState } from 'react';
+import { Avatar, Checkbox, Group, rem, ScrollArea, Table, Text } from "@mantine/core";
+import cx from "clsx";
+import { useState } from "react";
 
-import { data } from '../mocData';
-import classes from './TableSelection.module.css';
+import { data } from "../mocData";
+import classes from "./TableSelection.module.css";
 
 export function TableSelection() {
-  const [selection, setSelection] = useState(['1']);
+  const [selection, setSelection] = useState(["1"]);
   const toggleRow = (id: string) =>
     setSelection((current) =>
       current.includes(id) ? current.filter((item) => item !== id) : [...current, id]

@@ -1,13 +1,13 @@
-import { Box, Drawer, Flex, Text, Title } from '@mantine/core';
-import { type FC } from 'react';
-import { useTranslation } from 'react-i18next';
-import { IoClose } from 'react-icons/io5';
+import { Box, Drawer, Flex, Text, Title } from "@mantine/core";
+import { type FC } from "react";
+import { useTranslation } from "react-i18next";
+import { IoClose } from "react-icons/io5";
 
-import { incomeTotal } from '@/shared/helpers/incomeTotal';
-import type { Product } from '@/shared/types/Types';
+import { incomeTotal } from "@/shared/helpers/incomeTotal";
+import type { Product } from "@/shared/types/Types";
 
-import s from './Basket.module.css';
-import { SingleCard } from './UI/CardItem/CardItem';
+import s from "./Basket.module.css";
+import { SingleCard } from "./UI/CardItem/CardItem";
 
 type Props = {
   setIsShowBasket: () => void;
@@ -36,12 +36,12 @@ export const Basket: FC<Props> = ({ setIsShowBasket, opened }) => {
         ))}
       <Flex>
         <Flex>
-          <Text>{`${t('basket.totalDue')} ${incomeTotal(orderedProduct).toLocaleString()} грн.`}</Text>
+          <Text>{`${t("basket.totalDue")} ${incomeTotal(orderedProduct).toLocaleString()} грн.`}</Text>
         </Flex>
       </Flex>
       :
       <Flex className={s.basketEmpty}>
-        <Title className={s.basketEmptyMsg}>{t('basket.basketEmpty')}</Title>
+        <Title className={s.basketEmptyMsg}>{t("basket.basketEmpty")}</Title>
         <Box ml="auto" onClick={handleOpenBasket} className={s.close}>
           <IoClose />
         </Box>

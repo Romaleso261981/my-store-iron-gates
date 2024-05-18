@@ -1,4 +1,4 @@
-import { Center, Title } from '@mantine/core';
+import { Center, Title } from "@mantine/core";
 
 const AboutPage = () => {
   return (

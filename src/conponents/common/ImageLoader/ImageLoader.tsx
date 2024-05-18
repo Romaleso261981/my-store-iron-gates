@@ -1,5 +1,5 @@
-import { type FC, useState } from 'react';
-import { AiOutlineLoading3Quarters } from 'react-icons/ai';
+import { type FC, useState } from "react";
+import { AiOutlineLoading3Quarters } from "react-icons/ai";
 
 type Props = {
   src: string;
@@ -19,16 +19,16 @@ const ImageLoader: FC<Props> = ({ src, alt, className }) => {
       {loaded && (
         <AiOutlineLoading3Quarters
           style={{
-            position: 'absolute',
+            position: "absolute",
             top: 0,
             bottom: 0,
             right: 0,
             left: 0,
-            margin: 'auto'
+            margin: "auto"
           }}
         />
       )}
-      <img alt={alt || ''} className={className} onLoad={onLoad} src={src} />
+      <img alt={alt || ""} className={className} onLoad={onLoad} src={src} />
     </>
   );
 };

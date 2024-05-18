@@ -1,32 +1,32 @@
-import { Autocomplete, Button, Flex, Group, rem } from '@mantine/core';
-import { useMediaQuery } from '@mantine/hooks';
-import { IconSearch } from '@tabler/icons-react';
-import { useState } from 'react';
-import { useTranslation } from 'react-i18next';
-import { FaPhoneVolume } from 'react-icons/fa6';
-import { IoMdMail } from 'react-icons/io';
-import { Link } from 'react-router-dom';
+import { Autocomplete, Button, Flex, Group, rem } from "@mantine/core";
+import { useMediaQuery } from "@mantine/hooks";
+import { IconSearch } from "@tabler/icons-react";
+import { useState } from "react";
+import { useTranslation } from "react-i18next";
+import { FaPhoneVolume } from "react-icons/fa6";
+import { IoMdMail } from "react-icons/io";
+import { Link } from "react-router-dom";
 
-import { ADMIN } from '@/constans/constans';
-import { Basket, IconBasket } from '@/features';
-import { ColorSwitch } from '@/features/ColorSwitch/ColorSwitch.tsx';
-import { LanguagePicker } from '@/features/LanguagePicker/LanguagePicker';
+import { ADMIN } from "@/constans/constans";
+import { Basket, IconBasket } from "@/features";
+import { ColorSwitch } from "@/features/ColorSwitch/ColorSwitch.tsx";
+import { LanguagePicker } from "@/features/LanguagePicker/LanguagePicker";
 
-import MainLogo from '../MainLogo/MainLogo';
-import classes from './HeaderSearch.module.css';
+import MainLogo from "../MainLogo/MainLogo";
+import classes from "./HeaderSearch.module.css";
 
 const links = [
-  { link: '/about', label: 'Про нас' },
-  { link: '/pricing', label: 'Ціни' },
-  { link: '/adress', label: 'Адресса' },
-  { link: '/our_team', label: 'Наша команда' }
+  { link: "/about", label: "Про нас" },
+  { link: "/pricing", label: "Ціни" },
+  { link: "/adress", label: "Адресса" },
+  { link: "/our_team", label: "Наша команда" }
 ];
 
 export function HeaderSearch() {
   // const [opened, { toggle }] = useDisclosure(false);
   const [isShowBasket, setIsShowBasket] = useState(false);
 
-  const matches = useMediaQuery('(min-width: 23.75em)');
+  const matches = useMediaQuery("(min-width: 23.75em)");
 
   const { t } = useTranslation();
 
@@ -50,7 +50,7 @@ export function HeaderSearch() {
         </Group>
         <Flex
           gap={10}
-          align={useMediaQuery('(min-width: 75rem)') ? 'flex-start' : 'flex-start'}
+          align={useMediaQuery("(min-width: 75rem)") ? "flex-start" : "flex-start"}
           direction="column">
           <Group>
             {matches && <IoMdMail />}
@@ -85,9 +85,9 @@ export function HeaderSearch() {
           direction="column"
           visibleFrom="sm">
           {items}
-          {ADMIN === 'admin' && (
+          {ADMIN === "admin" && (
             <Button>
-              <a href="/community">{t('header.kolyaRobota')}</a>
+              <a href="/community">{t("header.kolyaRobota")}</a>
             </Button>
           )}
         </Flex>

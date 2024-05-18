@@ -8,28 +8,28 @@ import {
   Textarea,
   TextInput,
   Title
-} from '@mantine/core';
-import { useForm } from '@mantine/form';
-import { IconBrandInstagram, IconBrandTwitter, IconBrandYoutube } from '@tabler/icons-react';
+} from "@mantine/core";
+import { useForm } from "@mantine/form";
+import { IconBrandInstagram, IconBrandTwitter, IconBrandYoutube } from "@tabler/icons-react";
 
-import { sendMessage } from '@/shared/helpers/sendMessageIntoTelegram';
+import { sendMessage } from "@/shared/helpers/sendMessageIntoTelegram";
 
-import { ContactIconsList } from './ContactIcons';
-import classes from './ContactUs.module.css';
+import { ContactIconsList } from "./ContactIcons";
+import classes from "./ContactUs.module.css";
 
 const social = [IconBrandTwitter, IconBrandYoutube, IconBrandInstagram];
 
 export function ContactUs() {
   const form = useForm({
     initialValues: {
-      email: '',
-      phone: '',
-      message: '',
+      email: "",
+      phone: "",
+      message: "",
       termsOfService: false
     },
 
     validate: {
-      email: (value) => (/^\S+@\S+$/.test(value) ? null : 'Invalid email')
+      email: (value) => (/^\S+@\S+$/.test(value) ? null : "Invalid email")
     }
   });
 
@@ -43,7 +43,7 @@ export function ContactUs() {
     console.log(message);
 
     sendMessage(message);
-    (formValue.email = ''), (formValue.message = ''), (formValue.phone = '');
+    (formValue.email = ""), (formValue.message = ""), (formValue.phone = "");
   };
 
   const icons = social.map((Icon, index) => (
@@ -71,13 +71,13 @@ export function ContactUs() {
           <TextInput
             label="Пошта"
             placeholder="example@email.com"
-            {...form.getInputProps('email')}
+            {...form.getInputProps("email")}
             classNames={{ input: classes.input, label: classes.inputLabel }}
           />
           <TextInput
             label="Номер телефону"
             placeholder="+380 (66) 568 58 45"
-            {...form.getInputProps('phone')}
+            {...form.getInputProps("phone")}
             mt="md"
             classNames={{ input: classes.input, label: classes.inputLabel }}
           />
@@ -85,7 +85,7 @@ export function ContactUs() {
             required
             label="Ваше повідомлення"
             placeholder="Напишіть ваше повідомлення"
-            {...form.getInputProps('message')}
+            {...form.getInputProps("message")}
             minRows={4}
             mt="md"
             classNames={{ input: classes.input, label: classes.inputLabel }}

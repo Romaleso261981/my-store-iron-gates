@@ -1,6 +1,6 @@
-import { Pagination } from '@mantine/core';
-import { randomId } from '@mantine/hooks';
-import { useState } from 'react';
+import { Pagination } from "@mantine/core";
+import { randomId } from "@mantine/hooks";
+import { useState } from "react";
 
 function chunk<T>(array: T[], size: number): T[][] {
   if (!array.length) {

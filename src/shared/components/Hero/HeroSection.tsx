@@ -1,6 +1,6 @@
-import { Button, Container, Text, Title } from '@mantine/core';
+import { Button, Container, Text, Title } from "@mantine/core";
 
-import classes from './HeroSection.module.css';
+import classes from "./HeroSection.module.css";
 
 export function HeroImageRight() {
   return (
@@ -9,14 +9,14 @@ export function HeroImageRight() {
         <div className={classes.inner}>
           <div className={classes.content}>
             <Title className={classes.title}>
-              Ворота{' '}
+              Ворота{" "}
               <Text
                 component="span"
                 inherit
                 variant="gradient"
-                gradient={{ from: 'pink', to: 'yellow' }}>
+                gradient={{ from: "pink", to: "yellow" }}>
                 від виробника
-              </Text>{' '}
+              </Text>{" "}
               безкоштовна доставка!!!
             </Title>
 
@@ -27,7 +27,7 @@ export function HeroImageRight() {
 
             <Button
               variant="gradient"
-              gradient={{ from: 'pink', to: 'yellow' }}
+              gradient={{ from: "pink", to: "yellow" }}
               size="xl"
               className={classes.control}
               mt={40}>

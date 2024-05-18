@@ -1,22 +1,22 @@
-import { Button, Flex, Text, TextInput, Title } from '@mantine/core';
-import { useState } from 'react';
+import { Button, Flex, Text, TextInput, Title } from "@mantine/core";
+import { useState } from "react";
 
-import { sendMessage } from '@/shared/helpers/sendMessageIntoTelegram';
+import { sendMessage } from "@/shared/helpers/sendMessageIntoTelegram";
 
-import { CarouselCard } from './CarouselCard/CarouselCard';
-import classes from './EmailBanner.module.css';
+import { CarouselCard } from "./CarouselCard/CarouselCard";
+import classes from "./EmailBanner.module.css";
 // import image from './image.svg';
 
 export function EmailBanner() {
-  const [value, setValue] = useState('');
+  const [value, setValue] = useState("");
 
   const handleSendMessage = () => {
     sendMessage(value);
-    setValue('');
+    setValue("");
   };
 
   const handleKeyPress = (event: React.KeyboardEvent<HTMLInputElement>) => {
-    if (event.key === 'Enter') {
+    if (event.key === "Enter") {
       handleSendMessage();
     }
   };

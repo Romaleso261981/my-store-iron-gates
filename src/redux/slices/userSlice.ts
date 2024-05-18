@@ -1,15 +1,15 @@
-import type { PayloadAction } from '@reduxjs/toolkit';
-import { createSlice } from '@reduxjs/toolkit';
+import type { PayloadAction } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 
-import type { User } from '@/shared/types/Types';
+import type { User } from "@/shared/types/Types";
 
 const initialState = {
-  phoneNumber: '',
-  verificationId: ''
+  phoneNumber: "",
+  verificationId: ""
 } as User;
 
 const userSlice = createSlice({
-  name: 'search',
+  name: "search",
   initialState,
   reducers: {
     setPhoneNumber(state, action: PayloadAction<string>) {

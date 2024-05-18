@@ -1,9 +1,9 @@
-import { Card, Flex, Overlay, Text } from '@mantine/core';
-import type { FC } from 'react';
+import { Card, Flex, Overlay, Text } from "@mantine/core";
+import type { FC } from "react";
 
-import type { Job } from '@/shared/types/Types';
+import type { Job } from "@/shared/types/Types";
 
-import classes from './GroupJobItem.module.css';
+import classes from "./GroupJobItem.module.css";
 
 type GroupJobItemProps = {
   job: Job;

@@ -1,26 +1,26 @@
-import { Box, Group, rem, Text } from '@mantine/core';
-import { IconListSearch } from '@tabler/icons-react';
-import cx from 'clsx';
-import { useState } from 'react';
+import { Box, Group, rem, Text } from "@mantine/core";
+import { IconListSearch } from "@tabler/icons-react";
+import cx from "clsx";
+import { useState } from "react";
 
-import classes from './TableOfContentsFloating.module.css';
+import classes from "./TableOfContentsFloating.module.css";
 
 const links = [
-  { label: 'Usage', link: '#usage', order: 1 },
-  { label: 'Position and placement', link: '#position', order: 1 },
-  { label: 'With other overlays', link: '#overlays', order: 1 },
-  { label: 'Manage focus', link: '#focus', order: 1 },
-  { label: 'Examples', link: '#1', order: 1 },
-  { label: 'Show on focus', link: '#2', order: 2 },
-  { label: 'Show on hover', link: '#3', order: 2 },
-  { label: 'With form', link: '#4', order: 2 }
+  { label: "Usage", link: "#usage", order: 1 },
+  { label: "Position and placement", link: "#position", order: 1 },
+  { label: "With other overlays", link: "#overlays", order: 1 },
+  { label: "Manage focus", link: "#focus", order: 1 },
+  { label: "Examples", link: "#1", order: 1 },
+  { label: "Show on focus", link: "#2", order: 2 },
+  { label: "Show on hover", link: "#3", order: 2 },
+  { label: "With form", link: "#4", order: 2 }
 ];
 
 export function TableOfContentsFloating() {
   const [active, setActive] = useState(2);
 
   const items = links.map((item, index) => (
-    <Box<'a'>
+    <Box<"a">
       component="a"
       href={item.link}
       onClick={(event) => {

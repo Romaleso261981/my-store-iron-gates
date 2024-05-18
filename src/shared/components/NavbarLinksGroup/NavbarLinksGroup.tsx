@@ -1,8 +1,8 @@
-import { Box, Collapse, Group, rem, Text, ThemeIcon, UnstyledButton } from '@mantine/core';
-import { IconCalendarStats, IconChevronRight } from '@tabler/icons-react';
-import { useState } from 'react';
+import { Box, Collapse, Group, rem, Text, ThemeIcon, UnstyledButton } from "@mantine/core";
+import { IconCalendarStats, IconChevronRight } from "@tabler/icons-react";
+import { useState } from "react";
 
-import classes from './NavbarLinksGroup.module.css';
+import classes from "./NavbarLinksGroup.module.css";
 
 interface LinksGroupProps {
   icon: React.FC;
@@ -15,7 +15,7 @@ export function LinksGroup({ icon: Icon, label, initiallyOpened, links }: LinksG
   const hasLinks = Array.isArray(links);
   const [opened, setOpened] = useState(initiallyOpened || false);
   const items = (hasLinks ? links : []).map((link) => (
-    <Text<'a'>
+    <Text<"a">
       component="a"
       className={classes.link}
       href={link.link}
@@ -29,7 +29,7 @@ export function LinksGroup({ icon: Icon, label, initiallyOpened, links }: LinksG
     <>
       <UnstyledButton onClick={() => setOpened((o) => !o)} className={classes.control}>
         <Group justify="space-between" gap={0}>
-          <Box style={{ display: 'flex', alignItems: 'center' }}>
+          <Box style={{ display: "flex", alignItems: "center" }}>
             <ThemeIcon variant="light" size={30}>
               <Icon />
             </ThemeIcon>
@@ -42,7 +42,7 @@ export function LinksGroup({ icon: Icon, label, initiallyOpened, links }: LinksG
               style={{
                 width: rem(16),
                 height: rem(16),
-                transform: opened ? 'rotate(-90deg)' : 'none'
+                transform: opened ? "rotate(-90deg)" : "none"
               }}
             />
           )}
@@ -54,12 +54,12 @@ export function LinksGroup({ icon: Icon, label, initiallyOpened, links }: LinksG
 }
 
 const mockdata = {
-  label: 'Releases',
+  label: "Releases",
   icon: IconCalendarStats,
   links: [
-    { label: 'Upcoming releases', link: '/' },
-    { label: 'Previous releases', link: '/' },
-    { label: 'Releases schedule', link: '/' }
+    { label: "Upcoming releases", link: "/" },
+    { label: "Previous releases", link: "/" },
+    { label: "Releases schedule", link: "/" }
   ]
 };
 

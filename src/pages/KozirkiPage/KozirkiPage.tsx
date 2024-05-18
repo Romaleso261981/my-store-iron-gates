@@ -1,6 +1,6 @@
-import { mockdataKozirki } from '@/mocData';
+import { mockdataKozirki } from "@/mocData";
 
-import { ArticalCard } from './ui/SingleCard/ui/ArticalCard/ArticalCard';
+import { ArticalCard } from "./ui/SingleCard/ui/ArticalCard/ArticalCard";
 
 export default function KozirkiPage() {
   return <ArticalCard data={mockdataKozirki} />;

@@ -1,32 +1,32 @@
-import { lazy, Suspense } from 'react';
-import { Route, Routes } from 'react-router-dom';
+import { lazy, Suspense } from "react";
+import { Route, Routes } from "react-router-dom";
 
-import { Spiner } from '@/shared/components/Loader/Loader';
-import { RoutersPaths } from '@/shared/types/enums';
+import { Spiner } from "@/shared/components/Loader/Loader";
+import { RoutersPaths } from "@/shared/types/enums";
 
-import { Layout } from './layout';
+import { Layout } from "./layout";
 
-const AuthPage = lazy(() => import('../pages/AuthPage/AuthPage'));
-const KovaniGrati = lazy(() => import('../pages/KovaniGrati/KovaniGrati'));
-const KozirkiPage = lazy(() => import('../pages/KozirkiPage/KozirkiPage'));
-const MainPage = lazy(() => import('../pages/MainPage/MainPage'));
-const PricingPage = lazy(() => import('../pages/PricingPage/PricingPage'));
-const KolyaPage = lazy(() => import('../pages/CommunityPage/KolyaPage'));
-const AdressPage = lazy(() => import('../pages/AdressPage/AdressPage'));
-const AboutPage = lazy(() => import('../pages/AboutPage/AboutPage'));
-const CardDetail = lazy(() => import('../pages/CardDetail/CardDetail'));
-const NotFound = lazy(() => import('../pages/Error-404/Error-404'));
+const AuthPage = lazy(() => import("../pages/AuthPage/AuthPage"));
+const KovaniGrati = lazy(() => import("../pages/KovaniGrati/KovaniGrati"));
+const KozirkiPage = lazy(() => import("../pages/KozirkiPage/KozirkiPage"));
+const MainPage = lazy(() => import("../pages/MainPage/MainPage"));
+const PricingPage = lazy(() => import("../pages/PricingPage/PricingPage"));
+const KolyaPage = lazy(() => import("../pages/CommunityPage/KolyaPage"));
+const AdressPage = lazy(() => import("../pages/AdressPage/AdressPage"));
+const AboutPage = lazy(() => import("../pages/AboutPage/AboutPage"));
+const CardDetail = lazy(() => import("../pages/CardDetail/CardDetail"));
+const NotFound = lazy(() => import("../pages/Error-404/Error-404"));
 const GateWithCorrugatedBoard = lazy(
-  () => import('../pages/GateWithCorrugatedBoard/GateWithCorrugatedBoard')
+  () => import("../pages/GateWithCorrugatedBoard/GateWithCorrugatedBoard")
 );
-const SingleCard = lazy(() => import('../pages/GateWithCorrugatedBoard/ui/SingleCard/SingleCard'));
+const SingleCard = lazy(() => import("../pages/GateWithCorrugatedBoard/ui/SingleCard/SingleCard"));
 const SingleCardElitni = lazy(
-  () => import('../pages/EliteIronGates/ui/SingleCard/SingleCardElitni')
+  () => import("../pages/EliteIronGates/ui/SingleCard/SingleCardElitni")
 );
 const SingleCardKozirki = lazy(
-  () => import('../pages/KozirkiPage/ui/SingleCard/SingleCardKozirki')
+  () => import("../pages/KozirkiPage/ui/SingleCard/SingleCardKozirki")
 );
-const EliteIronGates = lazy(() => import('../pages/EliteIronGates/EliteIronGates'));
+const EliteIronGates = lazy(() => import("../pages/EliteIronGates/EliteIronGates"));
 
 export default function RootRouter() {
   return (

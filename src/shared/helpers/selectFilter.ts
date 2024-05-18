@@ -1,9 +1,9 @@
 /* eslint-disable no-plusplus */
 
 enum SortBy {
-  DATEADDED = 'dateAdded',
-  DATE = 'date',
-  TITLE = 'title'
+  DATEADDED = "dateAdded",
+  DATE = "date",
+  TITLE = "title"
 }
 export type Job = {
   price: number;

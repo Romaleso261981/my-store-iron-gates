@@ -1,38 +1,38 @@
-import { ActionIcon, Box, Flex, rem, Text } from '@mantine/core';
-import { IconBrandInstagram, IconBrandTwitter, IconBrandYoutube } from '@tabler/icons-react';
+import { ActionIcon, Box, Flex, rem, Text } from "@mantine/core";
+import { IconBrandInstagram, IconBrandTwitter, IconBrandYoutube } from "@tabler/icons-react";
 // import { FaPhoneVolume } from 'react-icons/fa6';
 // import { IoMdMail } from 'react-icons/io';
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
-import MainLogo from '../MainLogo/MainLogo';
-import classes from './FooterLinks.module.css';
+import MainLogo from "../MainLogo/MainLogo";
+import classes from "./FooterLinks.module.css";
 
 const data = [
   {
-    title: 'Про нас',
+    title: "Про нас",
     links: [
-      { label: 'Телефон ', link: '#' },
-      { label: 'Pricing', link: '#' },
-      { label: 'Support', link: '#' },
-      { label: 'Forums', link: '#' }
+      { label: "Телефон ", link: "#" },
+      { label: "Pricing", link: "#" },
+      { label: "Support", link: "#" },
+      { label: "Forums", link: "#" }
     ]
   },
   {
-    title: 'Project',
+    title: "Project",
     links: [
-      { label: 'Contribute', link: '#' },
-      { label: 'Media assets', link: '#' },
-      { label: 'Changelog', link: '#' },
-      { label: 'Releases', link: '#' }
+      { label: "Contribute", link: "#" },
+      { label: "Media assets", link: "#" },
+      { label: "Changelog", link: "#" },
+      { label: "Releases", link: "#" }
     ]
   },
   {
-    title: 'Community',
+    title: "Community",
     links: [
-      { label: 'Join Discord', link: '#' },
-      { label: 'Follow on Twitter', link: '#' },
-      { label: 'Email newsletter', link: '#' },
-      { label: 'GitHub discussions', link: '#' }
+      { label: "Join Discord", link: "#" },
+      { label: "Follow on Twitter", link: "#" },
+      { label: "Email newsletter", link: "#" },
+      { label: "GitHub discussions", link: "#" }
     ]
   }
 ];
@@ -40,7 +40,7 @@ const data = [
 export function FooterLinks() {
   const groups = data.map((group) => {
     const links = group.links.map((link, index) => (
-      <Text<'a'>
+      <Text<"a">
         key={index}
         className={classes.link}
         component="a"

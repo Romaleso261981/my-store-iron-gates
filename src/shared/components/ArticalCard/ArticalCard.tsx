@@ -1,12 +1,12 @@
-import { AspectRatio, Button, Card, Container, Flex, Image, SimpleGrid, Text } from '@mantine/core';
-import type { FC } from 'react';
+import { AspectRatio, Button, Card, Container, Flex, Image, SimpleGrid, Text } from "@mantine/core";
+import type { FC } from "react";
 
 const oldKoef = 1;
 const newKoef = 0.9;
 
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 
-import classes from './ArticalCard.module.css';
+import classes from "./ArticalCard.module.css";
 
 type CardData = {
   id: string;
@@ -50,7 +50,7 @@ export const ArticalCard: FC<Props> = ({ data, type }) => {
             {(article.cost * oldKoef).toFixed(1)}
           </Text>
           <Text className={classes.oldCostUnion}>
-            {type === 'eliteIronGate' ? 'грн/м2' : 'грн'}
+            {type === "eliteIronGate" ? "грн/м2" : "грн"}
           </Text>
         </Flex>
       </Flex>
@@ -64,7 +64,7 @@ export const ArticalCard: FC<Props> = ({ data, type }) => {
             {(article.cost * newKoef).toFixed(1)}
           </Text>
           <Text className={classes.newCostUnion}>
-            {type === 'eliteIronGate' ? 'грн/м2' : 'грн'}
+            {type === "eliteIronGate" ? "грн/м2" : "грн"}
           </Text>
         </Flex>
       </Flex>

@@ -1,7 +1,7 @@
-import { Avatar, Group, rem, Text, UnstyledButton } from '@mantine/core';
-import { IconChevronRight } from '@tabler/icons-react';
+import { Avatar, Group, rem, Text, UnstyledButton } from "@mantine/core";
+import { IconChevronRight } from "@tabler/icons-react";
 
-import classes from './UserButton.module.css';
+import classes from "./UserButton.module.css";
 
 export function UserButton() {
   return (

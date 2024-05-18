@@ -1,7 +1,7 @@
-import { rem, Tooltip, UnstyledButton } from '@mantine/core';
-import type { IconHome2 } from '@tabler/icons-react';
+import { rem, Tooltip, UnstyledButton } from "@mantine/core";
+import type { IconHome2 } from "@tabler/icons-react";
 
-import classes from './Navbar.module.css';
+import classes from "./Navbar.module.css";
 
 interface NavbarLinkProps {
   icon: typeof IconHome2;

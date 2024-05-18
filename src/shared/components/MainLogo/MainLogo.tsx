@@ -1,6 +1,6 @@
-import { Flex, Image } from '@mantine/core';
+import { Flex, Image } from "@mantine/core";
 
-import s from './MainLogo.module.css';
+import s from "./MainLogo.module.css";
 
 export default function MainLogo() {
   return (

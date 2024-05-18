@@ -1,6 +1,6 @@
-import { doc, type DocumentData, type DocumentReference, setDoc } from 'firebase/firestore';
+import { doc, type DocumentData, type DocumentReference, setDoc } from "firebase/firestore";
 
-import { db } from '../../integations/firebase';
+import { db } from "../../integations/firebase";
 
 export const setFirestoreData = async <T extends DocumentData>(
   path: string,

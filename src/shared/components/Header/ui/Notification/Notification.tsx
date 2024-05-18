@@ -1,7 +1,7 @@
-import { ActionIcon, Indicator, Menu, Tooltip } from '@mantine/core';
-import { IconBell } from '@tabler/icons-react';
+import { ActionIcon, Indicator, Menu, Tooltip } from "@mantine/core";
+import { IconBell } from "@tabler/icons-react";
 
-import { NOTIFICATIONS } from './data';
+import { NOTIFICATIONS } from "./data";
 
 export const Notification = () => {
   return (
