@@ -3,7 +3,6 @@ import { useMediaQuery } from "@mantine/hooks";
 import { useEffect, useState } from "react";
 
 import { getExpenses, getJobs } from "@/redux/selectors";
-// import { getExpenses, getJobs } from "@/redux/selectors";
 import { getAllExpenses } from "@/redux/slices/expensesSlice";
 import { useAppDispatch, useAppSelector } from "@/redux/store";
 import { expensesTotal, incomeTotal } from "@/shared/helpers/calk";
