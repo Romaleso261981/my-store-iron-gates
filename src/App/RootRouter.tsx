@@ -12,6 +12,7 @@ const KozirkiPage = lazy(() => import("../pages/KozirkiPage/KozirkiPage"));
 const MainPage = lazy(() => import("../pages/MainPage/MainPage"));
 const PricingPage = lazy(() => import("../pages/PricingPage/PricingPage"));
 const KolyaPage = lazy(() => import("../pages/CommunityPage/KolyaPage"));
+const DimaPage = lazy(() => import("../pages/DimaPage/DimaPage"));
 const AdressPage = lazy(() => import("../pages/AdressPage/AdressPage"));
 const AboutPage = lazy(() => import("../pages/AboutPage/AboutPage"));
 const CardDetail = lazy(() => import("../pages/CardDetail/CardDetail"));
@@ -40,6 +41,7 @@ export default function RootRouter() {
           <Route path={RoutersPaths.MAIN} element={<MainPage />} />
           <Route path={RoutersPaths.ABOUT} element={<AboutPage />} />
           <Route path={RoutersPaths.KOLYA} element={<KolyaPage />} />
+          <Route path={RoutersPaths.DIMA} element={<DimaPage />} />
           <Route path={RoutersPaths.CARDDETAIL} element={<CardDetail />} />
           <Route path={RoutersPaths.ADRESS} element={<AdressPage />} />
           <Route path={RoutersPaths.PRICING} element={<PricingPage />} />

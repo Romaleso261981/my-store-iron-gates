@@ -16,7 +16,6 @@ export const incomeTotal = (arr: Job[]) => {
   if (!arr || arr?.length === 0) return 0;
 
   let value = 0;
-
   arr.forEach((val: Job) => {
     value += val.price;
   });

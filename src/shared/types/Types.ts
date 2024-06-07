@@ -48,6 +48,7 @@ export type MessagesData = {
 
 export type Job = {
   id: string;
+  owner: string;
   date: string;
   title: string;
   description: string;
@@ -59,6 +60,7 @@ export type Job = {
 };
 
 export type Expenses = {
+  owner: string;
   id: string;
   date: string;
   price: number;

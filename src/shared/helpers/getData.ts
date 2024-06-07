@@ -20,7 +20,8 @@ export const getAllFirestoreData = async <T extends DocumentData>(
     });
     return products;
   } else {
-    const q = query(collectionRef, limit(queryLimit));
+    const q = query(collectionRef, limit(1000));
+    console.log(q);
     const querySnapshot = await getDocs(q);
     const products: T[] = [];
 

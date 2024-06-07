@@ -14,15 +14,19 @@ type FormValues = {
 };
 
 type ExpensesProps = {
+  owner: string;
   toggleExpenses: () => void;
 };
 
-const ExpensesPage: FC<ExpensesProps> = ({ toggleExpenses }) => {
+const ExpensesPage: FC<ExpensesProps> = ({ toggleExpenses, owner }) => {
   const dispatch = useAppDispatch();
+
+  console.log(owner);
 
   const form = useForm<FormValues>({
     initialValues: {
       expenses: {
+        owner: "",
         id: "",
         date: "",
         price: 0,
@@ -33,6 +37,7 @@ const ExpensesPage: FC<ExpensesProps> = ({ toggleExpenses }) => {
 
   const submit = (values: FormValues) => {
     values.expenses.id = dayjs().toString();
+    values.expenses.owner = owner;
     values.expenses.dateAdded = new Date().getTime();
     dispatch(addExpenses(values.expenses));
     form.reset();

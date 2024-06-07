@@ -14,10 +14,11 @@ type FormValues = {
 };
 
 type CardAddJobProps = {
+  owner: string;
   toggleCardAddProduct: () => void;
 };
 
-const CardAddJob: FC<CardAddJobProps> = ({ toggleCardAddProduct }) => {
+const CardAddJob: FC<CardAddJobProps> = ({ toggleCardAddProduct, owner }) => {
   const dispatch = useAppDispatch();
 
   const form = useForm<FormValues>({
@@ -25,6 +26,7 @@ const CardAddJob: FC<CardAddJobProps> = ({ toggleCardAddProduct }) => {
       Jobs: {
         id: "",
         date: "",
+        owner: "",
         description: "",
         title: "",
         gotSalary: 0,
@@ -38,6 +40,7 @@ const CardAddJob: FC<CardAddJobProps> = ({ toggleCardAddProduct }) => {
 
   const submit = (values: FormValues) => {
     values.Jobs.id = dayjs().toString();
+    values.Jobs.owner = owner;
     values.Jobs.dateAdded = new Date().getTime();
     console.log("values.Jobs", values.Jobs);
     dispatch(addJob(values.Jobs));

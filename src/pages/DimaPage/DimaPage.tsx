@@ -3,17 +3,18 @@ import { useMediaQuery } from "@mantine/hooks";
 import { useEffect, useState } from "react";
 
 import { getExpenses, getJobs } from "@/redux/selectors";
+// import { getExpenses, getJobs } from "@/redux/selectors";
 import { getAllExpenses } from "@/redux/slices/expensesSlice";
 import { useAppDispatch, useAppSelector } from "@/redux/store";
 import { expensesTotal, incomeTotal } from "@/shared/helpers/calk";
 import { DataBasePath } from "@/shared/types/enums";
-import type { Job } from "@/shared/types/Types";
+import type { Expenses, Job } from "@/shared/types/Types";
 
 import { getAllJobs } from "../../redux/slices/jobSlise";
-import CardAddJob from "./UI/CardAddJob/CardAddJob";
-import ExpensesPage from "./UI/Expenses/Expenses";
+import CardAddJob from "../CommunityPage/UI/CardAddJob/CardAddJob";
+import ExpensesPage from "../CommunityPage/UI/Expenses/Expenses";
 
-const KolyaPage = () => {
+const DimaPage = () => {
   const [isShowCardAddProduct, setIsShowCardAddProduct] = useState(false);
   const [isShowCardExpenses, setIsShowCardExpenses] = useState(false);
 
@@ -24,12 +25,12 @@ const KolyaPage = () => {
   const jobs = useAppSelector(getJobs);
   const expenses = useAppSelector(getExpenses);
 
-  const sortedJobs = [...jobs].filter((e) => e.owner === "kolya");
-  const sortedExpenses = [...expenses].filter((e) => e.owner === "kolya");
+  const sortedJobs = [...jobs].filter((e) => e.owner === "dima");
+  const sortedExpenses: Expenses[] = [...expenses].filter((e) => e.owner === "dima");
 
   const getAllData = async () => {
-    dispatch(getAllJobs({ path: DataBasePath.JOBS, queryLimit: 100 }));
-    dispatch(getAllExpenses({ path: DataBasePath.EXPENSES, queryLimit: 100 }));
+    dispatch(getAllJobs({ path: DataBasePath.JOBS, queryLimit: 1000 }));
+    dispatch(getAllExpenses({ path: DataBasePath.EXPENSES, queryLimit: 1000 }));
   };
 
   useEffect(() => {
@@ -94,11 +95,11 @@ const KolyaPage = () => {
           </Table.ScrollContainer>
         </Flex>
       </Flex>
-      {isShowCardExpenses && <ExpensesPage owner="kolya" toggleExpenses={toggletoggleExpenses} />}
+      {isShowCardExpenses && <ExpensesPage owner="dima" toggleExpenses={toggletoggleExpenses} />}
       {isShowCardAddProduct && (
-        <CardAddJob owner="kolya" toggleCardAddProduct={toggleCardAddProduct} />
+        <CardAddJob owner="dima" toggleCardAddProduct={toggleCardAddProduct} />
       )}
     </Center>
   );
 };
-export default KolyaPage;
+export default DimaPage;
