@@ -1,4 +1,4 @@
-import { Button, Flex, Group, NumberInput, TextInput } from "@mantine/core";
+import { Button, Flex, Group, NumberInput, Textarea, TextInput } from "@mantine/core";
 import { useForm } from "@mantine/form";
 import * as dayjs from "dayjs";
 import type { FC } from "react";
@@ -26,6 +26,8 @@ const ExpensesPage: FC<ExpensesProps> = ({ toggleExpenses, owner }) => {
   const form = useForm<FormValues>({
     initialValues: {
       expenses: {
+        title: "",
+        description: "",
         owner: "",
         id: "",
         date: "",
@@ -48,6 +50,7 @@ const ExpensesPage: FC<ExpensesProps> = ({ toggleExpenses, owner }) => {
       <form onSubmit={form.onSubmit((values) => submit(values))}>
         <Flex p={20} direction="column" gap={10}>
           <TextInput label="Дата" placeholder="Дата" {...form.getInputProps("expenses.date")} />
+          <Textarea size="lg" label="Description" {...form.getInputProps("expenses.description")} />
           <Group>
             <NumberInput size="xs" label="Price" {...form.getInputProps("expenses.price")} />
           </Group>

@@ -60,6 +60,8 @@ export type Job = {
 };
 
 export type Expenses = {
+  title: string;
+  description: string;
   owner: string;
   id: string;
   date: string;

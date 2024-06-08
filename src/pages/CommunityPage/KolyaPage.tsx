@@ -1,4 +1,4 @@
-import { Button, Center, Flex, Group, Table, Text } from "@mantine/core";
+import { Button, Center, Flex, Group, Table, Text, Title } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
 import { useEffect, useState } from "react";
 
@@ -7,7 +7,7 @@ import { getAllExpenses } from "@/redux/slices/expensesSlice";
 import { useAppDispatch, useAppSelector } from "@/redux/store";
 import { expensesTotal, incomeTotal } from "@/shared/helpers/calk";
 import { DataBasePath } from "@/shared/types/enums";
-import type { Job } from "@/shared/types/Types";
+import type { Expenses, Job } from "@/shared/types/Types";
 
 import { getAllJobs } from "../../redux/slices/jobSlise";
 import CardAddJob from "./UI/CardAddJob/CardAddJob";
@@ -44,7 +44,7 @@ const KolyaPage = () => {
     setIsShowCardExpenses(!isShowCardExpenses);
   };
 
-  const rows = [...sortedJobs]
+  const incomRows = [...sortedJobs]
     .sort((a, b) => (a?.dateAdded < b?.dateAdded ? 1 : -1))
     .map((row: Job) => {
       return (
@@ -57,12 +57,24 @@ const KolyaPage = () => {
       );
     });
 
+  const expensRows = [...sortedExpenses]
+    .sort((a, b) => (a?.dateAdded < b?.dateAdded ? 1 : -1))
+    .map((row: Expenses) => {
+      return (
+        <Table.Tr key={row.id}>
+          {matches && <Table.Td>{row.date}</Table.Td>}
+          <Table.Td>{`${row.price}  грн.`}</Table.Td>
+          <Table.Td>{row.description}</Table.Td>
+        </Table.Tr>
+      );
+    });
+
   const incom = incomeTotal(sortedJobs);
   const expens = expensesTotal(sortedExpenses);
 
   return (
     <Center>
-      <Flex mt={50} direction={"column"}>
+      <Flex mt={50} p={40} direction={"column"}>
         {matches && (
           <Group>
             <Button onClick={toggletoggleExpenses}>Взяв гроші</Button>
@@ -79,19 +91,39 @@ const KolyaPage = () => {
           <Flex>
             <Text>{`Взяв за місяць ${expens} грн.`}</Text>
           </Flex>
-          <Table.ScrollContainer minWidth={800}>
-            <Table verticalSpacing="xs">
-              <Table.Thead>
-                <Table.Tr>
-                  {matches && <Table.Th>Дата</Table.Th>}
-                  {matches && <Table.Th>Техніка</Table.Th>}
-                  <Table.Th>Вартість</Table.Th>
-                  <Table.Th>Опис</Table.Th>
-                </Table.Tr>
-              </Table.Thead>
-              <Table.Tbody>{rows}</Table.Tbody>
-            </Table>
-          </Table.ScrollContainer>
+          <Flex>
+            <Flex direction="column">
+              <Title ml={100}>Заробленно</Title>
+              <Table.ScrollContainer minWidth={800}>
+                <Table verticalSpacing="xs">
+                  <Table.Thead>
+                    <Table.Tr>
+                      {matches && <Table.Th>Дата</Table.Th>}
+                      {matches && <Table.Th>Техніка</Table.Th>}
+                      <Table.Th>Сумма</Table.Th>
+                      <Table.Th>Опис</Table.Th>
+                    </Table.Tr>
+                  </Table.Thead>
+                  <Table.Tbody>{incomRows}</Table.Tbody>
+                </Table>
+              </Table.ScrollContainer>
+            </Flex>
+            <Flex direction="column" p={10}>
+              <Title ml={100}>Отримав</Title>
+              <Table.ScrollContainer minWidth={800}>
+                <Table verticalSpacing="xs">
+                  <Table.Thead>
+                    <Table.Tr>
+                      {matches && <Table.Th>Дата</Table.Th>}
+                      <Table.Th>Сумма</Table.Th>
+                      <Table.Th>Опис</Table.Th>
+                    </Table.Tr>
+                  </Table.Thead>
+                  <Table.Tbody>{expensRows}</Table.Tbody>
+                </Table>
+              </Table.ScrollContainer>
+            </Flex>
+          </Flex>
         </Flex>
       </Flex>
       {isShowCardExpenses && <ExpensesPage owner="kolya" toggleExpenses={toggletoggleExpenses} />}
