@@ -12,6 +12,7 @@ import type { Expenses, Job } from "@/shared/types/Types";
 import { getAllJobs } from "../../redux/slices/jobSlise";
 import CardAddJob from "../CommunityPage/UI/CardAddJob/CardAddJob";
 import ExpensesPage from "../CommunityPage/UI/Expenses/Expenses";
+import s from "./DimaPage.module.css";
 
 const DimaPage = () => {
   const [isShowCardAddProduct, setIsShowCardAddProduct] = useState(false);
@@ -92,7 +93,7 @@ const DimaPage = () => {
             <Text>{`Взяв за місяць ${expens} грн.`}</Text>
           </Flex>
           <Flex>
-            <Flex direction="column">
+            <Flex className={s.flexRootIncom} direction="column">
               <Title ml={100}>Заробленно</Title>
               <Table.ScrollContainer minWidth={800}>
                 <Table verticalSpacing="xs">
@@ -108,7 +109,7 @@ const DimaPage = () => {
                 </Table>
               </Table.ScrollContainer>
             </Flex>
-            <Flex direction="column" p={10}>
+            <Flex className={s.flexRootExpens} direction="column" p={10}>
               <Title ml={100}>Отримав</Title>
               <Table.ScrollContainer minWidth={800}>
                 <Table verticalSpacing="xs">

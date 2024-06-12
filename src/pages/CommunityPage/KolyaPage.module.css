@@ -1,3 +1,11 @@
 .progressSection:not(:first-of-type) {
   border-left: rem(3px) solid light-dark(var(--mantine-color-white), var(--mantine-color-dark-7));
 }
+
+.flexRootExpens {
+  border: grey 1px solid;
+  margin-left: 10px;
+}
+.flexRootIncom {
+  border: grey 1px solid;
+}

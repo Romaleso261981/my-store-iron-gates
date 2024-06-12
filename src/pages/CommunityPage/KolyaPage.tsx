@@ -10,6 +10,7 @@ import { DataBasePath } from "@/shared/types/enums";
 import type { Expenses, Job } from "@/shared/types/Types";
 
 import { getAllJobs } from "../../redux/slices/jobSlise";
+import s from "./KolyaPage.module.css";
 import CardAddJob from "./UI/CardAddJob/CardAddJob";
 import ExpensesPage from "./UI/Expenses/Expenses";
 
@@ -92,7 +93,7 @@ const KolyaPage = () => {
             <Text>{`Взяв за місяць ${expens} грн.`}</Text>
           </Flex>
           <Flex>
-            <Flex direction="column">
+            <Flex className={s.flexRootIncom} direction="column">
               <Title ml={100}>Заробленно</Title>
               <Table.ScrollContainer minWidth={800}>
                 <Table verticalSpacing="xs">
@@ -108,7 +109,7 @@ const KolyaPage = () => {
                 </Table>
               </Table.ScrollContainer>
             </Flex>
-            <Flex direction="column" p={10}>
+            <Flex className={s.flexRootExpens} direction="column" p={10}>
               <Title ml={100}>Отримав</Title>
               <Table.ScrollContainer minWidth={800}>
                 <Table verticalSpacing="xs">
