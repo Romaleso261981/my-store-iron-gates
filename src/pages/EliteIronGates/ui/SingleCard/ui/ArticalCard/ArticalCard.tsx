@@ -1,4 +1,4 @@
-import { AspectRatio, Button, Card, Flex, Image, SimpleGrid, Text } from "@mantine/core";
+import { AspectRatio, Button, Card, Flex, Group, Image, SimpleGrid, Text } from "@mantine/core";
 import type { FC } from "react";
 
 const oldKoef = 1;
@@ -80,9 +80,11 @@ export const ArticalCard: FC<Props> = ({ data, type }) => {
       <Text className={classes.title} mt={5}>
         {article.title}
       </Text>
-      <Button onClick={() => cardDetail(article.id)} variant="filled">
-        Замовити
-      </Button>
+      <Group mt={20}>
+        <Button onClick={() => cardDetail(article.id)} variant="filled">
+          Замовити
+        </Button>
+      </Group>
     </Card>
   ));
   return (

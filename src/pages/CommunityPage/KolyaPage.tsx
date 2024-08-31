@@ -25,7 +25,18 @@ const KolyaPage = () => {
   const jobs = useAppSelector(getJobs);
   const expenses = useAppSelector(getExpenses);
 
+  console.log(jobs);
+
   const sortedJobs = [...jobs].filter((e) => e.owner === "kolya");
+  // const sortedJobsWithTitle = [...sortedJobs].filter((e) => e.title.includes("Сахз"));
+  // const sortedJobsWithTitle = [...sortedJobs].filter((e) => e.title.includes("Ком"));
+  // const sortedJobsWithTitle = [...sortedJobs].filter((e) => e.title.includes("АТП 300"));
+  // const sortedJobsWithTitle = [...sortedJobs].filter((e) => e.title.includes("Кондиціонер"));
+  // const sortedJobsWithTitle = [...sortedJobs].filter((e) => e.title.includes("Спіртзавод"));
+  const sortedJobsWithTitle = [...sortedJobs].filter((e) => e);
+
+  const incomeTotalData = sortedJobsWithTitle;
+
   const sortedExpenses = [...expenses].filter((e) => e.owner === "kolya");
 
   const getAllData = async () => {
@@ -45,7 +56,7 @@ const KolyaPage = () => {
     setIsShowCardExpenses(!isShowCardExpenses);
   };
 
-  const incomRows = [...sortedJobs]
+  const incomRows = [...incomeTotalData]
     .sort((a, b) => (a?.dateAdded < b?.dateAdded ? 1 : -1))
     .map((row: Job) => {
       return (
@@ -70,7 +81,7 @@ const KolyaPage = () => {
       );
     });
 
-  const incom = incomeTotal(sortedJobs);
+  const incom = incomeTotal(incomeTotalData);
   const expens = expensesTotal(sortedExpenses);
 
   return (
