@@ -7,6 +7,9 @@ import { RoutersPaths } from "@/shared/types/enums";
 import { Layout } from "./layout";
 
 const AuthPage = lazy(() => import("../pages/AuthPage/AuthPage"));
+const ListOfCompletedWorks = lazy(
+  () => import("../pages/ListOfCompletedWorks/ListOfCompletedWorks")
+);
 const KovaniGrati = lazy(() => import("../pages/KovaniGrati/KovaniGrati"));
 const KozirkiPage = lazy(() => import("../pages/KozirkiPage/KozirkiPage"));
 const MainPage = lazy(() => import("../pages/MainPage/MainPage"));
@@ -34,6 +37,7 @@ export default function RootRouter() {
     <Suspense fallback={<Spiner />}>
       <Routes>
         <Route path={RoutersPaths.LOGIN} element={<AuthPage />} />
+        <Route path={RoutersPaths.WORKSLIST} element={<ListOfCompletedWorks />} />
         <Route path={RoutersPaths.VOROTAPROFNASTILOMBYID} element={<SingleCard />} />
         <Route path={RoutersPaths.ELITNIKOVANIVOROTABYID} element={<SingleCardElitni />} />
         <Route path={RoutersPaths.KOVANIKOZIRKIBYID} element={<SingleCardKozirki />} />

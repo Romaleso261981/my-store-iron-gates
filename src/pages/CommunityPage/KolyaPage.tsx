@@ -25,9 +25,8 @@ const KolyaPage = () => {
   const jobs = useAppSelector(getJobs);
   const expenses = useAppSelector(getExpenses);
 
-  console.log(jobs);
-
   const sortedJobs = [...jobs].filter((e) => e.owner === "kolya");
+  // const sortedJobs = [...jobs].filter((e) => e.owner !== "dima");
   // const sortedJobsWithTitle = [...sortedJobs].filter((e) => e.title.includes("Сахз"));
   // const sortedJobsWithTitle = [...sortedJobs].filter((e) => e.title.includes("Ком"));
   // const sortedJobsWithTitle = [...sortedJobs].filter((e) => e.title.includes("АТП 300"));

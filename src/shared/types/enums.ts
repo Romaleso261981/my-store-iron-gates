@@ -32,5 +32,6 @@ export enum RoutersPaths {
   KOLYA = "/kolya",
   DIMA = "/dima",
   LOGIN = "/login",
+  WORKSLIST = "/worksList",
   NOFOUND = "*"
 }
