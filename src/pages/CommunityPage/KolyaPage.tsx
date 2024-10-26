@@ -6,6 +6,7 @@ import { getExpenses, getJobs } from "@/redux/selectors";
 import { getAllExpenses } from "@/redux/slices/expensesSlice";
 import { useAppDispatch, useAppSelector } from "@/redux/store";
 import { expensesTotal, incomeTotal } from "@/shared/helpers/calk";
+import { client } from "@/shared/helpers/fetchClient";
 import { DataBasePath } from "@/shared/types/enums";
 import type { Expenses, Job } from "@/shared/types/Types";
 
@@ -22,12 +23,15 @@ const KolyaPage = () => {
 
   const dispatch = useAppDispatch();
 
+  client.get("http://localhost:5000/jobs").then((data) => console.log(data));
+
   const jobs = useAppSelector(getJobs);
   const expenses = useAppSelector(getExpenses);
 
   const sortedJobs = [...jobs].filter((e) => e.owner === "kolya");
   // const sortedJobs = [...jobs].filter((e) => e.owner !== "dima");
-  // const sortedJobsWithTitle = [...sortedJobs].filter((e) => e.title.includes("Сахз"));
+  // const sortedJobsWithTitle = [...sortedJobs].filter((e) => e.title.includes("ІПС"));
+  // const sortedJobsWithTitle = [...sortedJobs].filter((e) => e.title.includes("БОС"));
   // const sortedJobsWithTitle = [...sortedJobs].filter((e) => e.title.includes("Ком"));
   // const sortedJobsWithTitle = [...sortedJobs].filter((e) => e.title.includes("АТП 300"));
   // const sortedJobsWithTitle = [...sortedJobs].filter((e) => e.title.includes("Кондиціонер"));
