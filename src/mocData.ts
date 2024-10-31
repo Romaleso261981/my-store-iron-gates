@@ -41,7 +41,7 @@ export const mockdataKozirki = [
   {
     id: "1",
     title: "КОВАНІ КОЗИРКИ",
-    image: "https://images.prom.ua/1614744006_kovani-kozirki.jpg",
+    image: "../Pictures/kovaniGrati-1.webp",
     code: "З-0101",
     cost: 1,
     category: "kovaniGrati",
@@ -771,7 +771,7 @@ export const mockdataEliteIronGates = [
   {
     id: "1",
     title: "КОВАНІ ВОРОТА З МОНТАЖЕМ",
-    image: "https://images.prom.ua/5125569884_vorota-kovani-rozpashni.jpg",
+    image: "../Pictures/elitniKovaniVorota/1.webp",
     code: "B-0101",
     category: "elitniKovaniVorota",
     cost: 7400,
@@ -780,7 +780,7 @@ export const mockdataEliteIronGates = [
   {
     id: "2",
     title: "КОВАНІ ВОРОТА З МОНТАЖЕМ",
-    image: "https://images.prom.ua/3311842859_vorota-kovani-z.jpg",
+    image: "../Pictures/elitniKovaniVorota/2.webp",
     code: "B-0102",
     category: "elitniKovaniVorota",
     cost: 6500,
@@ -789,7 +789,7 @@ export const mockdataEliteIronGates = [
   {
     id: "3",
     title: "КОВАНІ ВОРОТА З МОНТАЖЕМ",
-    image: "https://images.prom.ua/3336002607_elitni-kovani-vorota.jpg",
+    image: "../Pictures/elitniKovaniVorota/3.webp",
     code: "B-01101",
     category: "elitniKovaniVorota",
     cost: 6800,
@@ -798,7 +798,7 @@ export const mockdataEliteIronGates = [
   {
     id: "4",
     title: "КОВАНІ ВОРОТА З МОНТАЖЕМ",
-    image: "https://images.prom.ua/3336002977_kovani-vorota-z.jpg",
+    image: "../Pictures/elitniKovaniVorota/4.webp",
     code: "B-01149",
     category: "elitniKovaniVorota",
     cost: 500,
@@ -807,7 +807,7 @@ export const mockdataEliteIronGates = [
   {
     id: "5",
     title: "КОВАНІ ВОРОТА З МОНТАЖЕМ",
-    image: "https://images.prom.ua/3336017347_kovani-vorota.jpg",
+    image: "../Pictures/elitniKovaniVorota/5.webp",
     code: "B-01147",
     category: "elitniKovaniVorota",
     cost: 4400,
@@ -816,7 +816,7 @@ export const mockdataEliteIronGates = [
   {
     id: "6",
     title: "КОВАНІ ВОРОТА З МОНТАЖЕМ",
-    image: "https://images.prom.ua/3336016848_elitni-kovani-vorota.jpg",
+    image: "../Pictures/elitniKovaniVorota/6.webp",
     code: "B-01151",
     category: "elitniKovaniVorota",
     cost: 5200,
@@ -825,7 +825,7 @@ export const mockdataEliteIronGates = [
   {
     id: "7",
     title: "КОВАНІ ВОРОТА З МОНТАЖЕМ",
-    image: "https://images.prom.ua/3336014558_kovani-rozpashni-vorota.jpg",
+    image: "../Pictures/elitniKovaniVorota/7.webp",
     code: "B-01108",
     category: "elitniKovaniVorota",
     cost: 8800,
@@ -834,7 +834,7 @@ export const mockdataEliteIronGates = [
   {
     id: "8",
     title: "КОВАНІ ВОРОТА З МОНТАЖЕМ",
-    image: "https://images.prom.ua/5127091487_rozpashni-kovani-vorota.jpg",
+    image: "../Pictures/elitniKovaniVorota/8.webp",
     code: "B-01110",
     category: "elitniKovaniVorota",
     cost: 4500,
@@ -843,7 +843,7 @@ export const mockdataEliteIronGates = [
   {
     id: "9",
     title: "КОВАНІ ВОРОТА ТА ХВІРТКА",
-    image: "https://images.prom.ua/5127091487_rozpashni-kovani-vorota.jpg",
+    image: "../Pictures/elitniKovaniVorota/9.webp",
     code: "B-01111",
     category: "elitniKovaniVorota",
     cost: 9400,
@@ -852,7 +852,7 @@ export const mockdataEliteIronGates = [
   {
     id: "10",
     title: "РОЗПАШНІ АЖУРНІ КОВАНІ ВОРОТА",
-    image: "https://images.prom.ua/3336025866_rozpashni-azhurni-kovani.jpg",
+    image: "../Pictures/elitniKovaniVorota/10.webp",
     code: "B-01120",
     category: "elitniKovaniVorota",
     cost: 5200,
@@ -861,7 +861,7 @@ export const mockdataEliteIronGates = [
   {
     id: "11",
     title: "ВОРОТА З КОВКОЮ",
-    image: "https://images.prom.ua/3336021526_vorota-z-kovkoyu.jpg",
+    image: "../Pictures/elitniKovaniVorota/11.webp",
     code: "B-01116",
     category: "elitniKovaniVorota",
     cost: 5000,
@@ -870,7 +870,7 @@ export const mockdataEliteIronGates = [
   {
     id: "12",
     title: "КОВАНІ ВОРОТА",
-    image: "https://images.prom.ua/3336044198_kovani-vorota.jpg",
+    image: "../Pictures/elitniKovaniVorota/12.webp",
     code: "B-01141",
     category: "elitniKovaniVorota",
     cost: 6900,
@@ -879,7 +879,7 @@ export const mockdataEliteIronGates = [
   {
     id: "13",
     title: "КОВАНІ ВОРОТА З ХВІРТКОЮ",
-    image: "https://images.prom.ua/3336032614_kovani-vorota.jpg",
+    image: "../Pictures/elitniKovaniVorota/13.webp",
     code: "B-0140",
     category: "elitniKovaniVorota",
     cost: 6000,
@@ -888,7 +888,7 @@ export const mockdataEliteIronGates = [
   {
     id: "14",
     title: "КОВАНІ ВОРОТА З ХВІРТКОЮ",
-    image: "https://images.prom.ua/3330538370_kovani-vorota-z.jpg",
+    image: "../Pictures/elitniKovaniVorota/14.webp",
     code: "B-0193",
     category: "elitniKovaniVorota",
     cost: 7000,
@@ -897,7 +897,7 @@ export const mockdataEliteIronGates = [
   {
     id: "15",
     title: "ВОРОТА КОВАНІ РОЗПАШНІ",
-    image: "https://images.prom.ua/3330538944_vorota-kovani-rozpashni.jpg",
+    image: "../Pictures/elitniKovaniVorota/15.webp",
     code: "B-0187",
     category: "elitniKovaniVorota",
     cost: 6400,
@@ -906,7 +906,7 @@ export const mockdataEliteIronGates = [
   {
     id: "16",
     title: "ВОРОТА КОВАНІ ВІДКАТНІ",
-    image: "https://images.prom.ua/3336017472_vorota-kovani-vidkatni.jpg",
+    image: "../Pictures/elitniKovaniVorota/16.webp",
     code: "B-01103",
     category: "elitniKovaniVorota",
     cost: 6200,
