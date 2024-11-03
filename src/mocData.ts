@@ -918,7 +918,7 @@ export const mockdataGateWithCorrugatedBoard = [
   {
     id: "1",
     title: "КОВАНІ ВОРОТА З ПРОФНАСТИЛОМ ТА КОВАНИМИ І ЕЛЕМЕНТАМИ",
-    image: "https://images.prom.ua/4643083809_kovani-vorota-z.jpg",
+    image: "../Pictures/vorotaWithProfnastilom/A-01221.webp",
     code: "A-01221",
     cost: 24200,
     category: "vorotaWithProfnastilom",
@@ -927,7 +927,7 @@ export const mockdataGateWithCorrugatedBoard = [
   {
     id: "2",
     title: "КОВАНІ ВОРОТА З ПРОФНАСТИЛОМ ТА КОВАНИМИ І ЕЛЕМЕНТАМИ",
-    image: "https://images.prom.ua/5077803389_kovani-vorota-z.jpg",
+    image: "../Pictures/vorotaWithProfnastilom/A-0112.webp",
     code: "A-0112",
     cost: 24400,
     category: "vorotaWithProfnastilom",
@@ -936,7 +936,7 @@ export const mockdataGateWithCorrugatedBoard = [
   {
     id: "3",
     title: "КОВАНІ ВОРОТА З ПРОФНАСТИЛОМ ТА КОВАНИМИ І ЕЛЕМЕНТАМИ",
-    image: "https://images.prom.ua/5191755770_vorota-kovani-z.jpg",
+    image: "../Pictures/vorotaWithProfnastilom/A-0101.webp",
     code: "A-0101",
     cost: 23700,
     category: "vorotaWithProfnastilom",
@@ -945,7 +945,7 @@ export const mockdataGateWithCorrugatedBoard = [
   {
     id: "4",
     title: "КОВАНІ ВОРОТА З ПРОФНАСТИЛОМ ТА КОВАНИМИ І ЕЛЕМЕНТАМИ",
-    image: "https://images.prom.ua/4410285717_kovani-vorota-z.jpg",
+    image: "../Pictures/vorotaWithProfnastilom/A-0103.webp",
     code: "A-0103",
     cost: 24400,
     category: "vorotaWithProfnastilom",
@@ -954,8 +954,8 @@ export const mockdataGateWithCorrugatedBoard = [
   {
     id: "5",
     title: "КОВАНІ ВОРОТА З ПРОФНАСТИЛОМ ТА КОВАНИМИ І ЕЛЕМЕНТАМИ",
-    image: "https://images.prom.ua/4351805732_vorota-z-profnastilom.jpg",
-    code: "A-01003  ",
+    image: "../Pictures/vorotaWithProfnastilom/A-01003.webp",
+    code: "A-01003",
     cost: 18270,
     category: "vorotaWithProfnastilom",
     date: "September 12, 2022"
@@ -963,7 +963,7 @@ export const mockdataGateWithCorrugatedBoard = [
   {
     id: "6",
     title: "КОВАНІ ВОРОТА З ПРОФНАСТИЛОМ ТА КОВАНИМИ І ЕЛЕМЕНТАМИ",
-    image: "https://images.prom.ua/3926049107_kovani-vorota-z.jpg",
+    image: "../Pictures/vorotaWithProfnastilom/A-0130.webp",
     code: "A-0130",
     cost: 21000,
     category: "vorotaWithProfnastilom",
@@ -972,7 +972,7 @@ export const mockdataGateWithCorrugatedBoard = [
   {
     id: "7",
     title: "КОВАНІ ВОРОТА З ПРОФНАСТИЛОМ ТА КОВАНИМИ І ЕЛЕМЕНТАМИ",
-    image: "https://images.prom.ua/4410288518_kovani-vorota-z.jpg",
+    image: "../Pictures/vorotaWithProfnastilom/A-0104.webp",
     code: "A-0104",
     cost: 18480,
     category: "vorotaWithProfnastilom",
@@ -981,7 +981,7 @@ export const mockdataGateWithCorrugatedBoard = [
   {
     id: "8",
     title: "КОВАНІ ВОРОТА З ПРОФНАСТИЛОМ ТА КОВАНИМИ І ЕЛЕМЕНТАМИ",
-    image: "https://images.prom.ua/5077844271_kovani-vorota-z.jpg",
+    image: "../Pictures/vorotaWithProfnastilom/A-01137.webp",
     code: "A-01137",
     cost: 27710,
     category: "vorotaWithProfnastilom",
@@ -990,7 +990,7 @@ export const mockdataGateWithCorrugatedBoard = [
   {
     id: "9",
     title: "ВОРОТА КОВАНІ З ПРОФНАСТИЛОМ І ХВІРТКОЮ",
-    image: "https://images.prom.ua/3408321299_vorota-kovani-z.jpg",
+    image: "../Pictures/vorotaWithProfnastilom/A-01198.webp",
     code: "A-01198",
     cost: 24800,
     category: "vorotaWithProfnastilom",
