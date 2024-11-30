@@ -6,7 +6,6 @@ import { getExpenses, getJobs } from "@/redux/selectors";
 import { getAllExpenses } from "@/redux/slices/expensesSlice";
 import { useAppDispatch, useAppSelector } from "@/redux/store";
 import { expensesTotal, incomeTotal } from "@/shared/helpers/calk";
-import { client } from "@/shared/helpers/fetchClient";
 import { DataBasePath } from "@/shared/types/enums";
 import type { Expenses, Job } from "@/shared/types/Types";
 
@@ -22,8 +21,6 @@ const KolyaPage = () => {
   const matches = useMediaQuery("(min-width: 1111px)");
 
   const dispatch = useAppDispatch();
-
-  client.get("http://localhost:5000/jobs").then((data) => console.log(data));
 
   const jobs = useAppSelector(getJobs);
   const expenses = useAppSelector(getExpenses);
