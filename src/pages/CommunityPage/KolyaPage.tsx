@@ -18,7 +18,7 @@ const KolyaPage = () => {
   const [isShowCardAddProduct, setIsShowCardAddProduct] = useState(false);
   const [isShowCardExpenses, setIsShowCardExpenses] = useState(false);
 
-  const matches = useMediaQuery("(min-width: 1111px)");
+  const matches = useMediaQuery("(min-width: 200px)");
   const mob = useMediaQuery("(max-width: 770px)");
 
   const dispatch = useAppDispatch();
