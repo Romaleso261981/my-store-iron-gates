@@ -87,7 +87,7 @@ const KolyaPage = () => {
 
   return (
     <Center>
-      <Flex mt={50} p={40} direction={"column"}>
+      <Flex mt={50} p={mob ? 0 : 40} direction={"column"}>
         <Flex className={s.buttonFlexRoot} justify="space-between">
           <Group>
             <Button onClick={toggleCardExpenses}>Взяв гроші</Button>
@@ -95,14 +95,14 @@ const KolyaPage = () => {
           </Group>
         </Flex>
 
-        <Flex mt={50} direction="column" gap={20}>
-          <Flex>
+        <Flex mt={50} direction="column" gap={mob ? 5 : 20}>
+          <Flex p={mob ? 10 : 20}>
             <Text>{`Залишок ${Number(incom) - Number(expens)} грн.`}</Text>
           </Flex>
-          <Flex>
+          <Flex p={mob ? 10 : 20}>
             <Text>{`Загальна сумма заробленних ${incom} грн.`}</Text>
           </Flex>
-          <Flex>
+          <Flex p={mob ? 10 : 20}>
             <Text>{`Взяв за місяць ${expens} грн.`}</Text>
           </Flex>
           <Flex direction={mob ? "column" : "row"} gap={20}>
