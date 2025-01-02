@@ -19,6 +19,7 @@ const KolyaPage = () => {
   const [isShowCardExpenses, setIsShowCardExpenses] = useState(false);
 
   const matches = useMediaQuery("(min-width: 1111px)");
+  const mob = useMediaQuery("(max-width: 770px)");
 
   const dispatch = useAppDispatch();
 
@@ -52,7 +53,7 @@ const KolyaPage = () => {
     setIsShowCardAddProduct(!isShowCardAddProduct);
   };
 
-  const toggletoggleExpenses = () => {
+  const toggleCardExpenses = () => {
     setIsShowCardExpenses(!isShowCardExpenses);
   };
 
@@ -87,12 +88,13 @@ const KolyaPage = () => {
   return (
     <Center>
       <Flex mt={50} p={40} direction={"column"}>
-        {matches && (
+        <Flex className={s.buttonFlexRoot} justify="space-between">
           <Group>
-            <Button onClick={toggletoggleExpenses}>Взяв гроші</Button>
+            <Button onClick={toggleCardExpenses}>Взяв гроші</Button>
             <Button onClick={toggleCardAddProduct}>Додати роботу</Button>
           </Group>
-        )}
+        </Flex>
+
         <Flex mt={50} direction="column" gap={20}>
           <Flex>
             <Text>{`Залишок ${Number(incom) - Number(expens)} грн.`}</Text>
@@ -103,10 +105,10 @@ const KolyaPage = () => {
           <Flex>
             <Text>{`Взяв за місяць ${expens} грн.`}</Text>
           </Flex>
-          <Flex>
-            <Flex className={s.flexRootIncom} direction="column">
+          <Flex direction={mob ? "column" : "row"} gap={20}>
+            <Flex className={s.flexRootIncom} direction="column" p={10}>
               <Title ml={100}>Заробленно</Title>
-              <Table.ScrollContainer minWidth={800}>
+              <Table.ScrollContainer minWidth={mob ? "auto" : 800}>
                 <Table verticalSpacing="xs">
                   <Table.Thead>
                     <Table.Tr>
@@ -122,7 +124,7 @@ const KolyaPage = () => {
             </Flex>
             <Flex className={s.flexRootExpens} direction="column" p={10}>
               <Title ml={100}>Отримав</Title>
-              <Table.ScrollContainer minWidth={800}>
+              <Table.ScrollContainer minWidth={mob ? "auto" : 800}>
                 <Table verticalSpacing="xs">
                   <Table.Thead>
                     <Table.Tr>
@@ -138,7 +140,7 @@ const KolyaPage = () => {
           </Flex>
         </Flex>
       </Flex>
-      {isShowCardExpenses && <ExpensesPage owner="kolya" toggleExpenses={toggletoggleExpenses} />}
+      {isShowCardExpenses && <ExpensesPage owner="kolya" toggleExpenses={toggleCardExpenses} />}
       {isShowCardAddProduct && (
         <CardAddJob owner="kolya" toggleCardAddProduct={toggleCardAddProduct} />
       )}

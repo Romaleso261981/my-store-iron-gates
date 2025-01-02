@@ -3,9 +3,17 @@
 }
 
 .flexRootExpens {
+  width: auto;
   border: grey 1px solid;
   margin-left: 10px;
 }
 .flexRootIncom {
+  width: auto;
   border: grey 1px solid;
+}
+
+.buttonFlexRoot{
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
 }
