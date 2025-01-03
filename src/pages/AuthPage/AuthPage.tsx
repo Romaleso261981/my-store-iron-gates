@@ -1,5 +1,11 @@
 import { Container } from "@mantine/core";
 
+import { AuthenticationForm } from "@/conponents/common/Authentication/Authentication/AuthenticationForm";
+
 export default function AuthPage() {
-  return <Container>{/* <CardsCarousel /> */}</Container>;
+  return (
+    <Container>
+      <AuthenticationForm />
+    </Container>
+  );
 }

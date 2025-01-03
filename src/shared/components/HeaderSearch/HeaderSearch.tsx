@@ -98,6 +98,7 @@ export function HeaderSearch() {
             leftSection={<IconSearch style={{ width: rem(16), height: rem(16) }} stroke={1.5} />}
             visibleFrom="xs"
           />
+
           <Flex pt={15} justify="right" gap={10} visibleFrom="xs">
             <IconBasket setIsShowBasket={toggleBasket} />
             <LanguagePicker type="collapsed" />
@@ -106,6 +107,11 @@ export function HeaderSearch() {
         </Flex>
         <Basket setIsShowBasket={toggleBasket} opened={isShowBasket} />
       </div>
+      <Group justify="center" mt={20} grow px="md">
+        <Link to={"/login"} color="white">
+          <Button variant="default">Log in</Button>
+        </Link>
+      </Group>
     </header>
   );
 }
