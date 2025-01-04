@@ -13,9 +13,13 @@ import {
 } from "@mantine/core";
 import { useForm } from "@mantine/form";
 import { upperFirst, useMediaQuery, useToggle } from "@mantine/hooks";
+import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 import { GoogleButton } from "@/conponents/ui/GoogleButton/GoogleButton";
 import { TwitterButton } from "@/conponents/ui/TwitterButton/TwitterButton";
+import { signInWithGoogle } from "@/redux/slices/authSlice";
+import { useAppDispatch, useAppSelector } from "@/redux/store";
 
 export function AuthenticationForm(props: PaperProps) {
   const [type, toggle] = useToggle(["login", "register"]);
@@ -33,7 +37,22 @@ export function AuthenticationForm(props: PaperProps) {
     }
   });
 
+  const user = useAppSelector((state) => state.authSlice.user);
+
+  const navigate = useNavigate();
+  const dispach = useAppDispatch();
+
+  const googleAuth = () => {
+    dispach(signInWithGoogle());
+  };
+
   const matches = useMediaQuery("(min-width: 768px)");
+
+  useEffect(() => {
+    if (user !== null) {
+      navigate("/");
+    }
+  }, [navigate, user]);
 
   return (
     <Paper
@@ -48,7 +67,9 @@ export function AuthenticationForm(props: PaperProps) {
       </Text>
 
       <Group grow mb="md" mt="md">
-        <GoogleButton radius="xl">Google</GoogleButton>
+        <GoogleButton radius="xl" onClick={googleAuth}>
+          Google
+        </GoogleButton>
         <TwitterButton radius="xl">Twitter</TwitterButton>
       </Group>
 

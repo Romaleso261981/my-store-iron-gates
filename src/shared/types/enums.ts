@@ -11,7 +11,9 @@ export enum MessagesType {
 
 export enum DataBasePath {
   JOBS = "jobs",
-  EXPENSES = "expenses"
+  EXPENSES = "expenses",
+  USERS = "users",
+  ADMIN = "admin"
 }
 
 export enum RoutersPaths {

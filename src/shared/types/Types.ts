@@ -1,15 +1,8 @@
-import type { ConfirmationResult } from "firebase/auth";
-
 import type { Status } from "./enums";
 
 export type StateAuth = {
   status: Status;
-  captchaFetch: ConfirmationResult;
-};
-
-export type User = {
-  phoneNumber: string;
-  verificationId: string;
+  user: User | null;
 };
 
 export type LanguagePickerProps = {
@@ -77,4 +70,38 @@ export type JobTypes = {
 export type ExpensesTypes = {
   expenses: Expenses[];
   lastId: string;
+};
+
+export type UserCredentials = {
+  nickName?: string;
+};
+export type UserRequest = {
+  code?: string;
+  message?: string;
+  user?: User;
+};
+export type UserReq = {
+  code?: string;
+  message?: string;
+  user?: User;
+};
+export type NewUser = User & UserCredentials;
+
+export type AuthError = {
+  code: string;
+  message: string;
+  errors: AuthErrors[];
+};
+export type AuthErrors = {
+  domain: string;
+  message: string;
+  reason: string;
+};
+
+export type User = {
+  nickName: string;
+  password: string;
+  phoneNumber: string;
+  verificationId: string;
+  email: string;
 };

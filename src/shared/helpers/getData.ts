@@ -7,7 +7,7 @@ export const getAllFirestoreData = async <T extends DocumentData>(
   path: string,
   queryLimit: number,
   lastRefKey?: number
-): Promise<T[] | null> => {
+): Promise<T[]> => {
   const collectionRef = collection(db, path);
 
   if (lastRefKey) {
