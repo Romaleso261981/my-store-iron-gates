@@ -40,10 +40,7 @@ export function AuthenticationForm(props: PaperProps) {
       radius="md"
       w={matches ? 400 : "90%"}
       p="lg"
-      pos={"absolute"}
-      top={"50%"}
-      left={"50%"}
-      style={{ transform: "translate(-50%, -50%)" }}
+      // style={{ transform: "translate(-50%, -50%)" }}
       withBorder
       {...props}>
       <Text size="lg" fw={500}>

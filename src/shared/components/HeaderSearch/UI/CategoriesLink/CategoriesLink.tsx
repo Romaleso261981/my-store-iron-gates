@@ -2,13 +2,13 @@ import { Group, Menu, rem, Text, UnstyledButton } from "@mantine/core";
 import { IconChevronDown } from "@tabler/icons-react";
 import type { FC } from "react";
 
-import s from "./KategjryLink.module.css";
+import s from "./CategoriesLink.module.css";
 
 const links2 = [
-  { id: "1", path: "/vorota-profnastilom-kovanimi", label: "Ворота з профнастилом" },
-  { id: "2", path: "/elitni-kovani-vorota", label: "Елітні ворота" },
-  { id: "3", path: "/kovani-kozirki", label: "Козирки" },
-  { id: "4", path: "/kovani-grati", label: "Ковані грати" }
+  { id: 1, path: "/vorota-profnastilom-kovanimi", label: "Ворота з профнастилом" },
+  { id: 2, path: "/elitni-kovani-vorota", label: "Елітні ворота" },
+  { id: 3, path: "/kovani-kozirki", label: "Козирки" },
+  { id: 4, path: "/kovani-grati", label: "Ковані грати" }
 ];
 
 const items = links2.map((link) => (
@@ -23,7 +23,7 @@ type Props = {
   title: string;
 };
 
-export const KategjryLink: FC<Props> = ({ title }) => {
+export const CategoriesLink: FC<Props> = ({ title }) => {
   return (
     <Menu
       width={260}

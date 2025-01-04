@@ -1,1 +1,1 @@
-export * from "./KategjryLink/KategjryLink";
+export * from "./CategoriesLink/CategoriesLink";
