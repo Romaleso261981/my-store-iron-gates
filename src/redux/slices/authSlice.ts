@@ -73,7 +73,8 @@ export const signInWithGoogle = createAsyncThunk("auth/logIn", async (_, { rejec
 
 const initialState = {
   status: Status.LOADING,
-  user: null
+  user: null,
+  captchaFetch: {}
 } as StateAuth;
 
 export const authSlice = createSlice({
