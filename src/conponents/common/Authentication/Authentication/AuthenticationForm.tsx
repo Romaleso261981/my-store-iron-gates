@@ -18,6 +18,7 @@ import { useNavigate } from "react-router-dom";
 
 import { GoogleButton } from "@/conponents/ui/GoogleButton/GoogleButton";
 import { TwitterButton } from "@/conponents/ui/TwitterButton/TwitterButton";
+import { getUser } from "@/redux/selectors";
 import { signInWithGoogle } from "@/redux/slices/authSlice";
 import { useAppDispatch, useAppSelector } from "@/redux/store";
 
@@ -37,7 +38,7 @@ export function AuthenticationForm(props: PaperProps) {
     }
   });
 
-  const user = useAppSelector((state) => state.authSlice.user);
+  const user = useAppSelector(getUser);
 
   const navigate = useNavigate();
   const dispach = useAppDispatch();
