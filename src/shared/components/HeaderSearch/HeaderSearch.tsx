@@ -11,6 +11,8 @@ import { ADMIN } from "@/constans/constans";
 import { Basket, IconBasket } from "@/features";
 import { ColorSwitch } from "@/features/ColorSwitch/ColorSwitch.tsx";
 import { LanguagePicker } from "@/features/LanguagePicker/LanguagePicker";
+import { getUser } from "@/redux/selectors";
+import { useAppSelector } from "@/redux/store";
 
 import MainLogo from "../MainLogo/MainLogo";
 import s from "./HeaderSearch.module.css";
@@ -26,6 +28,10 @@ export function HeaderSearch() {
   const [isShowBasket, setIsShowBasket] = useState(false);
 
   const matches = useMediaQuery("(min-width: 23.75em)");
+
+  const user = useAppSelector(getUser);
+
+  console.log("user", user);
 
   const { t } = useTranslation();
 
@@ -106,11 +112,17 @@ export function HeaderSearch() {
           />
 
           <Flex pt={15} justify="right" gap={10} visibleFrom="xs">
-            <Link to={"/login"}>
+            {user ? (
+              <Link to={"/login"}>
+                <Button variant="outline" color="black">
+                  Log in
+                </Button>
+              </Link>
+            ) : (
               <Button variant="outline" color="black">
-                Log in
+                Log out
               </Button>
-            </Link>
+            )}
             <IconBasket setIsShowBasket={toggleBasket} />
             <LanguagePicker type="collapsed" />
             <ColorSwitch />

@@ -47,6 +47,8 @@ export const signInWithGoogle = createAsyncThunk("auth/logIn", async (_, { rejec
     const data = await getAllFirestoreData<User>(DataBasePath.USERS, 20);
     const isExistUser = data.some((obj) => obj.email === email);
 
+    console.log("Users", data);
+
     if (isExistUser) {
       const existedUser = data.find((obj) => obj.email === email);
 
