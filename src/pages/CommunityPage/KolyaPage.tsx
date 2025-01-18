@@ -26,19 +26,19 @@ const KolyaPage = () => {
   const jobs = useAppSelector(getJobs);
   const expenses = useAppSelector(getExpenses);
 
-  const sortedJobs = [...jobs].filter((e) => e.owner === "kolya");
-  // const sortedJobs = [...jobs].filter((e) => e.owner !== "dima");
+  // const sortedJobs = [...jobs].filter((e) => e.owner === "kolya");
+  const sortedJobsWithTitle = [...jobs].filter((e) => e.owner !== "dima");
   // const sortedJobsWithTitle = [...sortedJobs].filter((e) => e.title.includes("ІПС"));
   // const sortedJobsWithTitle = [...sortedJobs].filter((e) => e.title.includes("БОС"));
   // const sortedJobsWithTitle = [...sortedJobs].filter((e) => e.title.includes("Ком"));
   // const sortedJobsWithTitle = [...sortedJobs].filter((e) => e.title.includes("АТП 300"));
   // const sortedJobsWithTitle = [...sortedJobs].filter((e) => e.title.includes("Кондиціонер"));
   // const sortedJobsWithTitle = [...sortedJobs].filter((e) => e.title.includes("Спіртзавод"));
-  const sortedJobsWithTitle = [...sortedJobs].filter((e) => e);
 
   const incomeTotalData = sortedJobsWithTitle;
 
-  const sortedExpenses = [...expenses].filter((e) => e.owner === "kolya");
+  const sortedExpenses = [...expenses].filter((e) => e.owner !== "dima");
+  // const sortedExpenses = [...expenses].filter((e) => e.owner === "kolya");
 
   const getAllData = async () => {
     dispatch(getAllJobs({ path: DataBasePath.JOBS, queryLimit: 100 }));
@@ -87,22 +87,22 @@ const KolyaPage = () => {
 
   return (
     <Center>
-      <Flex mt={50} p={mob ? 0 : 40} direction={"column"}>
+      <Flex mt={mob ? 10 : 50} px={mob ? 20 : 40} direction={"column"}>
         <Flex className={s.buttonFlexRoot} justify="space-between">
-          <Group>
+          <Group display="flex" justify="space-around" mx="auto" gap={10}>
             <Button onClick={toggleCardExpenses}>Взяв гроші</Button>
             <Button onClick={toggleCardAddProduct}>Додати роботу</Button>
           </Group>
         </Flex>
 
         <Flex mt={50} direction="column" gap={mob ? 5 : 20}>
-          <Flex p={mob ? 10 : 20}>
+          <Flex px={40}>
             <Text>{`Залишок ${Number(incom) - Number(expens)} грн.`}</Text>
           </Flex>
-          <Flex p={mob ? 10 : 20}>
+          <Flex px={40}>
             <Text>{`Загальна сумма заробленних ${incom} грн.`}</Text>
           </Flex>
-          <Flex p={mob ? 10 : 20}>
+          <Flex px={40}>
             <Text>{`Взяв за місяць ${expens} грн.`}</Text>
           </Flex>
           <Flex direction={mob ? "column" : "row"} gap={20}>
